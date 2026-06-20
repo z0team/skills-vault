@@ -1,9 +1,4 @@
 ---
-name: blader__humanizer
-description: Всі скіли з паку blader__humanizer
----
-
----
 name: humanizer
 version: 2.8.0
 description: |

@@ -1,9 +1,4 @@
 ---
-name: garrytan__gstack
-description: Всі скіли з паку garrytan__gstack
----
-
----
 name: gstack
 preamble-tier: 1
 version: 1.1.0

@@ -2,3 +2,16 @@
 *.pyc
 __pycache__/
 node_modules/
+
+# Згенеровані агент-плагіни (тільки dist.tar.gz треба в git)
+dist/*
+!dist/dist.tar.gz
+.claude-plugin/
+.cursor-plugin/
+.codex-plugin/
+.opencode/
+.windsurf-plugin/
+.roo/
+.prompts/
+.zed/
+.trae/

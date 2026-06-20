@@ -9,13 +9,12 @@ PACKS_DIR="$ROOT_DIR/packs"
 CONVERT="$ROOT_DIR/scripts/convert.py"
 
 echo "📦 Генеруємо dist/ ..."
-echo "📦 Генеруємо dist/ ..."
 python3 -c "
 import shutil, os, stat
 def onerror(func, path, exc_info):
     try: os.chmod(path, stat.S_IRWXU); func(path)
     except: pass
-for d in ['dist', 'skills', '.claude-plugin', '.cursor-plugin', '.codex-plugin', '.opencode', '.windsurf-plugin']:
+for d in ['dist', 'skills', '.claude-plugin', '.cursor-plugin', '.codex-plugin', '.opencode', '.windsurf-plugin', '.roo', '.prompts', '.zed', '.trae']:
     if os.path.exists(os.path.join('$ROOT_DIR', d)):
         shutil.rmtree(os.path.join('$ROOT_DIR', d), onerror=onerror)
 "
@@ -26,34 +25,44 @@ chmod u+w "$DIST_DIR" "$ROOT_DIR/skills" 2>/dev/null || true
 
 AGENTS=("claude-code" "cursor" "copilot" "windsurf" "opencode" "codex" "agy" "agents-md" "generic" "roo" "continue" "zed" "trae")
 
+CMDS_FILE=$(mktemp)
+
 for pack_dir in "$PACKS_DIR"/*; do
     [ -d "$pack_dir" ] || continue
     pack_id=$(basename "$pack_dir")
     
-    echo "⏳ $pack_id ..."
-    
-    for agent in "${AGENTS[@]}"; do
-        OUT_DIR="$DIST_DIR/$pack_id/$agent"
-        mkdir -p "$OUT_DIR"
+    # Process skills for npx
+    find "$pack_dir" -name "SKILL.md" 2>/dev/null | while read -r skill_md; do
+        skill_folder=$(basename "$(dirname "$skill_md")")
+        if [ "$skill_folder" = "$pack_id" ] || [ "$skill_folder" = "skills" ] || [ "$skill_folder" = "." ]; then
+            skill_folder="${pack_id}"
+        else
+            skill_folder="${pack_id}__${skill_folder}"
+        fi
         
-        # Find all SKILL.md in the pack
-        find "$pack_dir" -name "SKILL.md" 2>/dev/null | while read -r skill_md; do
-            python3 "$CONVERT" "$skill_md" --target "$agent" --out "$OUT_DIR" >/dev/null 2>&1 || echo "⚠️ Помилка конвертації $skill_md для $agent"
-            
-            # For 'npx skills add' compatibility, we also copy the raw SKILL.md to a root skills/ folder
-            if [ "$agent" = "generic" ]; then
-                skill_name=$(basename "$(dirname "$skill_md")")
-                if [ "$skill_name" = "skills" ] || [ "$skill_name" = "." ] || [ "$skill_name" = "$pack_id" ]; then
-                    skill_name="${pack_id}_skill"
-                fi
-                mkdir -p "$ROOT_DIR/skills/$skill_name"
-                cp "$skill_md" "$ROOT_DIR/skills/$skill_name/SKILL.md"
-            fi
-        done || true
-    done
+        mkdir -p "$ROOT_DIR/skills/$skill_folder"
+        cp "$skill_md" "$ROOT_DIR/skills/$skill_folder/SKILL.md"
+        
+        # Add python conversion jobs
+        for agent in "${AGENTS[@]}"; do
+            OUT_DIR="$DIST_DIR/$pack_id/$agent"
+            echo "mkdir -p \"$OUT_DIR\" && python3 \"$CONVERT\" \"$skill_md\" --target \"$agent\" --out \"$OUT_DIR\" >/dev/null 2>&1" >> "$CMDS_FILE"
+        done
+    done || true
 done
 
-echo "🔗 Копіюємо всі правила в кореневі папки (як у obra/Superpowers)..."
+echo "🚀 Конвертуємо скіли паралельно (це може зайняти хвилину)..."
+while IFS= read -r cmd; do
+    eval "$cmd" &
+    # Check number of running jobs
+    while [ $(jobs -r | wc -l) -ge 16 ]; do
+        sleep 0.1
+    done
+done < "$CMDS_FILE"
+wait
+rm -f "$CMDS_FILE"
+
+echo "🔗 Копіюємо всі правила в кореневі папки..."
 mkdir -p "$ROOT_DIR/.claude-plugin" "$ROOT_DIR/.cursor-plugin" "$ROOT_DIR/.codex-plugin" "$ROOT_DIR/.opencode" "$ROOT_DIR/.windsurf-plugin" "$ROOT_DIR/.roo" "$ROOT_DIR/.prompts" "$ROOT_DIR/.zed" "$ROOT_DIR/.trae"
 
 # Aggregation logic
