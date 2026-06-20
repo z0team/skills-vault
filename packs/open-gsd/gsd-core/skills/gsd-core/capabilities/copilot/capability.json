@@ -1,0 +1,53 @@
+{
+  "id": "copilot",
+  "role": "runtime",
+  "version": "1.5.1-dev.0",
+  "title": "GitHub Copilot",
+  "description": "GitHub Copilot (VS Code) — markdown config format; copilot-inline hook surface; no hook events emitted; flat skill nesting (unconfirmed recursive loader); tier-2 support.",
+  "tier": "core",
+  "requires": [],
+  "engines": {
+    "gsd": ">=1.6.0"
+  },
+  "runtime": {
+    "configHome": {
+      "kind": "dot-home",
+      "name": ".copilot",
+      "env": [
+        "COPILOT_CONFIG_DIR",
+        "COPILOT_HOME"
+      ]
+    },
+    "configFormat": "markdown",
+    "artifactLayout": {
+      "global": [
+        {
+          "kind": "skills",
+          "destSubpath": "skills",
+          "prefix": "gsd-",
+          "nesting": "flat",
+          "recursive": false,
+          "converter": "convertClaudeCommandToCopilotSkill"
+        }
+      ],
+      "local": [
+        {
+          "kind": "skills",
+          "destSubpath": "skills",
+          "prefix": "gsd-",
+          "nesting": "flat",
+          "recursive": false,
+          "converter": "convertClaudeCommandToCopilotSkill"
+        }
+      ]
+    },
+    "commandStyle": "slash-hyphen",
+    "hooksSurface": "copilot-inline",
+    "sandboxTier": "none",
+    "supportTier": 2,
+    "installSurface": "copilot-instructions",
+    "writesSharedSettings": false,
+    "permissionWriter": null,
+    "extendedHookEvents": []
+  }
+}
