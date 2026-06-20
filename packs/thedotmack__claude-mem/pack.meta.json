@@ -1,0 +1,12 @@
+{
+  "id": "thedotmack__claude-mem",
+  "source": "https://github.com/thedotmack/claude-mem",
+  "license": "Found in repository",
+  "fetched_at": "2026-06-20T17:26:19.484165+00:00Z",
+  "type": "skill",
+  "agents": [
+    "claude-code",
+    "cursor",
+    "generic"
+  ]
+}

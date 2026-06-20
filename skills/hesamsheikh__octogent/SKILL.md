@@ -1,17 +1,9 @@
 ---
 name: hesamsheikh__octogent
-description: Skills from the hesamsheikh__octogent pack
----
-
----
-name: octogent
-description: "<img width=1500 height=500 alt=Octogent header src=./static/images/octogent-header.png />"
+description: "Skills pack"
 ---
 
 # octogent
 
 This skill was imported from hesamsheikh/octogent.
 Please refer to the original files in this directory for instructions.
-
-
----

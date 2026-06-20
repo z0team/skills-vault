@@ -1,12 +1,6 @@
 ---
 name: uditgoenka
-description: Skills from the uditgoenka pack
----
-
----
-name: autoresearch
-description: "Autonomous iteration loop: modify, verify, keep/discard against any metric"
-version: 2.2.0
+description: "Skills from the uditgoenka pack"
 ---
 
 # Autoresearch — Autonomous Goal-directed Iteration
@@ -105,6 +99,3 @@ Backed by `scripts/orchestrate.sh` (deterministic seam — all routing logic liv
 - **screen-cmd on every derived command** — run before the loop starts AND on every command read from a persisted state file on resume. Persisted commands are never trusted.
 - **No un-screened commands mid-loop.** The autonomous loop cannot introduce new shell commands that bypass `screen-cmd`.
 - **Unknown-units cycles excluded from Plateau counter.** A cycle where `units` returns `unknown` (e.g. runner crash) is not counted as zero-progress; repeated `unknown` routes to `BLOCKED`.
-
-
----

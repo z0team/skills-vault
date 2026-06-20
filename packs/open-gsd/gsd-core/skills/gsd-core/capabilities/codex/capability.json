@@ -1,0 +1,53 @@
+{
+  "id": "codex",
+  "role": "runtime",
+  "version": "1.5.1-dev.0",
+  "title": "OpenAI Codex CLI",
+  "description": "OpenAI Codex CLI — shell-var command style; per-agent sandbox tiers; config.toml + hooks.json hook surface; tier-1 support.",
+  "tier": "core",
+  "requires": [],
+  "engines": {
+    "gsd": ">=1.6.0"
+  },
+  "runtime": {
+    "configHome": {
+      "kind": "dot-home",
+      "name": ".codex",
+      "env": [
+        "CODEX_HOME"
+      ]
+    },
+    "configFormat": "toml",
+    "artifactLayout": {
+      "global": [
+        {
+          "kind": "skills",
+          "destSubpath": "skills",
+          "prefix": "gsd-",
+          "nesting": "flat",
+          "recursive": false,
+          "converter": "convertClaudeCommandToCodexSkill"
+        }
+      ],
+      "local": [
+        {
+          "kind": "skills",
+          "destSubpath": "skills",
+          "prefix": "gsd-",
+          "nesting": "flat",
+          "recursive": false,
+          "converter": "convertClaudeCommandToCodexSkill"
+        }
+      ]
+    },
+    "commandStyle": "shell-var",
+    "hooksSurface": "codex-hooks-json",
+    "hookEvents": "claude",
+    "sandboxTier": "codex-agent-sandbox",
+    "supportTier": 1,
+    "installSurface": "codex-toml",
+    "writesSharedSettings": false,
+    "permissionWriter": null,
+    "extendedHookEvents": []
+  }
+}

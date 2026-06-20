@@ -1,14 +1,6 @@
 ---
 name: affaan-m
-description: Skills from the affaan-m pack
----
-
----
-name: accessibility
-description: Design, implement, and audit inclusive digital products using WCAG 2.2 Level AA
-  standards. Use this skill to generate semantic ARIA for Web and accessibility traits for Web and Native platforms (iOS/Android).
-metadata:
-  origin: ECC
+description: "Skills from the affaan-m pack"
 ---
 
 # Accessibility (WCAG 2.2)
@@ -150,17 +142,6 @@ Switch(
 - `design-system`
 - `liquid-glass-design`
 - `swiftui-patterns`
-
-
----
-
----
-name: agent-architecture-audit
-description: Full-stack diagnostic for agent and LLM applications. Audits the 12-layer agent stack for wrapper regression, memory pollution, tool discipline failures, hidden repair loops, and rendering corruption. Produces severity-ranked findings with code-first fixes. Essential for developers building agent applications, autonomous loops, or any LLM-powered feature.
-metadata:
-  origin: oh-my-agent-check
-tools: Read, Write, Edit, Bash, Grep, Glob
----
 
 # Agent Architecture Audit
 
@@ -412,17 +393,6 @@ Audits should produce structured reports following this shape:
 - `autonomous-agent-harness` — Set up autonomous agent operations
 - `agent-harness-construction` — Build agent harnesses from scratch
 
-
----
-
----
-name: agent-eval
-description: Head-to-head comparison of coding agents (Claude Code, Aider, Codex, etc.) on custom tasks with pass rate, cost, time, and consistency metrics
-metadata:
-  origin: ECC
-tools: Read, Write, Edit, Bash, Grep, Glob
----
-
 # Agent Eval Skill
 
 A lightweight CLI tool for comparing coding agents head-to-head on reproducible tasks. Every "which coding agent is best?" comparison runs on vibes — this tool systematizes it.
@@ -562,16 +532,6 @@ judge:
 
 - Repository: [github.com/joaquinhuigomez/agent-eval](https://github.com/joaquinhuigomez/agent-eval)
 
-
----
-
----
-name: agent-harness-construction
-description: Design and optimize AI agent action spaces, tool definitions, and observation formatting for higher completion rates.
-metadata:
-  origin: ECC
----
-
 # Agent Harness Construction
 
 Use this skill when you are improving how an agent plans, calls tools, recovers from errors, and converges on completion.
@@ -639,16 +599,6 @@ Track:
 - Opaque tool output with no recovery hints.
 - Error-only output without next steps.
 - Context overloading with irrelevant references.
-
-
----
-
----
-name: agent-introspection-debugging
-description: Structured self-debugging workflow for AI agent failures using capture, diagnosis, contained recovery, and introspection reports.
-metadata:
-  origin: ECC
----
 
 # Agent Introspection Debugging
 
@@ -797,16 +747,6 @@ Always provide:
 - the root-cause hypothesis
 - the recovery action
 - the evidence that the situation is now better or still blocked
-
-
----
-
----
-name: agent-payment-x402
-description: Add x402 payment execution to AI agents with per-task budgets, spending controls, and non-custodial wallets. Supports Base through agentwallet-sdk and X Layer through OKX Payments / OKX Agent Payments Protocol.
-metadata:
-  origin: community
----
 
 # Agent Payment Execution (x402)
 
@@ -1027,15 +967,6 @@ main().catch((err) => {
 - **OKX Agent Payments Protocol skill**: [`okx/onchainos-skills`](https://github.com/okx/onchainos-skills/tree/main/skills/okx-agent-payments-protocol)
 - **OKX Payments overview**: [web3.okx.com/onchainos/dev-docs/payments/overview](https://web3.okx.com/onchainos/dev-docs/payments/overview)
 
-
----
-
----
-name: agent-self-evaluation
-description: Use after completing any non-trivial task. The agent self-rates its output on 5 axes — accuracy, completeness, clarity, actionability, conciseness — with concrete evidence per criterion. Produces a structured 1-5 scorecard with specific improvement suggestions.
-origin: ECC
----
-
 # Agent Self-Evaluation
 
 After completing a complex task, the agent pauses to rate its own output against a structured 5-axis rubric. This is NOT a pass/fail gate — it's a deliberate reflection step that catches omissions, flags overconfidence, and surface areas for improvement before the user has to.
@@ -1212,16 +1143,6 @@ FAIL: "Score: 3. I don't like Python decorators."
 - `agent-eval` — Head-to-head comparison of different coding agents on benchmark tasks
 - `verification-loop` — Systematic verification of outputs against expected results
 - `security-review` — Security-focused code review checklist
-
-
----
-
----
-name: agent-sort
-description: Build an evidence-backed ECC install plan for a specific repo by sorting skills, commands, rules, hooks, and extras into DAILY vs LIBRARY buckets using parallel repo-aware review passes. Use when ECC should be trimmed to what a project actually needs instead of loading the full bundle.
-metadata:
-  origin: ECC
----
 
 # Agent Sort
 
@@ -1433,16 +1354,6 @@ VERIFICATION
 - checks run and remaining gaps
 ```
 
-
----
-
----
-name: agentic-engineering
-description: Operate as an agentic engineer using eval-first execution, decomposition, and cost-aware model routing.
-metadata:
-  origin: ECC
----
-
 # Agentic Engineering
 
 Use this skill for engineering workflows where AI agents perform most implementation work and humans enforce quality and risk controls.
@@ -1500,16 +1411,6 @@ Track per task:
 - success/failure
 
 Escalate model tier only when lower tier fails with a clear reasoning gap.
-
-
----
-
----
-name: agentic-os
-description: Build persistent multi-agent operating systems on Claude Code. Covers kernel architecture, specialist agents, slash commands, file-based memory, scheduled automation, and state management without external databases.
-metadata:
-  origin: ECC
----
 
 # Agentic OS
 
@@ -1893,16 +1794,6 @@ Keep routing declarative in `CLAUDE.md` markdown tables. It is inspectable, edit
 - [ ] Cost tracking: log API spend per session in `data/logs/<date>-costs.json`
 - [ ] One project = one Agentic OS. Do not share a single `CLAUDE.md` across unrelated projects.
 
-
----
-
----
-name: ai-first-engineering
-description: Engineering operating model for teams where AI agents generate a large share of implementation output.
-metadata:
-  origin: ECC
----
-
 # AI-First Engineering
 
 Use this skill when designing process, reviews, and architecture for teams shipping with AI-assisted code generation.
@@ -1948,16 +1839,6 @@ Raise testing bar for generated code:
 - required regression coverage for touched domains
 - explicit edge-case assertions
 - integration checks for interface boundaries
-
-
----
-
----
-name: ai-regression-testing
-description: Regression testing strategies for AI-assisted development. Sandbox-mode API testing without database dependencies, automated bug-check workflows, and patterns to catch AI blind spots where the same model writes and reviews code.
-metadata:
-  origin: ECC
----
 
 # AI Regression Testing
 
@@ -2339,16 +2220,6 @@ No bug in /api/user/notifications  → Don't write test (yet)
 - Write integration tests when unit tests suffice
 - Aim for coverage percentage — aim for regression prevention
 
-
----
-
----
-name: android-clean-architecture
-description: Clean Architecture patterns for Android and Kotlin Multiplatform projects — module structure, dependency rules, UseCases, Repositories, and data layer patterns.
-metadata:
-  origin: ECC
----
-
 # Android Clean Architecture
 
 Clean Architecture patterns for Android and KMP projects. Covers module boundaries, dependency inversion, UseCase/Repository patterns, and data layer design with Room, SQLDelight, and Ktor.
@@ -2683,16 +2554,6 @@ plugins { id("kmp-library") }
 See skill: `compose-multiplatform-patterns` for UI patterns.
 See skill: `kotlin-coroutines-flows` for async patterns.
 
-
----
-
----
-name: angular-developer
-description: Generates Angular code and provides architectural guidance. Trigger when creating projects, components, or services, or for best practices on reactivity (signals, linkedSignal, resource), forms, dependency injection, routing, SSR, accessibility (ARIA), animations, styling (component styles, Tailwind CSS), testing, or CLI tooling.
-metadata:
-  origin: ECC
----
-
 # Angular Developer Guidelines
 
 ## When to Activate
@@ -2842,17 +2703,6 @@ When working with Angular tooling, consult the following references:
 - `security-review` — security checklist for web applications including Angular-specific concerns
 - `frontend-patterns` — general frontend patterns for context on React/Next.js approaches
 
-
----
-
----
-name: api-connector-builder
-description: Build a new API connector or provider by matching the target repo's existing integration pattern exactly. Use when adding one more integration without inventing a second architecture.
-metadata:
-  origin: ECC direct-port adaptation
-version: "1.0.0"
----
-
 # API Connector Builder
 
 Use this when the job is to add a repo-native integration surface, not just a generic HTTP client.
@@ -2966,16 +2816,6 @@ src/integrations/
 - `backend-patterns`
 - `mcp-server-patterns`
 - `github-ops`
-
-
----
-
----
-name: api-design
-description: REST API design patterns including resource naming, status codes, pagination, filtering, error responses, versioning, and rate limiting for production APIs.
-metadata:
-  origin: ECC
----
 
 # API Design Patterns
 
@@ -3495,16 +3335,6 @@ Before shipping a new endpoint:
 - [ ] Consistent naming with existing endpoints (camelCase vs snake_case)
 - [ ] Documented (OpenAPI/Swagger spec updated)
 
-
----
-
----
-name: architecture-decision-records
-description: Capture architectural decisions made during Claude Code sessions as structured ADRs. Auto-detects decision moments, records context, alternatives considered, and rationale. Maintains an ADR log so future developers understand why the codebase is shaped the way it is.
-metadata:
-  origin: ECC
----
-
 # Architecture Decision Records
 
 Capture architectural decisions as they happen during coding sessions. Instead of decisions living only in Slack threads, PR comments, or someone's memory, this skill produces structured ADR documents that live alongside the code.
@@ -3679,16 +3509,6 @@ proposed → accepted → [deprecated | superseded by ADR-NNNN]
 - **Planner agent**: when the planner proposes architecture changes, suggest creating an ADR
 - **Code reviewer agent**: flag PRs that introduce architectural changes without a corresponding ADR
 
-
----
-
----
-name: article-writing
-description: Write articles, guides, blog posts, tutorials, newsletter issues, and other long-form content in a distinctive voice derived from supplied examples or brand guidance. Use when the user wants polished written content longer than a paragraph, especially when voice consistency, structure, and credibility matter.
-metadata:
-  origin: ECC
----
-
 # Article Writing
 
 Write long-form content that sounds like an actual person with a point of view, not an LLM smoothing itself into paste.
@@ -3762,16 +3582,6 @@ Before delivering:
 - the voice matches the supplied examples or the agreed `VOICE PROFILE`
 - every section adds something new
 - formatting matches the intended medium
-
-
----
-
----
-name: automation-audit-ops
-description: Evidence-first automation inventory and overlap audit workflow for ECC. Use when the user wants to know which jobs, hooks, connectors, MCP servers, or wrappers are live, broken, redundant, or missing before fixing anything.
-metadata:
-  origin: ECC
----
 
 # Automation Audit Ops
 
@@ -3909,16 +3719,6 @@ NEXT ECC MOVE
 - important claims cite a live proof path
 - each surfaced automation is labeled with a clear live-state category
 - the final recommendation distinguishes keep / merge / cut / fix-next
-
-
----
-
----
-name: autonomous-agent-harness
-description: Transform Claude Code into a fully autonomous agent system with persistent memory, scheduled operations, computer use, and task queuing. Replaces standalone agent frameworks (Hermes, AutoGPT) by leveraging Claude Code's native crons, dispatch, MCP tools, and memory. Use when the user wants continuous autonomous operation, scheduled tasks, or a self-directing agent loop.
-metadata:
-  origin: ECC
----
 
 # Autonomous Agent Harness
 
@@ -4187,16 +3987,6 @@ Trigger: 30 min before each calendar event
 - Remote dispatch may have rate limits. Design crons with appropriate intervals.
 - Memory files should be kept concise. Archive old data rather than letting files grow unbounded.
 - Always verify that scheduled tasks completed successfully. Add error handling to cron prompts.
-
-
----
-
----
-name: autonomous-loops
-description: "Patterns and architectures for autonomous Claude Code loops — from simple sequential pipelines to RFC-driven multi-agent DAG systems."
-metadata:
-  origin: ECC
----
 
 # Autonomous Loops Skill
 
@@ -4803,16 +4593,6 @@ These patterns compose well:
 | NanoClaw | ECC | `/claw` command in this repo |
 | Verification Loop | ECC | `skills/verification-loop/` in this repo |
 
-
----
-
----
-name: backend-patterns
-description: Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes.
-metadata:
-  origin: ECC
----
-
 # Backend Development Patterns
 
 Backend architecture patterns and best practices for scalable server-side applications.
@@ -5369,19 +5149,6 @@ export async function GET(request: Request) {
 
 **Remember**: Backend patterns enable scalable, maintainable server-side applications. Choose patterns that fit your complexity level.
 
-
----
-
----
-name: benchmark-methodology
-description: >-
-  Use after competitive-platform-analysis has produced a tiered competitor set.
-  Scores each competitor across nine weighted dimensions (positioning, voice,
-  visual craft, offer packaging, evidence, enterprise-readiness, thought
-  leadership, pricing, client's strategic tension) with explicit 1–5 rubrics
-  and a tension-plot. Precedes competitive-report-structure.
----
-
 # Benchmark Methodology
 
 Use this skill to turn a scoped competitor set into **comparable, defensible
@@ -5563,17 +5330,6 @@ Hand the completed cards plus the tension plot to `competitive-report-structure`
 - `competitive-platform-analysis` — the prerequisite; produces the tiered competitor set this skill scores.
 - `competitive-report-structure` — the next step; assembles the scored profile cards into a client-deliverable report.
 
-
----
-
----
-name: benchmark-optimization-loop
-description: Use when the user asks to make something faster, try many variants, run recursive optimization, benchmark latency/throughput/cost, or choose the best implementation by repeated measured tests.
-metadata:
-  origin: ECC
-tools: Read, Write, Edit, Bash, Grep, Glob
----
-
 # Benchmark Optimization Loop
 
 Use this skill to convert "make it 20x faster" or "try 50 recursive
@@ -5636,16 +5392,6 @@ A variant cannot become the new default until:
 - rollback is obvious;
 - the change is encoded in source control or a durable runbook;
 - the final summary includes exact commands and measurements.
-
-
----
-
----
-name: benchmark
-description: Use this skill to measure performance baselines, detect regressions before/after PRs, and compare stack alternatives.
-metadata:
-  origin: ECC
----
 
 # Benchmark — Performance Baseline & Regression Detection
 
@@ -5734,17 +5480,6 @@ Stores baselines in `.ecc/benchmarks/` as JSON. Git-tracked so the team shares b
 - CI: run `/benchmark compare` on every PR
 - Pair with `/canary-watch` for post-deploy monitoring
 - Pair with `/browser-qa` for full pre-ship checklist
-
-
----
-
----
-name: blender-motion-state-inspection
-description: Use this skill when inspecting Blender characters, rigs, poses, animation retargeting, ground contact, facing direction, or model-vs-motion alignment where screenshots alone are not enough.
-metadata:
-  origin: ECC
-tools: Read, Write, Edit, Bash, Grep, Glob
----
 
 # Blender Motion State Inspection
 
@@ -5904,25 +5639,6 @@ Verdict: likely backwards import or retargeting forward-axis mismatch. Fix the i
 
 If a Blender state exporter is available, prefer JSON that includes meshes, armatures, pose bones, materials, contacts, bounding boxes, and sampled animation frames. If no exporter exists, run a small Blender Python script through Blender itself, for example `blender --background scene.blend --python collect_motion_state.py`, because `bpy` is not available in a normal system Python interpreter.
 
-
----
-
----
-name: blueprint
-description: >-
-  Turn a one-line objective into a step-by-step construction plan for
-  multi-session, multi-agent engineering projects. Each step has a
-  self-contained context brief so a fresh agent can execute it cold.
-  Includes adversarial review gate, dependency graph, parallel step
-  detection, anti-pattern catalog, and plan mutation protocol.
-  TRIGGER when: user requests a plan, blueprint, or roadmap for a
-  complex multi-PR task, or describes work that needs multiple sessions.
-  DO NOT TRIGGER when: task is completable in a single PR or fewer
-  than 3 tool calls, or user says "just do it".
-metadata:
-  origin: community
----
-
 # Blueprint — Construction Plan Generator
 
 Turn a one-line objective into a step-by-step construction plan that any coding agent can execute cold.
@@ -6013,19 +5729,6 @@ If you are vendoring only this skill outside the full ECC install, copy the revi
 ## Source
 
 Inspired by antbotlab/blueprint — upstream project and reference design.
-
-
----
-
----
-name: brand-discovery
-description: >-
-  Use when a brand needs to discover or articulate its identity through
-  structured multi-session interviews. Covers purpose, positioning, audience,
-  personality, voice, narrative, and founder-brand tension across 8 modules
-  using laddering, 5 Whys, and projective techniques. Produces a resumable
-  session with disk-persisted state and a master brandbook (90_SYNTHESIS.md).
----
 
 # Brand Discovery
 
@@ -6163,16 +5866,6 @@ the module file, flag "productive tensions" for the group alignment workshop.
 - `competitive-platform-analysis` — after brand-discovery establishes the positioning brief, use this to scope and categorise the competitor set.
 - `brand-voice` (ECC) — if the brand-discovery voice-and-tone module needs a separate, source-derived writing-style profile.
 
-
----
-
----
-name: brand-voice
-description: Build a source-derived writing style profile from real posts, essays, launch notes, docs, or site copy, then reuse that profile across content, outreach, and social workflows. Use when the user wants voice consistency without generic AI writing tropes.
-metadata:
-  origin: ECC
----
-
 # Brand Voice
 
 Build a durable voice profile from real source material, then use that profile everywhere instead of re-deriving style from scratch or defaulting to generic AI copy.
@@ -6264,16 +5957,6 @@ Use this skill before or inside:
 - cold or warm outbound across X, LinkedIn, and email
 
 If another skill already has a partial voice capture section, this skill is the canonical source of truth.
-
-
----
-
----
-name: browser-qa
-description: Use this skill to automate visual testing and UI interaction verification using browser automation after deploying features.
-metadata:
-  origin: ECC
----
 
 # Browser QA — Automated Visual Testing & Interaction
 
@@ -6374,16 +6057,6 @@ Works with any browser MCP:
 
 Pair with `/canary-watch` for post-deploy monitoring.
 
-
----
-
----
-name: bun-runtime
-description: Bun as runtime, package manager, bundler, and test runner. When to choose Bun vs Node, migration notes, and Vercel support.
-metadata:
-  origin: ECC
----
-
 # Bun Runtime
 
 Bun is a fast all-in-one JavaScript runtime and toolkit: runtime, package manager, bundler, and test runner.
@@ -6462,16 +6135,6 @@ Bun.serve({
 - Commit the lockfile (`bun.lock` or `bun.lockb`) for reproducible installs.
 - Prefer `bun run` for scripts. For TypeScript, Bun runs `.ts` natively.
 - Keep dependencies up to date; Bun and the ecosystem evolve quickly.
-
-
----
-
----
-name: canary-watch
-description: Use this skill to monitor and verify a deployed URL after releases — checks HTTP endpoints, SSE streams, static assets, console errors, and performance regressions after deploys, merges, or dependency upgrades. Smoke / canary / post-deploy verification.
-metadata:
-  origin: ECC
----
 
 # Canary Watch — Post-Deploy Monitoring
 
@@ -6574,28 +6237,6 @@ Pair with:
 - `/browser-qa` for pre-deploy verification
 - Hooks: add as a PostToolUse hook on `git push` to auto-check after deploys
 - CI: run in GitHub Actions after deploy step
-
-
----
-
----
-name: carrier-relationship-management
-description: >
-  Codified expertise for managing carrier portfolios, negotiating freight rates,
-  tracking carrier performance, allocating freight, and maintaining strategic
-  carrier relationships. Informed by transportation managers with 15+ years
-  experience. Includes scorecarding frameworks, RFP processes, market intelligence,
-  and compliance vetting. Use when managing carriers, negotiating rates, evaluating
-  carrier performance, or building freight strategies.
-license: Apache-2.0
-version: 1.0.0
-homepage: https://github.com/affaan-m/everything-claude-code
-metadata:
-  origin: ECC
-  author: evos
-  clawdbot:
-    emoji: ""
----
 
 # Carrier Relationship Management
 
@@ -6791,16 +6432,6 @@ Track weekly, review monthly with carrier management team, share quarterly with 
 - Track carrier scorecards, exception trends, and routing-guide compliance in the same operating review so pricing and service decisions stay tied together.
 - Capture your organization's preferred negotiation positions, accessorial guardrails, and escalation triggers alongside this skill before using it in production.
 
-
----
-
----
-name: cisco-ios-patterns
-description: Cisco IOS and IOS-XE review patterns for show commands, config hierarchy, wildcard masks, ACL placement, interface hygiene, and safe change-window verification.
-metadata:
-  origin: community
----
-
 # Cisco IOS Patterns
 
 Use this skill when reviewing Cisco IOS or IOS-XE snippets, building a
@@ -6959,19 +6590,6 @@ source rather than relying on a generic ping.
 - Skill: `network-config-validation`
 - Skill: `network-interface-health`
 
-
----
-
----
-name: ck
-description: Persistent per-project memory for Claude Code. Auto-loads project context on session start, tracks sessions with git activity, and writes to native memory. Commands run deterministic Node.js scripts — behavior is consistent across model versions.
-metadata:
-  origin: community
-version: 2.0.0
-author: sreedhargs89
-repo: https://github.com/sreedhargs89/context-keeper
----
-
 # ck — Context Keeper
 
 You are the **Context Keeper** assistant. When the user invokes any `/ck:*` command,
@@ -7111,16 +6729,6 @@ unsaved sessions, git activity since last save, and goal mismatches vs CLAUDE.md
 - Never edit `context.json` or `CONTEXT.md` directly — always use the scripts.
 - If `projects.json` is malformed, tell the user and offer to reset it to `{}`.
 
-
----
-
----
-name: claude-devfleet
-description: Orchestrate multi-agent coding tasks via Claude DevFleet — plan projects, dispatch parallel agents in isolated worktrees, monitor progress, and read structured reports.
-metadata:
-  origin: community
----
-
 # Claude DevFleet Multi-Agent Orchestration
 
 ## When to Use
@@ -7226,16 +6834,6 @@ DevFleet runs up to 3 concurrent agents by default (configurable via `DEVFLEET_M
 - Mission dependencies form a DAG — do not create circular dependencies.
 - Each agent runs in an isolated git worktree and auto-merges on completion. If a merge conflict occurs, the changes remain on the agent's worktree branch for manual resolution.
 - When manually creating missions, always set `auto_dispatch=true` if you want them to trigger automatically when dependencies complete. Without this flag, missions stay in `draft` status.
-
-
----
-
----
-name: click-path-audit
-description: "Trace every user-facing button/touchpoint through its full state change sequence to find bugs where functions individually work but cancel each other out, produce wrong final state, or leave the UI in an inconsistent state. Use when: systematic debugging found no bugs but users report broken buttons, or after any major refactor touching shared state stores."
-metadata:
-  origin: community
----
 
 # /click-path-audit — Behavioural Flow Audit
 
@@ -7475,16 +7073,6 @@ selectThread: (thread) => set({
 - Step 1 maps `selectThread` resets `composeMode`
 - Step 2 traces the handler: call 1 sets true, call 2 resets false
 - Verdict: Sequential Undo — final state contradicts button intent
-
-
----
-
----
-name: clickhouse-io
-description: ClickHouse database patterns, query optimization, analytics, and data engineering best practices for high-performance analytical workloads.
-metadata:
-  origin: ECC
----
 
 # ClickHouse Analytics Patterns
 
@@ -7920,16 +7508,6 @@ pgClient.on('notification', async (msg) => {
 
 **Remember**: ClickHouse excels at analytical workloads. Design tables for your query patterns, batch inserts, and leverage materialized views for real-time aggregations.
 
-
----
-
----
-name: code-tour
-description: Create CodeTour `.tour` files — persona-targeted, step-by-step walkthroughs with real file and line anchors. Use for onboarding tours, architecture walkthroughs, PR tours, RCA tours, and structured "explain how this works" requests.
-metadata:
-  origin: ECC
----
-
 # Code Tour
 
 Create **CodeTour** `.tour` files for codebase walkthroughs that open directly to real files and line ranges. Tours live in `.tours/` and are meant for the CodeTour format, not ad hoc Markdown notes.
@@ -8161,16 +7739,6 @@ The tour should feel like a path, not an inventory.
 - `council`
 - official upstream format: `microsoft/codetour`
 
-
----
-
----
-name: codebase-onboarding
-description: Analyze an unfamiliar codebase and generate a structured onboarding guide with architecture map, key entry points, conventions, and a starter CLAUDE.md. Use when joining a new project or setting up Claude Code for the first time in a repo.
-metadata:
-  origin: ECC
----
-
 # Codebase Onboarding
 
 Systematically analyze an unfamiliar codebase and produce a structured onboarding guide. Designed for developers joining a new project or setting up Claude Code in an existing repo for the first time.
@@ -8399,16 +7967,6 @@ Generate or update a project-specific CLAUDE.md based on detected conventions. I
 **Action**: Read existing CLAUDE.md, run Phases 1-3, merge new findings
 **Output**: Updated `CLAUDE.md` with additions clearly marked
 
-
----
-
----
-name: codehealth-mcp
-description: Real-time structural Code Health via CodeScene MCP — review before edits, verify score deltas after changes, gate commits and PRs. Use when reviewing code quality, refactoring, checking if AI changes degraded a file, or before commit/PR.
-metadata:
-  origin: community
----
-
 # Code Health MCP (CodeScene)
 
 Structural maintainability feedback for AI-assisted coding. Complements style/lint skills (`coding-standards`, `plankton-code-quality`) with **design-level** health scores and regression gates.
@@ -8569,16 +8127,6 @@ Drive-by cleanup across the module
 - `tdd-workflow` — test-first development
 - `security-review` — security checklist
 - `documentation-lookup` — library docs via Context7 (orthogonal)
-
-
----
-
----
-name: coding-standards
-description: Baseline cross-project coding conventions for naming, readability, immutability, and code-quality review. Use detailed frontend or backend skills for framework-specific patterns.
-metadata:
-  origin: ECC
----
 
 # Coding Standards & Best Practices
 
@@ -9125,19 +8673,6 @@ setTimeout(callback, DEBOUNCE_DELAY_MS)
 
 **Remember**: Code quality is not negotiable. Clear, maintainable code enables rapid development and confident refactoring.
 
-
----
-
----
-name: competitive-platform-analysis
-description: >-
-  Use when scoping a competitive landscape — identifying, categorising, and
-  score-filtering a competitor set before any benchmarking begins. Decides who
-  counts as a competitor, which tier they belong to, and which sources to mine.
-  First step in the three-skill competitive pipeline; precedes
-  benchmark-methodology.
----
-
 # Competitive Platform Analysis
 
 Use this skill to decide **who to benchmark** and **where to find them** before
@@ -9343,19 +8878,6 @@ un-hireable" cautionary case to learn from.
 - `brand-discovery` — use first to establish the positioning brief and strategic tension that scopes the competitor set.
 - `benchmark-methodology` — the next step; takes the tiered set and scores each competitor across nine dimensions.
 
-
----
-
----
-name: competitive-report-structure
-description: >-
-  Use after benchmark-methodology has produced scored competitor profile cards.
-  Assembles findings into a decision-grade report: landscape map, competitor
-  profiles, benchmarking matrix, white-space analysis, strategic recommendations,
-  and team alignment trigger questions. Final step in the three-skill competitive
-  pipeline.
----
-
 # Competitive Report Structure
 
 Use this skill to assemble scored competitor cards into a decision-grade report.
@@ -9508,16 +9030,6 @@ End with questions that force decisions, not admiration of the analysis:
 - `benchmark-methodology` — the prerequisite; produces the scored competitor profile cards this skill assembles.
 - `competitive-platform-analysis` — provides the tier structure (Direct / Adjacent / Aspirational) used in Section 3.
 - `brand-discovery` — use to establish the client's positioning brief if it hasn't been defined.
-
-
----
-
----
-name: compose-multiplatform-patterns
-description: Compose Multiplatform and Jetpack Compose patterns for KMP projects — state management, navigation, theming, performance, and platform-specific UI.
-metadata:
-  origin: ECC
----
 
 # Compose Multiplatform Patterns
 
@@ -9813,16 +9325,6 @@ fun AppTheme(
 See skill: `android-clean-architecture` for module structure and layering.
 See skill: `kotlin-coroutines-flows` for coroutine and Flow patterns.
 
-
----
-
----
-name: config-gc
-description: Garbage collection for your Claude Code configuration. Periodically scans ~/.claude (skills, memory, hooks, permissions, MCP servers, caches) for redundant, stale, orphaned, or low-value items, then walks the user through a confirm-each-deletion cleanup. Use when the user says "clean up my config", "config GC", "too many skills", "audit my setup", "my .claude is bloated", or asks for a periodic config review.
-metadata:
-  origin: ECC
----
-
 # Config GC — Garbage Collection for Claude Code Setups
 
 Borrowed from runtime garbage collection: periodically scan for objects that are no longer referenced, redundant, expired, or low-value, and reclaim the space. The critical difference: **here, collection requires a human in the loop. Never delete autonomously.**
@@ -9936,16 +9438,6 @@ jq '.permissions.allow -= ["Bash(git push)"]' ~/.claude/settings.local.json.bak 
 - `configure-ecc` — after installing skills with it, run config-gc to reconcile overlaps with your pre-existing setup.
 - `continuous-learning` — produces the memory files this skill later audits.
 - `security-review` — pairs well with the permissions channel.
-
-
----
-
----
-name: configure-ecc
-description: Interactive installer for Everything Claude Code — guides users through selecting and installing skills and rules to user-level or project-level directories, verifies paths, and optionally optimizes installed files.
-metadata:
-  origin: ECC
----
 
 # Configure Everything Claude Code (ECC)
 
@@ -10326,16 +9818,6 @@ Then print a summary report:
 - Some skills assume `~/.claude/` paths. Run Step 4 verification to find and fix these.
 - For `continuous-learning-v2`, the `~/.claude/homunculus/` directory is always user-level — this is expected and not an error.
 
-
----
-
----
-name: connections-optimizer
-description: Reorganize the user's X and LinkedIn network with review-first pruning, add/follow recommendations, and channel-specific warm outreach drafted in the user's real voice. Use when the user wants to clean up following lists, grow toward current priorities, or rebalance a social graph around higher-signal relationships.
-metadata:
-  origin: ECC
----
-
 # Connections Optimizer
 
 Reorganize the user's network instead of treating outbound as a one-way prospecting list.
@@ -10520,16 +10002,6 @@ Drafts
 - `x-api` for X graph access, drafting, and optional apply flows
 - `content-engine` when the user also wants public launch content around network moves
 
-
----
-
----
-name: content-engine
-description: Create platform-native content systems for X, LinkedIn, TikTok, YouTube, newsletters, and repurposed multi-platform campaigns. Use when the user wants social posts, threads, scripts, content calendars, or one source asset adapted cleanly across platforms.
-metadata:
-  origin: ECC
----
-
 # Content Engine
 
 Build platform-native content without flattening the author's real voice into platform slop.
@@ -10655,16 +10127,6 @@ Before delivering:
 - `brand-voice` for source-derived voice profiles
 - `crosspost` for platform-specific distribution
 - `x-api` for sourcing recent posts and publishing approved X output
-
-
----
-
----
-name: content-hash-cache-pattern
-description: Cache expensive file processing results using SHA-256 content hashes — path-independent, auto-invalidating, with service layer separation.
-metadata:
-  origin: ECC
----
 
 # Content-Hash File Cache Pattern
 
@@ -10822,16 +10284,6 @@ data = dataclasses.asdict(entry)  # Use manual serialization instead
 - Cache entries that would be extremely large (consider streaming instead)
 - Results that depend on parameters beyond file content (e.g., different extraction configs)
 
-
----
-
----
-name: context-budget
-description: Audits Claude Code context window consumption across agents, skills, MCP servers, and rules. Identifies bloat, redundant components, and produces prioritized token-savings recommendations.
-metadata:
-  origin: ECC
----
-
 # Context Budget
 
 Analyze token overhead across every loaded component in a Claude Code session and surface actionable optimizations to reclaim context space.
@@ -10962,16 +10414,6 @@ Skill: Current overhead 33% → adding 5 servers (~50 tools) would add ~25,000 t
 - **Verbose mode for debugging**: use when you need to pinpoint the exact files driving overhead, not for regular audits
 - **Audit after changes**: run after adding any agent, skill, or MCP server to catch creep early
 
-
----
-
----
-name: continuous-agent-loop
-description: Patterns for continuous autonomous agent loops with quality gates, evals, and recovery controls.
-metadata:
-  origin: ECC
----
-
 # Continuous Agent Loop
 
 This is the v1.8+ canonical loop skill name. It supersedes `autonomous-loops` while keeping compatibility for one release.
@@ -11011,17 +10453,6 @@ Recommended production stack:
 - run `/harness-audit`
 - reduce scope to failing unit
 - replay with explicit acceptance criteria
-
-
----
-
----
-name: continuous-learning-v2
-description: Instinct-based learning system that observes sessions via hooks, creates atomic instincts with confidence scoring, and evolves them into skills/commands/agents. v2.1 adds project-scoped instincts to prevent cross-project contamination.
-metadata:
-  origin: ECC
-version: 2.1.0
----
 
 # Continuous Learning v2.1 - Instinct
 -Based Architecture
@@ -11377,16 +10808,6 @@ v2.1 is fully compatible with v2.0 and v1:
 
 *Instinct-based learning: teaching Claude your patterns, one project at a time.*
 
-
----
-
----
-name: continuous-learning
-description: "[DEPRECATED - use continuous-learning-v2] Legacy v1 stop-hook skill extractor. v2 is a strict superset with instinct-based, project-scoped, hook-reliable learning. Do not invoke v1; route continuous learning, session learning, and pattern extraction requests to continuous-learning-v2."
-metadata:
-  origin: ECC
----
-
 # Continuous Learning Skill - DEPRECATED
 
 > **DEPRECATED 2026-04-28.** Use `continuous-learning-v2` instead. v2 is a strict superset: stop-hook observation becomes PreToolUse/PostToolUse observation, full skills become atomic instincts with confidence scoring, and global-only storage becomes project-scoped plus global promotion.
@@ -11512,16 +10933,6 @@ Homunculus v2 takes a more sophisticated approach:
 5. **Evolution path** - Cluster related instincts into skills/commands
 
 See: `docs/continuous-learning-v2-spec.md` for full spec.
-
-
----
-
----
-name: cost-aware-llm-pipeline
-description: Cost optimization patterns for LLM API usage — model routing by task complexity, budget tracking, retry logic, and prompt caching.
-metadata:
-  origin: ECC
----
 
 # Cost-Aware LLM Pipeline
 
@@ -11701,16 +11112,6 @@ def process(text: str, config: Config, tracker: CostTracker) -> tuple[Result, Co
 - Multi-model architectures that need intelligent routing
 - Production systems that need budget guardrails
 
-
----
-
----
-name: cost-tracking
-description: Track and report Claude Code token usage, spending, and budgets from the local ECC cost-tracker metrics log. Use when the user asks about costs, spending, usage, tokens, budgets, or cost breakdowns by model, session, or date.
-metadata:
-  origin: community
----
-
 # Cost Tracking
 
 Use this skill to analyze Claude Code cost and usage history from the metrics log
@@ -11801,16 +11202,6 @@ with four decimals, larger amounts with two.
 - `cost-aware-llm-pipeline` - Model-routing and budget-design patterns.
 - `token-budget-advisor` - Context and token-budget planning.
 - `strategic-compact` - Context compaction to reduce repeated token spend.
-
-
----
-
----
-name: council
-description: Convene a four-voice council for ambiguous decisions, tradeoffs, and go/no-go calls. Use when multiple valid paths exist and you need structured disagreement before choosing.
-metadata:
-  origin: ECC
----
 
 # Council
 
@@ -12009,16 +11400,6 @@ Likely council shape:
 - Critic focuses on support burden, expectation debt, and rollout confusion
 
 The value is not unanimity. The value is making the disagreement legible before choosing.
-
-
----
-
----
-name: cpp-coding-standards
-description: C++ coding standards based on the C++ Core Guidelines (isocpp.github.io). Use when writing, reviewing, or refactoring C++ code to enforce modern, safe, and idiomatic practices.
-metadata:
-  origin: ECC
----
 
 # C++ Coding Standards (C++ Core Guidelines)
 
@@ -12738,16 +12119,6 @@ Before marking C++ work complete:
 - [ ] `'\n'` instead of `std::endl` (SL.io.50)
 - [ ] No magic numbers (ES.45)
 
-
----
-
----
-name: cpp-testing
-description: Use only when writing/updating/fixing C++ tests, configuring GoogleTest/CTest, diagnosing failing or flaky tests, or adding coverage/sanitizers.
-metadata:
-  origin: ECC
----
-
 # C++ Testing (Agent Skill)
 
 Agent-focused testing workflow for modern C++ (C++17/20) using GoogleTest/GoogleMock with CMake/CTest.
@@ -13067,16 +12438,6 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size) {
 - **Catch2**: header-only, expressive matchers
 - **doctest**: lightweight, minimal compile overhead
 
-
----
-
----
-name: crosspost
-description: Multi-platform content distribution across X, LinkedIn, Threads, and Bluesky. Adapts content per platform using content-engine patterns. Never posts identical content cross-platform. Use when the user wants to distribute content across social platforms.
-metadata:
-  origin: ECC
----
-
 # Crosspost
 
 Distribute content across platforms without turning it into the same fake post in four costumes.
@@ -13182,16 +12543,6 @@ Before delivering:
 - `brand-voice` for reusable source-derived voice capture
 - `content-engine` for voice capture and source shaping
 - `x-api` for X publishing workflows
-
-
----
-
----
-name: csharp-testing
-description: C# and .NET testing patterns with xUnit, FluentAssertions, mocking, integration tests, and test organization best practices.
-metadata:
-  origin: ECC
----
 
 # C# Testing Patterns
 
@@ -13509,16 +12860,6 @@ dotnet test --filter "FullyQualifiedName~OrderService"
 dotnet watch test --project tests/MyApp.UnitTests/
 ```
 
-
----
-
----
-name: customer-billing-ops
-description: Operate customer billing workflows such as subscriptions, refunds, churn triage, billing-portal recovery, and plan analysis using connected billing tools like Stripe. Use when the user needs to help a customer, inspect subscription state, or manage revenue-impacting billing operations.
-metadata:
-  origin: ECC
----
-
 # Customer Billing Ops
 
 Use this skill for real customer operations, not generic payment API design.
@@ -13653,29 +12994,6 @@ PRODUCT GAP
 - "The right fix is a billing portal, not a custom dashboard yet"
 - "This looks like duplicate personal checkout, not a real team-seat purchase"
 - "Refund one duplicate charge, keep the remaining active subscription, then convert the customer to org billing later if needed"
-
-
----
-
----
-name: customs-trade-compliance
-description: >
-  Codified expertise for customs documentation, tariff classification, duty
-  optimization, restricted party screening, and regulatory compliance across
-  multiple jurisdictions. Informed by trade compliance specialists with 15+
-  years experience. Includes HS classification logic, Incoterms application,
-  FTA utilization, and penalty mitigation. Use when handling customs clearance,
-  tariff classification, trade compliance, import/export documentation, or
-  duty optimization.
-license: Apache-2.0
-version: 1.0.0
-homepage: https://github.com/affaan-m/everything-claude-code
-metadata:
-  origin: ECC
-  author: evos
-  clawdbot:
-    emoji: ""
----
 
 # Customs & Trade Compliance
 
@@ -13920,16 +13238,6 @@ Track these metrics monthly and trend quarterly:
 
 - Pair this skill with an internal HS classification log, broker escalation matrix, and a list of jurisdictions where your team has non-resident importer or FTZ coverage.
 - Record the valuation assumptions your organization uses for U.S., EU, and APAC lanes so duty calculations stay consistent across teams.
-
-
----
-
----
-name: dart-flutter-patterns
-description: Production-ready Dart and Flutter patterns covering null safety, immutable state, async composition, widget architecture, popular state management frameworks (BLoC, Riverpod, Provider), GoRouter navigation, Dio networking, Freezed code generation, and clean architecture.
-metadata:
-  origin: ECC
----
 
 # Dart/Flutter Patterns
 
@@ -14489,17 +13797,6 @@ testWidgets('CartBadge shows item count', (tester) async {
 - Skill: `flutter-dart-code-review` — comprehensive review checklist
 - Rules: `rules/dart/` — coding style, patterns, security, testing, hooks
 
-
----
-
----
-name: dashboard-builder
-description: Build monitoring dashboards that answer real operator questions for Grafana, SigNoz, and similar platforms. Use when turning metrics into a working dashboard instead of a vanity board.
-metadata:
-  origin: ECC direct-port adaptation
-version: "1.0.0"
----
-
 # Dashboard Builder
 
 Use this when the task is to build a dashboard people can operate from.
@@ -14601,16 +13898,6 @@ Every panel should answer a real question. If it does not, remove it.
 - `research-ops`
 - `backend-patterns`
 - `terminal-ops`
-
-
----
-
----
-name: data-scraper-agent
-description: Build a fully automated AI-powered data collection agent for any public source — job boards, prices, news, GitHub, sports, anything. Scrapes on a schedule, enriches data with a free LLM (Gemini Flash), stores results in Notion/Sheets/Supabase, and learns from user feedback. Runs 100% free on GitHub Actions. Use when the user wants to monitor, collect, or track any public data automatically.
-metadata:
-  origin: community
----
 
 # Data Scraper Agent
 
@@ -15371,17 +14658,6 @@ A complete working agent built with this exact architecture would scrape 4+ sour
 batch Gemini calls, learn from Applied/Rejected decisions stored in Notion, and run
 100% free on GitHub Actions. Follow Steps 1–9 above to build your own.
 
-
----
-
----
-name: data-throughput-accelerator
-description: Use when large data ingestion, backfill, export, ETL, warehouse loading, manifest catch-up, or table synchronization needs to become much faster while preserving data correctness.
-metadata:
-  origin: ECC
-tools: Read, Write, Edit, Bash, Grep, Glob
----
-
 # Data Throughput Accelerator
 
 Use this skill when the bottleneck is moving, transforming, or saving lots of
@@ -15447,16 +14723,6 @@ Data throughput result:
 - Do not call a pipeline complete until the target tables and manifest agree.
 - For finance, healthcare, regulated, or customer-impacting data, preserve
   replay evidence and approval gates.
-
-
----
-
----
-name: database-migrations
-description: Database migration best practices for schema changes, data migrations, rollbacks, and zero-downtime deployments across PostgreSQL, MySQL, and common ORMs (Prisma, Drizzle, Kysely, Django, TypeORM, golang-migrate).
-metadata:
-  origin: ECC
----
 
 # Database Migration Patterns
 
@@ -15882,16 +15148,6 @@ Day 7: Migration drops old status column
 | Schema + data in one migration | Hard to rollback, long transactions | Separate migrations |
 | Dropping column before removing code | Application errors on missing column | Remove code first, drop column next deploy |
 
-
----
-
----
-name: deep-research
-description: Multi-source deep research using firecrawl and exa MCPs. Searches the web, synthesizes findings, and delivers cited reports with source attribution. Use when the user wants thorough research on any topic with evidence and citations.
-metadata:
-  origin: ECC
----
-
 # Deep Research
 
 > **Drift-prone skill.** Firecrawl/Exa MCP tool names, quotas, and result
@@ -16045,17 +15301,6 @@ Each agent searches, reads sources, and returns findings. The main session synth
 "What's happening with the US housing market right now?"
 "Investigate the competitive landscape for AI code editors"
 ```
-
-
----
-
----
-name: defi-amm-security
-description: Security checklist for Solidity AMM contracts, liquidity pools, and swap flows. Covers reentrancy, CEI ordering, donation or inflation attacks, oracle manipulation, slippage, admin controls, and integer math.
-metadata:
-  origin: ECC direct-port adaptation
-version: "1.0.0"
----
 
 # DeFi AMM Security
 
@@ -16216,16 +15461,6 @@ echidna-test . --contract YourAMM --config echidna.yaml
 
 forge test --fuzz-runs 10000
 ```
-
-
----
-
----
-name: deployment-patterns
-description: Deployment workflows, CI/CD pipeline patterns, Docker containerization, health checks, rollback strategies, and production readiness checklists for web applications.
-metadata:
-  origin: ECC
----
 
 # Deployment Patterns
 
@@ -16649,16 +15884,6 @@ Before any production deployment:
 - [ ] Runbook for common failure scenarios
 - [ ] On-call rotation and escalation path defined
 
-
----
-
----
-name: design-system
-description: Use this skill to generate or audit design systems, check visual consistency, and review PRs that touch styling.
-metadata:
-  origin: ECC
----
-
 # Design System — Generate & Audit Visual Systems
 
 ## When to Use
@@ -16735,16 +15960,6 @@ Identifies generic AI-generated design patterns:
 ```
 /design-system slop-check
 ```
-
-
----
-
----
-name: django-celery
-description: Django + Celery async task patterns — configuration, task design, beat scheduling, retries, canvas workflows, monitoring, and testing. Use when adding background jobs, scheduled tasks, or async processing to a Django app.
-metadata:
-  origin: ECC
----
 
 # Django + Celery Async Task Patterns
 
@@ -17197,16 +16412,6 @@ def charge_and_fulfill(order_id):
 - `django-patterns` — ORM, service layer, and project structure
 - `django-tdd` — Testing Django models, views, and services
 - `python-testing` — pytest configuration and fixtures
-
-
----
-
----
-name: django-patterns
-description: Django architecture patterns, REST API design with DRF, ORM best practices, caching, signals, middleware, and production-grade Django apps.
-metadata:
-  origin: ECC
----
 
 # Django Development Patterns
 
@@ -17937,16 +17142,6 @@ Product.objects.filter(stock=0).delete()
 
 Remember: Django provides many shortcuts, but for production applications, structure and organization matter more than concise code. Build for maintainability.
 
-
----
-
----
-name: django-security
-description: Django security best practices, authentication, authorization, CSRF protection, SQL injection prevention, XSS prevention, and secure deployment configurations.
-metadata:
-  origin: ECC
----
-
 # Django Security Best Practices
 
 Comprehensive security guidelines for Django applications to protect against common vulnerabilities.
@@ -18534,16 +17729,6 @@ LOGGING = {
 | Updates | Keep Django and dependencies updated |
 
 Remember: Security is a process, not a product. Regularly review and update your security practices.
-
-
----
-
----
-name: django-tdd
-description: Django testing strategies with pytest-django, TDD methodology, factory_boy, mocking, coverage, and testing Django REST Framework APIs.
-metadata:
-  origin: ECC
----
 
 # Django Testing with TDD
 
@@ -19269,16 +18454,6 @@ open htmlcov/index.html
 
 Remember: Tests are documentation. Good tests explain how your code should work. Keep them simple, readable, and maintainable.
 
-
----
-
----
-name: django-verification
-description: "Verification loop for Django projects: migrations, linting, tests with coverage, security scans, and deployment readiness checks before release or PR."
-metadata:
-  origin: ECC
----
-
 # Django Verification Loop
 
 Run before PRs, after major changes, and pre-deploy to ensure Django application quality and security.
@@ -19743,16 +18918,6 @@ jobs:
 
 Remember: Automated verification catches common issues but doesn't replace manual code review and testing in staging environment.
 
-
----
-
----
-name: dmux-workflows
-description: Multi-agent orchestration using dmux (tmux pane manager for AI agents). Patterns for parallel agent workflows across Claude Code, Codex, OpenCode, and other harnesses. Use when running multiple agent sessions in parallel or coordinating multi-agent development workflows.
-metadata:
-  origin: ECC
----
-
 # dmux Workflows
 
 Orchestrate parallel AI agent sessions using dmux, a tmux pane manager for agent harnesses.
@@ -19938,16 +19103,6 @@ Use `seedPaths` when workers need access to dirty or untracked local files that 
 - **Merge conflicts:** Use git worktrees to isolate file changes per pane.
 - **High token usage:** Reduce number of parallel panes. Each pane is a full agent session.
 - **tmux not found:** Install with `brew install tmux` (macOS) or `apt install tmux` (Linux).
-
-
----
-
----
-name: docker-patterns
-description: Docker and Docker Compose patterns for local development, container security, networking, volume strategies, and multi-service orchestration.
-metadata:
-  origin: ECC
----
 
 # Docker Patterns
 
@@ -20308,16 +19463,6 @@ docker network inspect <project>_default
 # Use .env files (gitignored) or Docker secrets
 ```
 
-
----
-
----
-name: documentation-lookup
-description: Use up-to-date library and framework docs via Context7 MCP instead of training data. Activates for setup questions, API references, code examples, or when the user names a framework (e.g. React, Next.js, Prisma).
-metadata:
-  origin: ECC
----
-
 # Documentation Lookup (Context7)
 
 When the user asks about libraries, frameworks, or APIs, fetch current documentation via the Context7 MCP (tools `resolve-library-id` and `query-docs`) instead of relying on training data.
@@ -20402,16 +19547,6 @@ Limit: do not call query-docs (or resolve-library-id) more than 3 times per ques
 - **Version awareness**: When users mention versions, use version-specific library IDs from the resolve step when available.
 - **Prefer official sources**: When multiple matches exist, prefer official or primary packages over community forks.
 - **No sensitive data**: Redact API keys, passwords, tokens, and other secrets from any query sent to Context7. Treat the user's question as potentially containing secrets before passing it to resolve-library-id or query-docs.
-
-
----
-
----
-name: dotnet-patterns
-description: Idiomatic C# and .NET patterns, conventions, dependency injection, async/await, and best practices for building robust, maintainable .NET applications.
-metadata:
-  origin: ECC
----
 
 # .NET Development Patterns
 
@@ -20729,16 +19864,6 @@ public async Task<ProcessResult> ProcessPaymentAsync(
 | Mutable `static` state | Use DI scoping or `ConcurrentDictionary` |
 | `string.Format` in loops | Use `StringBuilder` or interpolated string handlers |
 
-
----
-
----
-name: dynamic-workflow-mode
-description: "Design task-local harnesses, eval gates, and reusable skill extraction for Claude dynamic workflow mode and other adaptive agent harnesses."
-metadata:
-  origin: ECC
----
-
 # Dynamic Workflow Mode
 
 Use this skill when a coding agent can generate or adapt a task-local harness instead of only following a static command flow. The goal is to turn dynamic workflow mode into a disciplined system: temporary harnesses for one-off work, shared skill extraction for repeated work, and observable control pane checkpoints for teams.
@@ -20856,16 +19981,6 @@ Finish with:
 - The eval commands and results.
 - The control pane or handoff artifact path.
 - The next reusable extraction candidate.
-
-
----
-
----
-name: e2e-testing
-description: Playwright E2E testing patterns, Page Object Model, configuration, CI/CD integration, artifact management, and flaky test strategies.
-metadata:
-  origin: ECC
----
 
 # E2E Testing Patterns
 
@@ -21188,16 +20303,6 @@ test('trade execution', async ({ page }) => {
 })
 ```
 
-
----
-
----
-name: ecc-guide
-description: Guide users through ECC's current agents, skills, commands, hooks, rules, install profiles, and project onboarding by reading the live repository surface before answering.
-metadata:
-  origin: community
----
-
 # ECC Guide
 
 Use this skill when a user needs help understanding, navigating, installing, or choosing parts of Everything Claude Code.
@@ -21382,16 +20487,6 @@ Needs approval before apply: <yes/no>
 - `/skill-create`: generate a new skill from local git history
 - `/security-scan`: inspect Claude/OpenCode configuration security
 
-
----
-
----
-name: ecc-tools-cost-audit
-description: Evidence-first ECC Tools burn and billing audit workflow. Use when investigating runaway PR creation, quota bypass, premium-model leakage, duplicate jobs, or GitHub App cost spikes in the ECC Tools repo.
-metadata:
-  origin: ECC
----
-
 # ECC Tools Cost Audit
 
 Use this skill when the user suspects the ECC Tools GitHub App is burning cost, over-creating PRs, bypassing usage limits, or routing free users into premium analysis paths.
@@ -21547,16 +20642,6 @@ If the system can spend tokens and then fail on PR creation, file update, or bra
 - proving commands are named
 - final status distinguishes local change, verification, push, and deployment
 
-
----
-
----
-name: email-ops
-description: Evidence-first mailbox triage, drafting, send verification, and sent-mail-safe follow-up workflow for ECC. Use when the user wants to organize email, draft or send through the real mail surface, or prove what landed in Sent.
-metadata:
-  origin: ECC
----
-
 # Email Ops
 
 Use this when the real task is mailbox work: triage, drafting, replying, sending, or proving a message landed in Sent.
@@ -21672,29 +20757,6 @@ NEXT STEP
 - the response names the account and thread or recipient
 - any send claim includes Sent proof or an explicit client-side confirmation
 - the final state is one of drafted / sent / blocked / awaiting verification
-
-
----
-
----
-name: energy-procurement
-description: >
-  Codified expertise for electricity and gas procurement, tariff optimization,
-  demand charge management, renewable PPA evaluation, and multi-facility energy
-  cost management. Informed by energy procurement managers with 15+ years
-  experience at large commercial and industrial consumers. Includes market
-  structure analysis, hedging strategies, load profiling, and sustainability
-  reporting frameworks. Use when procuring energy, optimizing tariffs, managing
-  demand charges, evaluating PPAs, or developing energy strategies.
-license: Apache-2.0
-version: 1.0.0
-homepage: https://github.com/affaan-m/everything-claude-code
-metadata:
-  origin: ECC
-  author: evos
-  clawdbot:
-    emoji: ""
----
 
 # Energy Procurement
 
@@ -21905,16 +20967,6 @@ Track monthly, review quarterly with finance and sustainability:
 - Maintain an internal hedge policy, approved counterparty list, and tariff-change calendar alongside this skill.
 - Keep facility-specific load shapes and utility contract metadata close to the planning workflow so recommendations stay grounded in real demand patterns.
 
-
----
-
----
-name: enterprise-agent-ops
-description: Operate long-lived agent workloads with observability, security boundaries, and lifecycle management.
-metadata:
-  origin: ECC
----
-
 # Enterprise Agent Ops
 
 Use this skill for cloud-hosted or continuously running agent systems that need operational controls beyond single CLI sessions.
@@ -21959,16 +21011,6 @@ This skill pairs with:
 - systemd services
 - container orchestrators
 - CI/CD gates
-
-
----
-
----
-name: error-handling
-description: Patterns for robust error handling across TypeScript, Python, and Go. Covers typed errors, error boundaries, retries, circuit breakers, and user-facing error messages.
-metadata:
-  origin: ECC
----
 
 # Error Handling Patterns
 
@@ -22341,17 +21383,6 @@ Before merging any code that touches error handling:
 - [ ] Retry logic only retries retriable errors (not 4xx client errors)
 - [ ] React components are wrapped in `ErrorBoundary` for rendering errors
 
-
----
-
----
-name: eval-harness
-description: Formal evaluation framework for Claude Code sessions implementing eval-driven development (EDD) principles
-metadata:
-  origin: ECC
-tools: Read, Write, Edit, Bash, Grep, Glob
----
-
 # Eval Harness Skill
 
 A formal evaluation framework for Claude Code sessions, implementing eval-driven development (EDD) principles.
@@ -22615,14 +21646,6 @@ Recommended thresholds:
 - `.claude/evals/<feature>.md` definition
 - `.claude/evals/<feature>.log` run history
 - `docs/releases/<version>/eval-summary.md` release snapshot
-
-
----
-
----
-name: everything-claude-code-conventions
-description: Development conventions and patterns for everything-claude-code. JavaScript project with conventional commits.
----
 
 # Everything Claude Code Conventions
 
@@ -23062,14 +22085,6 @@ Based on analysis of the codebase, follow these practices:
 
 *This skill was auto-generated by [ECC Tools](https://ecc.tools). Review and customize as needed for your team.*
 
-
----
-
----
-name: everything-claude-code
-description: Development conventions and patterns for everything-claude-code. JavaScript project with conventional commits.
----
-
 # Everything Claude Code Conventions
 
 > Generated from [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) on 2026-03-20
@@ -23508,17 +22523,6 @@ Based on analysis of the codebase, follow these practices:
 
 *This skill was auto-generated by [ECC Tools](https://ecc.tools). Review and customize as needed for your team.*
 
-
----
-
----
-name: evm-token-decimals
-description: Prevent silent decimal mismatch bugs across EVM chains. Covers runtime decimal lookup, chain-aware caching, bridged-token precision drift, and safe normalization for bots, dashboards, and DeFi tools.
-metadata:
-  origin: ECC direct-port adaptation
-version: "1.0.0"
----
-
 # EVM Token Decimals
 
 Silent decimal mismatches are one of the easiest ways to ship balances or USD values that are off by orders of magnitude without throwing an error.
@@ -23643,16 +22647,6 @@ cast call <token_address> "decimals()(uint8)" --rpc-url <rpc>
 - Re-query decimals after bridging or wrapper changes
 - Normalize internal accounting consistently before comparison or pricing
 
-
----
-
----
-name: exa-search
-description: Neural search via Exa MCP for web, code, and company research. Use when the user needs web search, code examples, company intel, people lookup, or AI-powered deep research with Exa's neural search engine.
-metadata:
-  origin: ECC
----
-
 # Exa Search
 
 > **Drift-prone skill.** Exa MCP tool names, parameters, and account limits can
@@ -23754,16 +22748,6 @@ get_code_context_exa(query: "WebAssembly component model examples", tokensNum: 4
 
 - `deep-research` — Full research workflow using firecrawl + exa together
 - `market-research` — Business-oriented research with decision frameworks
-
-
----
-
----
-name: fal-ai-media
-description: Unified media generation via fal.ai MCP — image, video, and audio. Covers text-to-image (Nano Banana), text/image-to-video (Seedance, Kling, Veo 3), text-to-speech (CSM-1B), and video-to-audio (ThinkSound). Use when the user wants to generate images, videos, or audio with AI.
-metadata:
-  origin: ECC
----
 
 # fal.ai Media Generation
 
@@ -24047,16 +23031,6 @@ models()
 - `videodb` — Video processing, editing, and streaming
 - `video-editing` — AI-powered video editing workflows
 - `content-engine` — Content creation for social platforms
-
-
----
-
----
-name: fastapi-patterns
-description: FastAPI best practices covering project structure, Pydantic v2 schemas, dependency injection, async handlers, authentication, authorization, transactional service layers, and testing with httpx and pytest.
-metadata:
-  origin: ECC
----
 
 # FastAPI Patterns
 
@@ -24566,16 +23540,6 @@ async def list_items(db: AsyncSession = Depends(get_db)):
 - Enforce deterministic sorting (e.g., `.order_by(Model.id)`) on all offset/limit paginated endpoints to avoid data skips.
 - Isolate authorization checks from core authentication dependencies to provide precise REST status signals (`401` vs `403`).
 
-
----
-
----
-name: finance-billing-ops
-description: Evidence-first revenue, pricing, refunds, team-billing, and billing-model truth workflow for ECC. Use when the user wants a sales snapshot, pricing comparison, duplicate-charge diagnosis, or code-backed billing reality instead of generic payments advice.
-metadata:
-  origin: ECC
----
-
 # Finance Billing Ops
 
 Use this when the user wants to understand money, pricing, refunds, team-seat logic, or whether the product actually behaves the way the website and sales copy imply.
@@ -24697,16 +23661,6 @@ PRODUCT GAP
 - the answer includes a live-data statement or snapshot timestamp
 - product-truth claims are code-backed
 - customer-impact and broader pricing/product conclusions are separated cleanly
-
-
----
-
----
-name: flox-environments
-description: "Create reproducible, cross-platform (macOS/Linux) development environments with Flox, a declarative Nix-based environment manager. Use when setting up project toolchains for any language, installing system-level dependencies (compilers, databases, native libs like openssl/BLAS), pinning exact package versions for a team, running local services (PostgreSQL, Redis, Kafka), onboarding developers with one command, or solving 'works on my machine' problems — including agent/vibe-coding setups that need project-scoped tools without sudo. Also use when the user mentions .flox/, manifest.toml, flox activate, or FloxHub."
-metadata:
-  origin: Flox
----
 
 # Flox Environments
 
@@ -25199,16 +24153,6 @@ The following skills are available as part of the [Flox Claude Code plugin](http
 
 Learn more and install at [flox.dev/docs](https://flox.dev/docs/install-flox/install/)
 
-
----
-
----
-name: flutter-dart-code-review
-description: Library-agnostic Flutter/Dart code review checklist covering widget best practices, state management patterns (BLoC, Riverpod, Provider, GetX, MobX, Signals), Dart idioms, performance, accessibility, security, and clean architecture.
-metadata:
-  origin: ECC
----
-
 # Flutter/Dart Code Review Best Practices
 
 Comprehensive, library-agnostic checklist for reviewing Flutter/Dart applications. These principles apply regardless of which state management solution, routing library, or DI framework is used.
@@ -25639,14 +24583,6 @@ The table below maps universal principles to their implementation in popular sol
 - [Flutter Error Handling](https://docs.flutter.dev/testing/errors)
 - [Flutter State Management Options](https://docs.flutter.dev/data-and-backend/state-mgmt/options)
 
-
----
-
----
-name: foundation-models-on-device
-description: Apple FoundationModels framework for on-device LLM — text generation, guided generation with @Generable, tool calling, and snapshot streaming in iOS 26+.
----
-
 # FoundationModels: On-Device LLM (iOS 26)
 
 Patterns for integrating Apple's on-device language model into apps using the FoundationModels framework. Covers text generation, structured output with `@Generable`, custom tool calling, and snapshot streaming — all running on-device for privacy and offline support.
@@ -25885,19 +24821,6 @@ var body: some View {
 - AI-assisted features that must work offline
 - Streaming UI that progressively shows generated content
 - Domain-specific AI actions via tool calling (search, compute, lookup)
-
-
----
-
----
-name: frontend-a11y
-description: >
-  Accessibility patterns for React and Next.js — semantic HTML, ARIA attributes,
-  form labeling, keyboard navigation, focus management, and screen reader support.
-  Use when building any interactive UI component or form.
-metadata:
-  origin: community
----
 
 # Frontend Accessibility Patterns
 
@@ -26336,16 +25259,6 @@ Before submitting any interactive component for review:
 - `design-system` — design token and component consistency
 - `motion-ui` — animation patterns with accessibility considerations
 
-
----
-
----
-name: frontend-design-direction
-description: Set an ECC-specific frontend design direction for production UI work. Use when building or improving websites, dashboards, applications, components, landing pages, visual tools, or any web UI that needs stronger product-specific design judgment.
-metadata:
-  origin: community
----
-
 # Frontend Design Direction
 
 Use this skill when the work is not just making UI function, but making it feel
@@ -26432,16 +25345,6 @@ needs repeated daily use.
 - Motion improves orientation and does not mask sluggishness.
 - The result matches the repo's existing frontend conventions unless there is a
   clear reason to depart.
-
-
----
-
----
-name: frontend-patterns
-description: Frontend development patterns for React, Next.js, state management, performance optimization, and UI best practices.
-metadata:
-  origin: ECC
----
 
 # Frontend Development Patterns
 
@@ -27094,16 +25997,6 @@ export function Modal({ isOpen, onClose, children }: ModalProps) {
 
 **Remember**: Modern frontend patterns enable maintainable, performant user interfaces. Choose patterns that fit your project complexity.
 
-
----
-
----
-name: frontend-slides
-description: Create stunning, animation-rich HTML presentations from scratch or by converting PowerPoint files. Use when the user wants to build a presentation, convert a PPT/PPTX to web, or create slides for a talk/pitch. Helps non-designers discover their aesthetic through visual exploration rather than abstract choices.
-metadata:
-  origin: ECC
----
-
 # Frontend Slides
 
 Create zero-dependency, animation-rich HTML presentations that run entirely in the browser.
@@ -27282,16 +26175,6 @@ Use these maxima unless the user explicitly asks for denser slides and readabili
 - animation is meaningful, not noisy
 - reduced motion is respected
 - file paths and customization points are explained at handoff
-
-
----
-
----
-name: fsharp-testing
-description: F# testing patterns with xUnit, FsUnit, Unquote, FsCheck property-based testing, integration tests, and test organization best practices.
-metadata:
-  origin: ECC
----
 
 # F# Testing Patterns
 
@@ -27568,17 +26451,6 @@ dotnet test --filter "FullyQualifiedName~OrderService"
 dotnet watch test --project tests/MyApp.Tests/
 ```
 
-
----
-
----
-name: gan-style-harness
-description: "GAN-inspired Generator-Evaluator agent harness for building high-quality applications autonomously. Based on Anthropic's March 2026 harness design paper."
-metadata:
-  origin: ECC-community
-tools: Read, Write, Edit, Bash, Grep, Glob, Task
----
-
 # GAN-Style Harness Skill
 
 > Inspired by [Anthropic's Harness Design for Long-Running Application Development](https://www.anthropic.com/engineering/harness-design-long-running-apps) (March 24, 2026)
@@ -27851,16 +26723,6 @@ Based on Anthropic's published results:
 - [Martin Fowler: Harness Engineering](https://martinfowler.com/articles/exploring-gen-ai/harness-engineering.html) — Broader industry context
 - [OpenAI: Harness Engineering](https://openai.com/index/harness-engineering/) — OpenAI's parallel work
 
-
----
-
----
-name: gateguard
-description: Fact-forcing gate that blocks Edit/Write/Bash (including MultiEdit) and demands concrete investigation (importers, data schemas, user instruction) before allowing the action. Measurably improves output quality by +2.25 points vs ungated agents.
-metadata:
-  origin: community
----
-
 # GateGuard — Fact-Forcing Pre-Action Gate
 
 A PreToolUse hook that forces Claude to investigate before editing. Instead of self-evaluation ("are you sure?"), it demands concrete facts. The act of investigation creates awareness that self-evaluation never did.
@@ -27987,14 +26849,6 @@ This adds `.gateguard.yml` for per-project configuration (custom messages, ignor
 
 - `safety-guard` — Runtime safety checks (complementary, not overlapping)
 - `code-reviewer` — Post-edit review (GateGuard is pre-edit investigation)
-
-
----
-
----
-name: generating-python-installer
-description: "Commercial-grade Python installer expert for Windows: Nuitka extreme compilation, dist slimming, DLL footprint analysis, and Inno Setup packaging to ship the smallest, fastest installers. Use only for advanced packaging/optimization (minimal size, fast startup), not basic script-to-exe conversion. 中文触发：Nuitka 极限优化、Python 商业打包、极限编译 Python、dist 瘦身、DLL 分析、最小安装包、最快启动、商业级打包风格"
----
 
 # Generating Python Installer (Commercial-Grade)
 
@@ -28812,16 +27666,6 @@ Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#MyAppName}}
 
 **基于 参考项目实战经验优化，助你打造商业级安装包！**
 
-
----
-
----
-name: gget
-description: gget CLI and Python workflow for quick genomic database queries, sequence lookup, BLAST-style searches, enrichment checks, and reproducible bioinformatics evidence logs.
-metadata:
-  origin: community
----
-
 # gget
 
 Use this skill when a task needs quick bioinformatics lookup across genomic
@@ -28982,16 +27826,6 @@ Also record:
 - [gget updates](https://pachterlab.github.io/gget/en/updates.html)
 - [gget GitHub repository](https://github.com/pachterlab/gget)
 - [gget Bioinformatics paper](https://doi.org/10.1093/bioinformatics/btac836)
-
-
----
-
----
-name: git-workflow
-description: Git workflow patterns including branching strategies, commit conventions, merge vs rebase, conflict resolution, and collaborative development best practices for teams of all sizes.
-metadata:
-  origin: ECC
----
 
 # Git Workflow Patterns
 
@@ -29703,16 +28537,6 @@ git add node_modules/
 | Undo last commit | `git reset --soft HEAD~1` |
 | Revert commit | `git revert HEAD` |
 
-
----
-
----
-name: github-ops
-description: GitHub repository operations, automation, and management. Issue triage, PR management, CI/CD operations, release management, and security monitoring using the gh CLI. Use when the user wants to manage GitHub issues, PRs, CI status, releases, contributors, stale items, or any GitHub operational task beyond simple git commands.
-metadata:
-  origin: ECC
----
-
 # GitHub Operations
 
 Manage GitHub repositories with a focus on community health, CI reliability, and contributor experience.
@@ -29851,16 +28675,6 @@ Before completing any GitHub operations task:
 - CI failures have been investigated (not just re-run)
 - releases include accurate changelogs
 - security alerts are acknowledged and tracked
-
-
----
-
----
-name: golang-patterns
-description: Idiomatic Go patterns, best practices, and conventions for building robust, efficient, and maintainable Go applications.
-metadata:
-  origin: ECC
----
 
 # Go Development Patterns
 
@@ -30530,16 +29344,6 @@ func (c *Counter) Increment() { c.n++ }        // Pointer receiver
 ```
 
 **Remember**: Go code should be boring in the best way - predictable, consistent, and easy to understand. When in doubt, keep it simple.
-
-
----
-
----
-name: golang-testing
-description: Go testing patterns including table-driven tests, subtests, benchmarks, fuzzing, and test coverage. Follows TDD methodology with idiomatic Go practices.
-metadata:
-  origin: ECC
----
 
 # Go Testing Patterns
 
@@ -31256,16 +30060,6 @@ test:
 
 **Remember**: Tests are documentation. They show how your code is meant to be used. Write them clearly and keep them up to date.
 
-
----
-
----
-name: google-workspace-ops
-description: Operate across Google Drive, Docs, Sheets, and Slides as one workflow surface for plans, trackers, decks, and shared documents. Use when the user needs to find, summarize, edit, migrate, or clean up Google Workspace assets without dropping to raw tool calls.
-metadata:
-  origin: ECC
----
-
 # Google Workspace Ops
 
 This skill is for operating shared docs, spreadsheets, and decks as working systems, not just editing one file in isolation.
@@ -31355,17 +30149,6 @@ FOLLOW-UPS
 - "Clean up this customer spreadsheet and show me the churn-risk rows"
 - "Import this deck into Slides and make it presentable"
 - "Find the current tracker, not the stale duplicate"
-
-
----
-
----
-name: healthcare-cdss-patterns
-description: Clinical Decision Support System (CDSS) development patterns. Drug interaction checking, dose validation, clinical scoring (NEWS2, qSOFA), alert severity classification, and integration into EMR workflows.
-metadata:
-  origin: Health1 Super Speciality Hospitals — contributed by Dr. Keyur Patel
-version: "1.0.0"
----
 
 # Healthcare CDSS Development Patterns
 
@@ -31606,17 +30389,6 @@ const result = calculateNEWS2({
 // { total: 13, risk: 'high', escalation: 'Urgent clinical review. Consider ICU.' }
 ```
 
-
----
-
----
-name: healthcare-emr-patterns
-description: EMR/EHR development patterns for healthcare applications. Clinical safety, encounter workflows, prescription generation, clinical decision support integration, and accessibility-first UI for medical data entry.
-metadata:
-  origin: Health1 Super Speciality Hospitals — contributed by Dr. Keyur Patel
-version: "1.0.0"
----
-
 # Healthcare EMR Development Patterns
 
 Patterns for building Electronic Medical Record (EMR) and Electronic Health Record (EHR) systems. Prioritizes patient safety, clinical accuracy, and practitioner efficiency.
@@ -31769,17 +30541,6 @@ Encounter #E-2024-0891 signed by Dr. Shah at 14:30
   → New record E-2024-0891-A1 linked to original
   → Timeline shows both: original encounter + addendum with timestamps
 ```
-
-
----
-
----
-name: healthcare-eval-harness
-description: Patient safety evaluation harness for healthcare application deployments. Automated test suites for CDSS accuracy, PHI exposure, clinical workflow integrity, and integration compliance. Blocks deployments on safety failures.
-metadata:
-  origin: Health1 Super Speciality Hospitals — contributed by Dr. Keyur Patel
-version: "1.0.0"
----
 
 # Healthcare Eval Harness — Patient Safety Verification
 
@@ -31982,17 +30743,6 @@ jq '{
 ### Verdict: SAFE TO DEPLOY
 ```
 
-
----
-
----
-name: healthcare-phi-compliance
-description: Protected Health Information (PHI) and Personally Identifiable Information (PII) compliance patterns for healthcare applications. Covers data classification, access control, audit trails, encryption, and common leak vectors.
-metadata:
-  origin: Health1 Super Speciality Hospitals — contributed by Dr. Keyur Patel
-version: "1.0.0"
----
-
 # Healthcare PHI/PII Compliance Patterns
 
 Patterns for protecting patient data, clinician data, and financial data in healthcare applications. Applicable to HIPAA (US), DISHA (India), GDPR (EU), and general healthcare data protection.
@@ -32132,16 +30882,6 @@ console.log('Processing record:', patient.id);
 // Note: even patient.id should be an opaque UUID, not a medical record number
 ```
 
-
----
-
----
-name: hermes-imports
-description: Convert local Hermes operator workflows into sanitized ECC skills and release-pack artifacts. Use when preparing a Hermes workflow for public ECC reuse without leaking private workspace state, credentials, or local-only paths.
-metadata:
-  origin: ECC
----
-
 # Hermes Imports
 
 Use this skill when turning a repeated Hermes workflow into something safe to ship in ECC.
@@ -32224,16 +30964,6 @@ Return:
 - private inputs removed
 - remaining risks
 - files that should be created or updated
-
-
----
-
----
-name: hexagonal-architecture
-description: Design, implement, and refactor Ports & Adapters systems with clear domain boundaries, dependency inversion, and testable use-case orchestration across TypeScript, Java, Kotlin, and Go services.
-metadata:
-  origin: ECC
----
 
 # Hexagonal Architecture
 
@@ -32506,17 +31236,6 @@ Use the same boundary rules across ecosystems; only syntax and wiring style chan
 - Refactoring starts from one vertical slice with behavior-preserving tests.
 - Language/framework specifics stay in adapters, never in domain rules.
 
-
----
-
----
-name: hipaa-compliance
-description: HIPAA-specific entrypoint for healthcare privacy and security work. Use when a task is explicitly framed around HIPAA, PHI handling, covered entities, BAAs, breach posture, or US healthcare compliance requirements.
-metadata:
-  origin: ECC direct-port adaptation
-version: "1.0.0"
----
-
 # HIPAA Compliance
 
 Use this as the HIPAA-specific entrypoint when a task is clearly about US healthcare compliance. This skill intentionally stays thin and canonical:
@@ -32588,16 +31307,6 @@ Response pattern:
 - `healthcare-emr-patterns`
 - `healthcare-eval-harness`
 - `security-review`
-
-
----
-
----
-name: homelab-network-readiness
-description: Readiness checklist for homelab VLAN segmentation, local DNS filtering, and WireGuard-style remote access before changing router, firewall, DHCP, or VPN configuration.
-metadata:
-  origin: community
----
 
 # Homelab Network Readiness
 
@@ -32763,16 +31472,6 @@ Prefer small, reversible changes:
 - Skill: `network-config-validation`
 - Skill: `network-interface-health`
 
-
----
-
----
-name: homelab-network-setup
-description: Practical home and homelab network planning for gateways, switches, access points, IP ranges, DHCP reservations, DNS, cabling, and common beginner mistakes.
-metadata:
-  origin: community
----
-
 # Homelab Network Setup
 
 Use this skill to design a home or small-lab network that can grow without
@@ -32896,16 +31595,6 @@ Goal: Prepare for future segmentation without enabling it immediately.
 
 - Skill: `network-interface-health`
 - Skill: `network-config-validation`
-
-
----
-
----
-name: homelab-pihole-dns
-description: Pi-hole installation, blocklist management, DNS-over-HTTPS setup, DHCP integration, local DNS records, and troubleshooting broken DNS resolution on a home network.
-metadata:
-  origin: community
----
 
 # Homelab Pi-hole DNS
 
@@ -33175,16 +31864,6 @@ pihole -g
 - homelab-network-setup
 - homelab-vlan-segmentation
 - homelab-wireguard-vpn
-
-
----
-
----
-name: homelab-vlan-segmentation
-description: Segmenting home networks into VLANs for IoT, guest, trusted, and server traffic using UniFi, pfSense/OPNsense, and MikroTik — including switch trunk config, firewall rules, and wireless SSID mapping.
-metadata:
-  origin: community
----
 
 # Homelab VLAN Segmentation
 
@@ -33492,16 +32171,6 @@ add chain=forward src-address=192.168.20.0/24 dst-address=192.168.10.0/24 \
 - homelab-pihole-dns
 - homelab-wireguard-vpn
 
-
----
-
----
-name: homelab-wireguard-vpn
-description: WireGuard VPN server setup, peer configuration, key generation, split tunneling vs full tunnel routing, and remote access to a home network from mobile and laptop clients.
-metadata:
-  origin: community
----
-
 # Homelab WireGuard VPN
 
 WireGuard is a fast, modern VPN protocol. It is the right choice for remote access to a
@@ -33802,14 +32471,6 @@ sudo wg-quick down wg0 && sudo wg-quick up wg0
 - homelab-vlan-segmentation
 - homelab-pihole-dns
 
-
----
-
----
-name: hookify-rules
-description: This skill should be used when the user asks to create a hookify rule, write a hook rule, configure hookify, add a hookify rule, or needs guidance on hookify rule syntax and patterns.
----
-
 # Writing Hookify Rules
 
 ## Overview
@@ -33933,17 +32594,6 @@ pattern: dangerous_command
 ---
 Warning message here
 ```
-
-
----
-
----
-name: inherit-legacy-style
-description: Legacy-project style inheritance skill. Use when the user types /inherit-legacy-style, or when onboarding an AI coding agent onto a hand-written legacy project and you need to prevent "style drift" (the model imposing its pretrained mainstream idioms onto the project). Language- and framework-agnostic — it aligns meta-architecture only, not syntax. Once run, it becomes a behavioral constraint on all subsequent coding tasks. Do NOT use for pure research or one-off questions unrelated to code-style alignment.
-metadata:
-  origin: community
-allowed-tools: Read, Glob, Grep, Bash, Edit, Write, AskUserQuestion
----
 
 # Inherit Legacy Style
 
@@ -34094,14 +32744,6 @@ This skill auto-detects whether it's a first-time or incremental run via `.ai-st
 3. **Enforcing DONTs via CLAUDE.md**
    - User: "Make sure all new code stays consistent with the project's rules."
    - Action: Soft hook installed → `.ai-style-rules.md` auto-loaded every session → every code-writing task opens with compliance declaration, reusing exemplar patterns and avoiding DONTs.
-
-
----
-
----
-name: intent-driven-development
-description: Turn ambiguous or high-impact product and engineering changes into scoped, verifiable acceptance criteria before or alongside implementation. Use when a user asks to clarify a feature, define acceptance criteria, de-risk a security/data/migration/integration change, prepare implementation requirements for another agent, or make a complex request testable. Do not trigger for trivial edits, straightforward fixes, active debugging, code review, or implementation requests whose acceptance conditions are already clear unless the user explicitly invokes this skill.
----
 
 # Intent-Driven Development
 
@@ -34459,29 +33101,6 @@ When another planning or implementation workflow is available, pass the acceptan
 criterion IDs to it. When no dedicated workflow exists, provide the brief directly as the
 implementation reference. Do not assume any named skill or tool is installed.
 
-
----
-
----
-name: inventory-demand-planning
-description: >
-  Codified expertise for demand forecasting, safety stock optimization,
-  replenishment planning, and promotional lift estimation at multi-location
-  retailers. Informed by demand planners with 15+ years experience managing
-  hundreds of SKUs. Includes forecasting method selection, ABC/XYZ analysis,
-  seasonal transition management, and vendor negotiation frameworks.
-  Use when forecasting demand, setting safety stock, planning replenishment,
-  managing promotions, or optimizing inventory levels.
-license: Apache-2.0
-version: 1.0.0
-homepage: https://github.com/affaan-m/everything-claude-code
-metadata:
-  origin: ECC
-  author: evos
-  clawdbot:
-    emoji: ""
----
-
 # Inventory Demand Planning
 
 ## Role and Context
@@ -34710,16 +33329,6 @@ Track weekly and trend monthly:
 - Pair this skill with your SKU segmentation model, service-level policy, and planner override audit log.
 - Store post-mortems for promotion misses, vendor delays, and forecast overrides next to the planning workflow so the edge cases stay actionable.
 
-
----
-
----
-name: investor-materials
-description: Create and update pitch decks, one-pagers, investor memos, accelerator applications, financial models, and fundraising materials. Use when the user needs investor-facing documents, projections, use-of-funds tables, milestone plans, or materials that must stay internally consistent across multiple fundraising assets.
-metadata:
-  origin: ECC
----
-
 # Investor Materials
 
 Build investor-facing materials that are consistent, credible, and easy to defend.
@@ -34811,16 +33420,6 @@ Before delivering:
 - the story is clear without hype language
 - the final asset is defensible in a partner meeting
 
-
----
-
----
-name: investor-outreach
-description: Draft cold emails, warm intro blurbs, follow-ups, update emails, and investor communications for fundraising. Use when the user wants outreach to angels, VCs, strategic investors, or accelerators and needs concise, personalized, investor-facing messaging.
-metadata:
-  origin: ECC
----
-
 # Investor Outreach
 
 Write investor communication that is short, concrete, and easy to act on.
@@ -34906,16 +33505,6 @@ Before delivering:
 - the proof point is concrete
 - filler praise and softener language are gone
 - word count stays tight
-
-
----
-
----
-name: ios-icon-gen
-description: Generate iOS app icons as PNG imagesets for Xcode asset catalogs from SF Symbols (5000+ Apple-native) or Iconify API (275k+ open source icons from 200+ collections). Use when generating icons, creating icon assets, adding icons to asset catalog, or searching for icons for iOS projects.
-metadata:
-  origin: community
----
 
 # iOS Icon Generator
 
@@ -35068,16 +33657,6 @@ Browse all: <https://icon-sets.iconify.design/>
 - Using default colors when the project has a defined color palette
 - Generating at wrong sizes (check existing icons first)
 - Committing generated icons without visual verification
-
-
----
-
----
-name: iterative-retrieval
-description: Pattern for progressively refining context retrieval to solve the subagent context problem
-metadata:
-  origin: ECC
----
 
 # Iterative Retrieval Pattern
 
@@ -35285,16 +33864,6 @@ When retrieving context for this task:
 - `continuous-learning` skill - For patterns that improve over time
 - Agent definitions bundled with ECC (manual install path: `agents/`)
 
-
----
-
----
-name: ito-basket-compare
-description: Compare Itô prediction-market baskets against a user's knowledge base, portfolio notes, financial context, watchlist, or research thesis. Use for read-only basket comparison and gap analysis without investment advice or live trading.
-metadata:
-  origin: ECC
----
-
 # Itô Basket Compare
 
 Use this skill to compare a basket, theme, or market set against a user's
@@ -35352,16 +33921,6 @@ End with:
 ```text
 This comparison is informational and not investment or trading advice.
 ```
-
-
----
-
----
-name: ito-data-atlas-agent
-description: Design background Data Atlas style agents for Itô basket research, market discovery, parameter drafting, and human-in-the-loop editing. Use for architecture and workflow planning, not live order execution.
-metadata:
-  origin: ECC
----
 
 # Itô Data Atlas Agent
 
@@ -35421,16 +33980,6 @@ Return an implementation-ready workflow spec with:
 - storage/audit boundary
 - non-goals
 
-
----
-
----
-name: ito-market-intelligence
-description: Research prediction-market events, venues, underliers, liquidity, and news context for Itô basket workflows. Use for read-only market intelligence, API-gated Itô exploration, and source-grounded prediction-market briefings without investment advice or live trading.
-metadata:
-  origin: ECC
----
-
 # Itô Market Intelligence
 
 Use this skill when a user wants prediction-market context, event discovery,
@@ -35485,16 +34034,6 @@ If access is missing, say:
 Itô live basket/API data requires gated access. Request an ITO_API_KEY before
 using Itô-backed reads.
 ```
-
-
----
-
----
-name: ito-trade-planner
-description: Build a non-advisory prediction-market trade planning worksheet for Itô or venue workflows. Use to inspect venues, underliers, constraints, order prerequisites, and manual execution steps without placing trades or recommending positions.
-metadata:
-  origin: ECC
----
 
 # Itô Trade Planner
 
@@ -35557,16 +34096,6 @@ End every plan with:
 This is a planning worksheet, not investment or trading advice. Review venue
 rules and make any trading decisions yourself.
 ```
-
-
----
-
----
-name: java-coding-standards
-description: "Java coding standards for Spring Boot and Quarkus services: naming, immutability, Optional usage, streams, exceptions, generics, CDI, reactive patterns, and project layout. Automatically applies framework-specific conventions."
-metadata:
-  origin: ECC
----
 
 # Java Coding Standards
 
@@ -35946,16 +34475,6 @@ class MarketServiceTest {
 
 **Remember**: Keep code intentional, typed, and observable. Optimize for maintainability over micro-optimizations unless proven necessary.
 
-
----
-
----
-name: jira-integration
-description: Use this skill when retrieving Jira tickets, analyzing requirements, updating ticket status, adding comments, or transitioning issues. Provides Jira API patterns via MCP or direct REST calls.
-metadata:
-  origin: ECC
----
-
 # Jira Integration Skill
 
 Retrieve, analyze, and update Jira tickets directly from your AI coding workflow. Supports both **MCP-based** (recommended) and **direct REST API** approaches.
@@ -36253,16 +34772,6 @@ Coverage: XX%
 - Check linked issues to understand full feature scope before starting
 - If acceptance criteria are vague, ask for clarification before writing code
 
-
----
-
----
-name: jpa-patterns
-description: JPA/Hibernate patterns for entity design, relationships, query optimization, transactions, auditing, indexing, pagination, and pooling in Spring Boot.
-metadata:
-  origin: ECC
----
-
 # JPA/Hibernate Patterns
 
 Use for data modeling, repositories, and performance tuning in Spring Boot.
@@ -36408,16 +34917,6 @@ spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
 - Assert SQL efficiency using logs: set `logging.level.org.hibernate.SQL=DEBUG` and `logging.level.org.hibernate.orm.jdbc.bind=TRACE` for parameter values
 
 **Remember**: Keep entities lean, queries intentional, and transactions short. Prevent N+1 with fetch strategies and projections, and index for your read/write paths.
-
-
----
-
----
-name: knowledge-ops
-description: Knowledge base management, ingestion, sync, and retrieval across multiple storage layers (local files, MCP memory, vector stores, Git repos). Use when the user wants to save, organize, sync, deduplicate, or search across their knowledge systems.
-metadata:
-  origin: ECC
----
 
 # Knowledge Operations
 
@@ -36567,16 +35066,6 @@ Before completing any knowledge operation:
 - indexes and summaries updated
 - appropriate storage layer chosen for the data type
 - cross-references added where relevant
-
-
----
-
----
-name: kotlin-coroutines-flows
-description: Kotlin Coroutines and Flow patterns for Android and KMP — structured concurrency, Flow operators, StateFlow, error handling, and testing.
-metadata:
-  origin: ECC
----
 
 # Kotlin Coroutines & Flows
 
@@ -36856,16 +35345,6 @@ class FakeItemRepository : ItemRepository {
 
 See skill: `compose-multiplatform-patterns` for UI consumption of Flows.
 See skill: `android-clean-architecture` for where coroutines fit in layers.
-
-
----
-
----
-name: kotlin-exposed-patterns
-description: JetBrains Exposed ORM patterns including DSL queries, DAO pattern, transactions, HikariCP connection pooling, Flyway migrations, and repository pattern.
-metadata:
-  origin: ECC
----
 
 # Kotlin Exposed Patterns
 
@@ -37581,16 +36060,6 @@ dependencies {
 
 **Remember**: Use the DSL style for simple queries and the DAO style when you need entity lifecycle management. Always use `newSuspendedTransaction` for coroutine support, and wrap database operations behind a repository interface for testability.
 
-
----
-
----
-name: kotlin-ktor-patterns
-description: Ktor server patterns including routing DSL, plugins, authentication, Koin DI, kotlinx.serialization, WebSockets, and testApplication testing.
-metadata:
-  origin: ECC
----
-
 # Ktor Server Patterns
 
 Comprehensive Ktor patterns for building robust, maintainable HTTP servers with Kotlin coroutines.
@@ -38274,16 +36743,6 @@ fun Application.configureDI() {
 | `testApplication { }` | Integration testing |
 
 **Remember**: Ktor is designed around Kotlin coroutines and DSLs. Keep routes thin, push logic to services, and use Koin for dependency injection. Test with `testApplication` for full integration coverage.
-
-
----
-
----
-name: kotlin-patterns
-description: Idiomatic Kotlin patterns, best practices, and conventions for building robust, efficient, and maintainable Kotlin applications with coroutines, null safety, and DSL builders.
-metadata:
-  origin: ECC
----
 
 # Kotlin Development Patterns
 
@@ -38990,16 +37449,6 @@ user?.address?.city?.let { process(it) }
 ```
 
 **Remember**: Kotlin code should be concise but readable. Leverage the type system for safety, prefer immutability, and use coroutines for concurrency. When in doubt, let the compiler help you.
-
-
----
-
----
-name: kotlin-testing
-description: Kotlin testing patterns with Kotest, MockK, coroutine testing, property-based testing, and Kover coverage. Follows TDD methodology with idiomatic Kotlin practices.
-metadata:
-  origin: ECC
----
 
 # Kotlin Testing Patterns
 
@@ -39820,16 +38269,6 @@ test:
 
 **Remember**: Tests are documentation. They show how your Kotlin code is meant to be used. Use Kotest's expressive matchers to make tests readable and MockK for clean mocking of dependencies.
 
-
----
-
----
-name: kubernetes-patterns
-description: Kubernetes workload patterns, resource management, RBAC, probes, autoscaling, ConfigMap/Secret handling, and kubectl debugging for production-grade deployments.
-metadata:
-  origin: ECC
----
-
 # Kubernetes Patterns
 
 Production-grade Kubernetes patterns for deploying, managing, and debugging workloads reliably.
@@ -40580,16 +39019,6 @@ spec:
 - `security-review` — Broader security hardening context
 - `git-workflow` — GitOps integration with K8s (ArgoCD / Flux patterns)
 
-
----
-
----
-name: laravel-patterns
-description: Laravel architecture patterns, routing/controllers, Eloquent ORM, service layers, queues, events, caching, and API resources for production apps.
-metadata:
-  origin: ECC
----
-
 # Laravel Development Patterns
 
 Production-grade Laravel architecture patterns for scalable, maintainable applications.
@@ -41000,16 +39429,6 @@ return response()->json([
 - Keep secrets in `.env` and config in `config/*.php`
 - Use per-environment config overrides and `config:cache` in production
 
-
----
-
----
-name: laravel-plugin-discovery
-description: Discover and evaluate Laravel packages via LaraPlugins.io MCP. Use when the user wants to find plugins, check package health, or assess Laravel/PHP compatibility.
-metadata:
-  origin: ECC
----
-
 # Laravel Plugin Discovery
 
 Find, evaluate, and choose healthy Laravel packages using the LaraPlugins.io MCP server.
@@ -41233,16 +39652,6 @@ The detailed response includes:
 - `laravel-tdd` — Test-driven development for Laravel
 - `laravel-security` — Laravel security best practices
 - `documentation-lookup` — General library documentation lookup (Context7)
-
-
----
-
----
-name: laravel-security
-description: Laravel security best practices — authentication, authorization, Eloquent safety, CSRF, XSS prevention, API security, and secure deployment configurations.
-metadata:
-  origin: ECC
----
 
 # Laravel Security Best Practices
 
@@ -42186,16 +40595,6 @@ SecurityLogger::log('suspicious_activity', ['reason' => 'multiple_attempts_from_
 - `backend-patterns` — General backend API and database patterns
 - `laravel-tdd` — Laravel testing with PHPUnit and Pest
 
-
----
-
----
-name: laravel-tdd
-description: Laravel testing strategies with PHPUnit, Pest, model factories, HTTP tests, Sanctum authentication testing, mocking, and coverage.
-metadata:
-  origin: ECC
----
-
 # Laravel Testing with TDD
 
 Test-driven development for Laravel applications using PHPUnit, Pest, Laravel factories, and testing helpers.
@@ -42865,16 +41264,6 @@ vendor/bin/pest --coverage --min=80
 - `tdd-workflow` — The repo-wide RED -> GREEN -> REFACTOR loop
 - `backend-patterns` — General backend API and database patterns
 
-
----
-
----
-name: laravel-verification
-description: "Verification loop for Laravel projects: env checks, linting, static analysis, tests with coverage, security scans, and deployment readiness."
-metadata:
-  origin: ECC
----
-
 # Laravel Verification Loop
 
 Run before PRs, after major changes, and pre-deploy.
@@ -43049,17 +41438,6 @@ php artisan view:cache
 php artisan schedule:list
 ```
 
-
----
-
----
-name: latency-critical-systems
-description: Use for latency-sensitive systems such as realtime dashboards, market data, streaming agents, execution gateways, queues, caches, or HFT-like infrastructure where freshness and p95 latency matter.
-metadata:
-  origin: ECC
-tools: Read, Write, Edit, Bash, Grep, Glob
----
-
 # Latency Critical Systems
 
 Use this skill when the user cares about realtime behavior, hot paths, streaming
@@ -43126,16 +41504,6 @@ ready.
 - Do not run live orders, destructive migrations, or customer-impacting deploys
   without an explicit approval gate.
 - Keep secrets and private payloads out of logs and benchmark artifacts.
-
-
----
-
----
-name: lead-intelligence
-description: AI-native lead intelligence and outreach pipeline. Replaces Apollo, Clay, and ZoomInfo with agent-powered signal scoring, mutual ranking, warm path discovery, source-derived voice modeling, and channel-specific outreach across email, LinkedIn, and X. Use when the user wants to find, qualify, and reach high-value contacts.
-metadata:
-  origin: ECC
----
 
 # Lead Intelligence
 
@@ -43453,14 +41821,6 @@ Output: Ranked list with warm paths, voice profile summary, and channel-specific
 - `brand-voice` for canonical voice capture
 - `connections-optimizer` for review-first network pruning and expansion before outreach
 
-
----
-
----
-name: liquid-glass-design
-description: iOS 26 Liquid Glass design system — dynamic glass material with blur, reflection, and interactive morphing for SwiftUI, UIKit, and WidgetKit.
----
-
 # Liquid Glass Design System (iOS 26)
 
 Patterns for implementing Apple's Liquid Glass — a dynamic material that blurs content behind it, reflects color and light from surrounding content, and reacts to touch and pointer interactions. Covers SwiftUI, UIKit, and WidgetKit integration.
@@ -43736,16 +42096,6 @@ VStack { /* content */ }
 - Widgets that should integrate with the system's Liquid Glass appearance
 - Morphing transitions between related UI states
 
-
----
-
----
-name: literature-review
-description: Systematic literature-review workflow for academic, biomedical, technical, and scientific topics, including search planning, source screening, synthesis, citation checks, and evidence logging.
-metadata:
-  origin: community
----
-
 # Literature Review
 
 Use this skill when the task is to find, screen, synthesize, and cite a body of
@@ -43933,17 +42283,6 @@ Databases: <list>
 - Do not use a single database for a broad claim unless the scope is explicitly
   limited to that database.
 
-
----
-
----
-name: llm-trading-agent-security
-description: Security patterns for autonomous trading agents with wallet or transaction authority. Covers prompt injection, spend limits, pre-send simulation, circuit breakers, MEV protection, and key handling.
-metadata:
-  origin: ECC direct-port adaptation
-version: "1.0.0"
----
-
 # LLM Trading Agent Security
 
 Autonomous trading agents have a harsher threat model than normal LLM apps: an injection or bad tool path can turn directly into asset loss.
@@ -44083,28 +42422,6 @@ deadline = int(time.time()) + 60
 - Private mempool or protected routing is used when appropriate
 - Slippage and deadlines are set per strategy
 - All agent decisions are audit-logged, not just successful sends
-
-
----
-
----
-name: logistics-exception-management
-description: >
-  Codified expertise for handling freight exceptions, shipment delays,
-  damages, losses, and carrier disputes. Informed by logistics professionals
-  with 15+ years operational experience. Includes escalation protocols,
-  carrier-specific behaviors, claims procedures, and judgment frameworks.
-  Use when handling shipping exceptions, freight claims, delivery issues,
-  or carrier disputes.
-license: Apache-2.0
-version: 1.0.0
-homepage: https://github.com/affaan-m/everything-claude-code
-metadata:
-  origin: ECC
-  author: evos
-  clawdbot:
-    emoji: ""
----
 
 # Logistics Exception Management
 
@@ -44310,16 +42627,6 @@ Track these metrics weekly and trend monthly:
 - Pair this skill with your internal claims deadlines, mode-specific escalation matrix, and insurer notice requirements.
 - Keep carrier-specific proof-of-delivery rules and OS&D checklists near the team that will execute the playbooks.
 
-
----
-
----
-name: make-interfaces-feel-better
-description: Apply concrete design-engineering details that make interfaces feel polished. Use when reviewing or improving UI spacing, typography, borders, shadows, motion, hit areas, icons, text wrapping, and interaction states.
-metadata:
-  origin: community
----
-
 # Make Interfaces Feel Better
 
 Use this skill for the small design-engineering details that compound into a
@@ -44466,16 +42773,6 @@ Omit principles that you checked but did not change.
 - `transition: all` and `will-change: all` are absent.
 - Small controls still have usable hit areas.
 
-
----
-
----
-name: manim-video
-description: Build reusable Manim explainers for technical concepts, graphs, system diagrams, and product walkthroughs, then hand off to the wider ECC video stack if needed. Use when the user wants a clean animated explainer rather than a generic talking-head script.
-metadata:
-  origin: ECC
----
-
 # Manim Video
 
 Use Manim for technical explainers where motion, structure, and clarity matter more than photorealism.
@@ -44560,16 +42857,6 @@ Return:
 - `remotion-video-creation` for motion-heavy post-processing or compositing
 - `content-engine` when the animation is part of a broader launch
 
-
----
-
----
-name: market-research
-description: Conduct market research, competitive analysis, investor due diligence, and industry intelligence with source attribution and decision-oriented summaries. Use when the user wants market sizing, competitor comparisons, fund research, technology scans, or research that informs business decisions.
-metadata:
-  origin: ECC
----
-
 # Market Research
 
 Produce research that supports decisions, not research theater.
@@ -44639,16 +42926,6 @@ Before delivering:
 - the recommendation follows from the evidence
 - risks and counterarguments are included
 - the output makes a decision easier
-
-
----
-
----
-name: marketing-campaign
-description: End-to-end marketing campaign planning and execution. Covers audience research, positioning, campaign angle definition, landing page copy, email sequences, social posts, ad copy, short-form video scripts, and content calendars. Use as the orchestration layer for multi-channel product launches.
-metadata:
-  origin: ECC
----
 
 # Marketing Campaign
 
@@ -44758,16 +43035,6 @@ Delete and rewrite any:
 - `market-research` — audience and competitive intelligence
 - `seo` — on-page optimisation for landing page copy
 
-
----
-
----
-name: mcp-server-patterns
-description: Build MCP servers with Node/TypeScript SDK — tools, resources, prompts, Zod validation, stdio vs Streamable HTTP. Use Context7 or official MCP docs for latest API.
-metadata:
-  origin: ECC
----
-
 # MCP Server Patterns
 
 The Model Context Protocol (MCP) lets AI assistants call tools, read resources, and use prompts from your server. Use this skill when building or maintaining MCP servers. The SDK API evolves; check Context7 (query-docs for "MCP") or the official MCP documentation for current method names and signatures.
@@ -44831,16 +43098,6 @@ Use **Zod** (or the SDK’s preferred schema format) for input validation.
 - **JavaScript/TypeScript**: `@modelcontextprotocol/sdk` (npm). Use Context7 with library name "MCP" for current registration and transport patterns.
 - **Go**: Official Go SDK on GitHub (`modelcontextprotocol/go-sdk`).
 - **C#**: Official C# SDK for .NET.
-
-
----
-
----
-name: messages-ops
-description: Evidence-first live messaging workflow for ECC. Use when the user wants to read texts or DMs, recover a recent one-time code, inspect a thread before replying, or prove which message source was actually checked.
-metadata:
-  origin: ECC
----
 
 # Messages Ops
 
@@ -44941,15 +43198,6 @@ STATUS
 - the response includes a sender, service, thread, or clear blocker
 - the final state is explicit and bounded
 
-
----
-
----
-name: ml-adoption-playbook
-description: End-to-end methodology for AI agents and software engineers to add machine learning algorithms to existing non-ML codebases. Covers problem framing, data readiness, architectural decoupling, and baseline model integration.
-origin: ECC
----
-
 # ML Adoption Playbook
 
 This skill provides an adaptive methodology for implementing machine learning models into existing software engineering projects. It bridges the gap between traditional SWE and MLOps by structuring how ML should be researched, decoupled, trained, and integrated.
@@ -45001,16 +43249,6 @@ When assisting a user via this playbook, agents should:
 2. **Draft a data contract** in Phase 2 for user approval.
 3. **Write the decoupling interface** (API/Service) in Phase 3 *before* writing the training loop.
 4. **Deliver a reproducible script** in Phase 4 that trains the model and saves the artifact.
-
-
----
-
----
-name: mle-workflow
-description: Production machine-learning engineering workflow for data contracts, reproducible training, model evaluation, deployment, monitoring, and rollback. Use when building, reviewing, or hardening ML systems beyond one-off notebooks.
-metadata:
-  origin: ECC
----
 
 # Machine Learning Engineering Workflow
 
@@ -45352,18 +43590,6 @@ Every deployment should have a rollback plan that names the previous artifact, c
 ## Output Expectations
 
 When using this skill, return concrete artifacts: data contract, promotion gates, pipeline steps, test plan, deployment plan, or review findings. Call out unknowns that block production readiness instead of filling them with assumptions.
-
-
----
-
----
-name: motion-advanced
-description: Advanced motion patterns for React / Next.js — drag & drop, gestures, text animations, SVG path drawing, custom hooks, imperative sequences (useAnimate), loaders, and the full API decision tree. Requires motion-foundations.
-version: 1.0
-tags: [motion, animation, advanced, gestures, svg]
-category: frontend
-author: jeff
----
 
 # Motion Advanced
 
@@ -45953,18 +44179,6 @@ This skill does **not** cover:
 - **`motion-foundations`** — defines all tokens, springs, `useSafeMotion`, and SSR guards imported here. Must be set up before using this skill.
 - **`motion-patterns`** — handles standard UI patterns (button, modal, stagger, page transitions, scroll reveals). Use it before reaching for the advanced patterns here.
 
-
----
-
----
-name: motion-foundations
-description: Motion tokens, spring presets, performance rules, device adaptation, accessibility enforcement, and SSR safety for React / Next.js using motion/react. Foundation layer — all other motion skills depend on this.
-version: 1.0
-tags: [motion, animation, performance, accessibility]
-category: frontend
-author: jeff
----
-
 # Motion Foundations
 
 The base layer of the motion system. Defines every value, constraint, and
@@ -46255,18 +44469,6 @@ This skill does **not** cover:
 
 - **`motion-patterns`** — consumes tokens and springs defined here to build button, modal, stagger, page transition, and scroll patterns. Does not redefine any values.
 - **`motion-advanced`** — consumes tokens and springs defined here for drag, SVG, text, and gesture patterns. Adds `useAnimate` sequences and custom hooks on top of this foundation.
-
-
----
-
----
-name: motion-patterns
-description: Production-ready animation patterns for React / Next.js — button, modal, toast, stagger, page transitions, exit animations, scroll, and layout — built on motion-foundations tokens and springs.
-version: 1.0
-tags: [motion, animation, ui-patterns]
-category: frontend
-author: jeff
----
 
 # Motion Patterns
 
@@ -46693,16 +44895,6 @@ This skill does **not** cover:
 
 - **`motion-foundations`** — defines all tokens, springs, the `useSafeMotion` hook, and SSR guards that every pattern here imports. Must be set up first.
 - **`motion-advanced`** — extends these patterns with drag, gestures, SVG, text, custom hooks, and imperative sequencing. Does not redefine any patterns from this skill.
-
-
----
-
----
-name: motion-ui
-description: "Production-ready UI motion system for React/Next.js. Use when implementing animations, transitions, or motion patterns."
-metadata:
-  origin: ECC
----
 
 # Motion System v4.2
 
@@ -47274,16 +45466,6 @@ export function Shared() {
 }
 ```
 
-
----
-
----
-name: mysql-patterns
-description: MySQL and MariaDB schema, query, indexing, transaction, replication, and connection-pool patterns for production backends.
-metadata:
-  origin: ECC
----
-
 # MySQL Patterns
 
 Use this skill when working on MySQL or MariaDB schema design, migrations,
@@ -47691,16 +45873,6 @@ When this skill is used for review, return:
 - Skill: `security-review` - secret handling, auth, and least privilege
 - Agent: `database-reviewer` - broader database review workflow
 
-
----
-
----
-name: nanoclaw-repl
-description: Operate and extend NanoClaw v2, ECC's zero-dependency session-aware REPL built on claude -p.
-metadata:
-  origin: ECC
----
-
 # NanoClaw REPL
 
 Use this skill when running or extending `scripts/claw.js`.
@@ -47728,16 +45900,6 @@ Use this skill when running or extending `scripts/claw.js`.
 - keep zero external runtime dependencies
 - preserve markdown-as-database compatibility
 - keep command handlers deterministic and local
-
-
----
-
----
-name: nestjs-patterns
-description: NestJS architecture patterns for modules, controllers, providers, DTO validation, guards, interceptors, config, and production-grade TypeScript backends.
-metadata:
-  origin: ECC
----
 
 # NestJS Development Patterns
 
@@ -47964,16 +46126,6 @@ describe('UsersController', () => {
 - Keep background jobs and event consumers in their own modules, not inside HTTP controllers.
 - Make rate limiting, auth, and audit logging explicit for public endpoints.
 
-
----
-
----
-name: netmiko-ssh-automation
-description: Safe Python Netmiko patterns for read-only collection, bounded batch SSH, TextFSM parsing, guarded config changes, timeouts, and network automation error handling.
-metadata:
-  origin: community
----
-
 # Netmiko SSH Automation
 
 Use this skill when writing or reviewing Python automation that connects to
@@ -48142,16 +46294,6 @@ snippet and capture before/after evidence in the change record.
 - Skill: `network-config-validation`
 - Skill: `network-interface-health`
 
-
----
-
----
-name: network-bgp-diagnostics
-description: Diagnostics-only BGP troubleshooting patterns for neighbor state, route exchange, prefix policy, AS path inspection, and safe evidence collection.
-metadata:
-  origin: community
----
-
 # Network BGP Diagnostics
 
 Use this skill when a BGP session is down, flapping, established with missing
@@ -48313,16 +46455,6 @@ supported by the platform and document exactly why it is safe.
 - Skill: `cisco-ios-patterns`
 - Skill: `network-config-validation`
 - Skill: `network-interface-health`
-
-
----
-
----
-name: network-config-validation
-description: Pre-deployment checks for router and switch configuration, including dangerous commands, duplicate addresses, subnet overlaps, stale references, management-plane risk, and IOS-style security hygiene.
-metadata:
-  origin: community
----
 
 # Network Config Validation
 
@@ -48529,16 +46661,6 @@ credentials. Warn on best-practice gaps that are outside the change scope.
 - Agent: `network-troubleshooter`
 - Skill: `network-interface-health`
 
-
----
-
----
-name: network-interface-health
-description: Diagnose interface errors, drops, CRCs, duplex mismatches, flapping, speed negotiation issues, and counter trends on routers, switches, and Linux hosts.
-metadata:
-  origin: community
----
-
 # Network Interface Health
 
 Use this skill when a network symptom might be caused by a physical link, switch
@@ -48686,16 +46808,6 @@ def parse_show_interfaces(raw: str) -> list[dict[str, Any]]:
 - Skill: `network-config-validation`
 - Skill: `homelab-network-setup`
 
-
----
-
----
-name: nextjs-turbopack
-description: Next.js 16+ and Turbopack — incremental bundling, FS caching, dev speed, and when to use Turbopack vs webpack.
-metadata:
-  origin: ECC
----
-
 # Next.js and Turbopack
 
 Next.js 16+ uses Turbopack by default for local development: an incremental bundler written in Rust that significantly speeds up dev startup and hot updates.
@@ -48747,17 +46859,6 @@ Reference: [Next.js proxy docs](https://nextjs.org/docs/app/getting-started/prox
 - Stay on a recent Next.js 16.x for stable Turbopack and caching behavior.
 - If dev is slow, ensure you're on Turbopack (default) and that the cache isn't being cleared unnecessarily.
 - For production bundle size issues, use the official Next.js bundle analysis tooling for your version.
-
-
----
-
----
-name: nodejs-keccak256
-description: Prevent Ethereum hashing bugs in JavaScript and TypeScript. Node's sha3-256 is NIST SHA3, not Ethereum Keccak-256, and silently breaks selectors, signatures, storage slots, and address derivation.
-metadata:
-  origin: ECC direct-port adaptation
-version: "1.0.0"
----
 
 # Node.js Keccak-256
 
@@ -48854,16 +46955,6 @@ grep -rn "keccak256" --include="*.ts" --include="*.js" . | grep -v node_modules
 ## Rule
 
 For Ethereum contexts, never use `crypto.createHash('sha3-256')`. Use Keccak-aware helpers from `ethers`, `viem`, `web3`, or another explicit Keccak implementation.
-
-
----
-
----
-name: nutrient-document-processing
-description: Process, convert, OCR, extract, redact, sign, and fill documents using the Nutrient DWS API. Works with PDFs, DOCX, XLSX, PPTX, HTML, and images.
-metadata:
-  origin: ECC
----
 
 # Nutrient Document Processing
 
@@ -49027,16 +47118,6 @@ For native tool integration, use the MCP server instead of curl:
 - [Full API Docs](https://www.nutrient.io/guides/dws-processor/)
 - [npm MCP Server](https://www.npmjs.com/package/@nutrient-sdk/dws-mcp-server)
 
-
----
-
----
-name: nuxt4-patterns
-description: Nuxt 4 app patterns for hydration safety, performance, route rules, lazy loading, and SSR-safe data fetching with useFetch and useAsyncData.
-metadata:
-  origin: ECC
----
-
 # Nuxt 4 Patterns
 
 Use when building or debugging Nuxt 4 apps with SSR, hybrid rendering, route rules, or page-level data fetching.
@@ -49131,16 +47212,6 @@ Pick route rules per route group, not globally. Marketing pages, catalogs, dashb
 - Non-critical data is lazy and has explicit loading UI
 - Route rules match the page's SEO and freshness requirements
 - Heavy interactive islands are lazy-loaded or lazily hydrated
-
-
----
-
----
-name: openclaw-persona-forge
-description: "为 OpenClaw AI Agent 锻造完整的龙虾灵魂方案。根据用户偏好或随机抽卡， 输出身份定位、灵魂描述(SOUL.md)、角色化底线规则、名字和头像生图提示词。 如当前环境提供已审核的生图 skill，可自动生成统一风格头像图片。 当用户需要创建、设计或定制 OpenClaw 龙虾灵魂时使用。 不适用于：微调已有 SOUL.md、非 OpenClaw 平台的角色设计、纯工具型无性格 Agent。 触发词：龙虾灵魂、虾魂、OpenClaw 灵魂、养虾灵魂、龙虾角色、龙虾定位、 龙虾剧本杀角色、龙虾游戏角色、龙虾 NPC、龙虾性格、龙虾背景故事、 lobster soul、lobster character、抽卡、随机龙虾、龙虾 SOUL、gacha。"
-metadata:
-  origin: community
----
 
 # 龙虾灵魂锻造炉
 
@@ -49425,16 +47496,6 @@ python3 ${SKILL_DIR}/gacha.py [次数]
 
 > 注：README.md / README.zh.md 是给人类用户看的安装说明，不影响 Skill 运行。
 
-
----
-
----
-name: opensource-pipeline
-description: "Open-source pipeline: fork, sanitize, and package private projects for safe public release. Chains 3 agents (forker, sanitizer, packager). Triggers: '/opensource', 'open source this', 'make this public', 'prepare for open source'."
-metadata:
-  origin: ECC
----
-
 # Open-Source Pipeline Skill
 
 Safely open-source any project through a 3-stage pipeline: **Fork** (strip secrets) → **Sanitize** (verify clean) → **Package** (CLAUDE.md + setup.sh + README).
@@ -49685,16 +47746,6 @@ $HOME/opensource-staging/
 
 See `security-review` for secret detection patterns used by the sanitizer.
 
-
----
-
----
-name: orch-add-feature
-description: Orchestrate building a brand-new feature end to end — research, plan, TDD implementation, review, and gated commit — by delegating each phase to the matching ECC agent. Use when adding a capability that does not exist yet.
-metadata:
-  origin: ECC
----
-
 # orch-add-feature
 
 Actor · action · target: **orch · add · feature**. Thin wrapper over the shared
@@ -49733,16 +47784,6 @@ orch-add-feature: add OAuth2 login to nws-poller
 → TDD each task → code-review (+ security-reviewer: auth path)
 → commit  [GATE 2: confirm]
 ```
-
-
----
-
----
-name: orch-build-mvp
-description: Orchestrate bootstrapping a working MVP from a design or spec document — ingest the doc, plan thin vertical slices, scaffold the first end-to-end slice, then TDD-implement, review, and gated commit. Use to turn an SDD/PRD into a running starting point.
-metadata:
-  origin: ECC
----
 
 # orch-build-mvp
 
@@ -49787,16 +47828,6 @@ orch-build-mvp: civicpulse/docs/SDD-v0.6.md
 → commit feat:  [GATE 2: confirm] → next slice
 ```
 
-
----
-
----
-name: orch-change-feature
-description: Orchestrate altering an existing, working feature to new desired behavior — update its tests to the new spec, change the implementation to match, review, and gated commit. Use when behavior is not broken but should be different.
-metadata:
-  origin: ECC
----
-
 # orch-change-feature
 
 Actor · action · target: **orch · change · feature**. Thin wrapper over the
@@ -49834,16 +47865,6 @@ orch-change-feature: make nws-poller alert at 2 warnings instead of 3
 → code-review → commit  [GATE 2: confirm]
 ```
 
-
----
-
----
-name: orch-fix-defect
-description: Orchestrate fixing a bug — reproduce it as a failing regression test, fix to green, review, and gated commit — by delegating each phase to the matching ECC agent. Use when existing behavior is broken or wrong.
-metadata:
-  origin: ECC
----
-
 # orch-fix-defect
 
 Actor · action · target: **orch · fix · defect**. Thin wrapper over the shared
@@ -49880,16 +47901,6 @@ orch-fix-defect: poller crashes on empty NWS response
 → write failing test reproducing the crash → fix to green
 → code-review → commit  [GATE 2: confirm]   (commit: fix:)
 ```
-
-
----
-
----
-name: orch-pipeline
-description: Shared orchestration engine for the orch-* skill family. Defines the gated Research-Plan-TDD-Review-Commit pipeline, the size classifier, the agent map, and the two human gates that the orch-* operation skills delegate to. Not usually invoked directly.
-metadata:
-  origin: ECC
----
 
 # Orchestrator Pipeline (shared engine)
 
@@ -50006,16 +48017,6 @@ The pipeline carries no hidden state — the planning docs *are* the handoff:
 - commits are conventional and scoped to one logical change
 - new / changed behavior has tests; coverage ≥ 80% per `rules/common/testing.md`
 
-
----
-
----
-name: orch-refine-code
-description: Orchestrate a behavior-preserving refactor — confirm tests are green, restructure without changing behavior, keep tests green, review, and gated commit. Use when the structure should improve but behavior must not change.
-metadata:
-  origin: ECC
----
-
 # orch-refine-code
 
 Actor · action · target: **orch · refine · code**. Thin wrapper over the shared
@@ -50053,17 +48054,6 @@ orch-refine-code: extract the NWS HTTP client out of poller.py
 → move in small steps, tests green throughout → code-review
 → commit refactor:  [GATE 2: confirm]
 ```
-
-
----
-
----
-name: parallel-execution-optimizer
-description: Use when the user wants a task done much faster through parallel work, concurrent agents, batched tool calls, isolated worktrees, or many independent verification lanes without losing correctness.
-metadata:
-  origin: ECC
-tools: Read, Write, Edit, Bash, Grep, Glob
----
 
 # Parallel Execution Optimizer
 
@@ -50130,16 +48120,6 @@ Parallel execution result:
 - Treating "fast" as done before correctness is proven.
 - Forgetting to poll running sessions.
 - Hiding skipped checks behind a success summary.
-
-
----
-
----
-name: perl-patterns
-description: Modern Perl 5.36+ idioms, best practices, and conventions for building robust, maintainable Perl applications.
-metadata:
-  origin: ECC
----
 
 # Modern Perl Development Patterns
 
@@ -50640,16 +48620,6 @@ require_module($module);
 
 **Remember**: Modern Perl is clean, readable, and safe. Let `use v5.36` handle the boilerplate, use Moo for objects, and prefer CPAN's battle-tested modules over hand-rolled solutions.
 
-
----
-
----
-name: perl-security
-description: Comprehensive Perl security covering taint mode, input validation, safe process execution, DBI parameterized queries, web security (XSS/SQLi/CSRF), and perlcritic security policies.
-metadata:
-  origin: ECC
----
-
 # Perl Security Patterns
 
 Comprehensive security guidelines for Perl applications covering input validation, injection prevention, and secure coding practices.
@@ -51148,16 +49118,6 @@ print $cgi->redirect($user_url);         # Open redirect
 
 **Remember**: Perl's flexibility is powerful but requires discipline. Use taint mode for web-facing code, validate all input with allowlists, use DBI placeholders for every query, and encode all output for its context. Defense in depth — never rely on a single layer.
 
-
----
-
----
-name: perl-testing
-description: Perl testing patterns using Test2::V0, Test::More, prove runner, mocking, coverage with Devel::Cover, and TDD methodology.
-metadata:
-  origin: ECC
----
-
 # Perl Testing Patterns
 
 Comprehensive testing strategies for Perl applications using Test2::V0, Test::More, prove, and TDD methodology.
@@ -51628,16 +49588,6 @@ Use `my` variables inside subtests — never `our` — to prevent state leaking 
 
 **Remember**: Tests are your safety net. Keep them fast, focused, and independent. Use Test2::V0 for new projects, prove for running, and Devel::Cover for accountability.
 
-
----
-
----
-name: plan-orchestrate
-description: Read a plan document, decompose it into steps, design a per-step agent chain from the ECC catalogue, and emit ready-to-paste /orchestrate custom prompts. Generative only — never invokes /orchestrate itself. Use when the user has a multi-step plan and wants to drive it through orchestrate without composing chains by hand.
-metadata:
-  origin: ECC
----
-
 # Plan Orchestrate
 
 Bridge a plan document to `/orchestrate custom` by emitting one ready-to-paste invocation per step. The skill is generative only — it never executes `/orchestrate`. The user pastes each line when ready.
@@ -51895,16 +49845,6 @@ The two examples above illustrate **the two possible outputs** for two different
 - Match the language of the plan document for task descriptions (agent names always remain English).
 - Do not insert "Co-Authored-By" lines or emoji in the output unless the user explicitly asks.
 
-
----
-
----
-name: plankton-code-quality
-description: "Write-time code quality enforcement using Plankton — auto-formatting, linting, and Claude-powered fixes on every file edit via hooks."
-metadata:
-  origin: community
----
-
 # Plankton Code Quality Skill
 
 Integration reference for Plankton (credit: @alxfazio), a write-time code quality enforcement system for Claude Code. Plankton runs formatters and linters on every file edit via PostToolUse hooks, then spawns Claude subprocesses to fix violations the agent didn't catch.
@@ -52136,16 +50076,6 @@ Track:
 - repeat violations by category
 - merge blocks due to gate failures
 
-
----
-
----
-name: postgres-patterns
-description: PostgreSQL database patterns for query optimization, schema design, indexing, and security. Based on Supabase best practices.
-metadata:
-  origin: ECC
----
-
 # PostgreSQL Patterns
 
 Quick reference for PostgreSQL best practices. For detailed guidance, use the `database-reviewer` agent.
@@ -52288,16 +50218,6 @@ SELECT pg_reload_conf();
 
 *Based on Supabase Agent Skills (credit: Supabase team) (MIT License)*
 
-
----
-
----
-name: prediction-market-oracle-research
-description: Research prediction markets as data sources or oracle signals for products, agents, dashboards, and corporate decision intelligence. Use for source-grounded analysis of market-implied probabilities, caveats, and integration patterns without investment advice.
-metadata:
-  origin: ECC
----
-
 # Prediction Market Oracle Research
 
 Use this skill when prediction markets are being considered as a data source,
@@ -52356,16 +50276,6 @@ End with:
 Prediction-market signals are informational inputs, not investment advice.
 ```
 
-
----
-
----
-name: prediction-market-risk-review
-description: Review prediction-market, basket, oracle, and trading-agent workflows for compliance, safety, data-quality, privacy, and execution risk. Use before any workflow handles venue auth, user portfolio data, API keys, or trade planning.
-metadata:
-  origin: ECC
----
-
 # Prediction Market Risk Review
 
 Use this skill before a prediction-market workflow touches user financial
@@ -52420,16 +50330,6 @@ Return:
 
 If any execution-capable step is requested, require a separate implementation
 plan and explicit user approval.
-
-
----
-
----
-name: prisma-patterns
-description: Prisma ORM patterns for TypeScript backends — schema design, query optimization, transactions, pagination, and critical traps like updateMany returning count not records, $transaction timeouts, migrate dev resetting the DB, @updatedAt skipped on bulk writes, and serverless connection exhaustion.
-metadata:
-  origin: ECC
----
 
 # Prisma Patterns
 
@@ -52797,16 +50697,6 @@ await prisma.post.deleteMany({ where: { authorId: userId } });
 - `database-migrations` — multi-step migration planning for production
 - `backend-patterns` — general API and service layer design
 
-
----
-
----
-name: product-capability
-description: Translate PRD intent, roadmap asks, or product discussions into an implementation-ready capability plan that exposes constraints, invariants, interfaces, and unresolved decisions before multi-service work starts. Use when the user needs an ECC-native PRD-to-SRS lane instead of vague planning prose.
-metadata:
-  origin: ECC
----
-
 # Product Capability
 
 This skill turns product intent into explicit engineering constraints.
@@ -52943,16 +50833,6 @@ HANDOFF
 - Engineering review has a durable artifact instead of relying on memory or Slack context.
 - The resulting plan is reusable across Claude Code, Codex, Cursor, OpenCode, and ECC 2.0 planning surfaces.
 
-
----
-
----
-name: product-lens
-description: Use this skill to validate the "why" before building, run product diagnostics, and pressure-test product direction before the request becomes an implementation contract.
-metadata:
-  origin: ECC
----
-
 # Product Lens — Think Before You Build
 
 This lane owns product diagnosis, not implementation-ready specification writing.
@@ -53039,16 +50919,6 @@ Pair with:
 - `/design-system audit` for visual polish assessment
 - `/canary-watch` for post-launch monitoring
 - `product-capability` when the product brief needs to become an implementation-ready capability plan
-
-
----
-
----
-name: production-audit
-description: Local-evidence production readiness audit for shipped apps, pre-launch reviews, post-merge checks, and "what breaks in prod?" questions without sending repo data to an external audit service.
-metadata:
-  origin: community
----
 
 # Production Audit
 
@@ -53250,29 +51120,6 @@ Next action: Want me to patch webhook idempotency first?
 - Skill: `e2e-testing`
 - Skill: `tdd-workflow`
 - Skill: `verification-loop`
-
-
----
-
----
-name: production-scheduling
-description: >
-  Codified expertise for production scheduling, job sequencing, line balancing,
-  changeover optimization, and bottleneck resolution in discrete and batch
-  manufacturing. Informed by production schedulers with 15+ years experience.
-  Includes TOC/drum-buffer-rope, SMED, OEE analysis, disruption response
-  frameworks, and ERP/MES interaction patterns. Use when scheduling production,
-  resolving bottlenecks, optimizing changeovers, responding to disruptions,
-  or balancing manufacturing lines.
-license: Apache-2.0
-version: 1.0.0
-homepage: https://github.com/affaan-m/everything-claude-code
-metadata:
-  origin: ECC
-  author: evos
-  clawdbot:
-    emoji: ""
----
 
 # Production Scheduling
 
@@ -53493,16 +51340,6 @@ Track per shift and trend weekly:
 - Pair this skill with your constraint hierarchy, frozen-window policy, and expedite-approval thresholds.
 - Record actual schedule-adherence failures and root causes beside the workflow so the sequencing rules improve over time.
 
-
----
-
----
-name: project-flow-ops
-description: Operate execution flow across GitHub and Linear by triaging issues and pull requests, linking active work, and keeping GitHub public-facing while Linear remains the internal execution layer. Use when the user wants backlog control, PR triage, or GitHub-to-Linear coordination.
-metadata:
-  origin: ECC
----
-
 # Project Flow Ops
 
 This skill turns disconnected GitHub issues, PRs, and Linear tasks into one execution flow.
@@ -53608,9 +51445,6 @@ NEXT OPERATOR ACTION
 - "Audit the open PR backlog and tell me what to merge vs rebuild"
 - "Map GitHub issues into our ECC 1.x and ECC 2.0 program lanes"
 - "Check whether this needs a Linear issue or should stay GitHub-only"
-
-
----
 
 # 專案指南技能（範例）
 
@@ -53957,29 +51791,6 @@ SUPABASE_KEY=eyJ...
 - `backend-patterns.md` - API 和資料庫模式
 - `frontend-patterns.md` - React 和 Next.js 模式
 - `tdd-workflow/` - 測試驅動開發方法論
-
-
----
-
----
-name: prompt-optimizer
-description: >-
-  Analyze raw prompts, identify intent and gaps, match ECC components
-  (skills/commands/agents/hooks), and output a ready-to-paste optimized
-  prompt. Advisory role only — never executes the task itself.
-  TRIGGER when: user says "optimize prompt", "improve my prompt",
-  "how to write a prompt for", "help me prompt", "rewrite this prompt",
-  or explicitly asks to enhance prompt quality. Also triggers on Chinese
-  equivalents: "优化prompt", "改进prompt", "怎么写prompt", "帮我优化这个指令".
-  DO NOT TRIGGER when: user wants the task executed directly, or says
-  "just do it" / "直接做". DO NOT TRIGGER when user says "优化代码",
-  "优化性能", "optimize performance", "optimize this code" — those are
-  refactoring/performance tasks, not prompt optimization.
-metadata:
-  origin: community
-  author: YannJY02
-  version: "1.0.0"
----
 
 # Prompt Optimizer
 
@@ -54360,16 +52171,6 @@ Recommended: Opus 4.6 for blueprint planning, Sonnet 4.6 for phase execution.
 | `strategic-compact` | Long session context management |
 | `cost-aware-llm-pipeline` | Token optimization recommendations |
 
-
----
-
----
-name: pubmed-database
-description: Direct PubMed and NCBI E-utilities search workflows for biomedical literature, MeSH queries, PMID lookup, citation retrieval, and API-backed literature monitoring.
-metadata:
-  origin: community
----
-
 # PubMed Database
 
 Use this skill when a task needs biomedical literature from PubMed rather than
@@ -54539,16 +52340,6 @@ Example:
 - [NCBI E-utilities documentation](https://www.ncbi.nlm.nih.gov/books/NBK25501/)
 - [NCBI API key guidance](https://support.nlm.nih.gov/kbArticle/?pn=KA-05317)
 - NCBI support: <eutilities@ncbi.nlm.nih.gov>
-
-
----
-
----
-name: python-patterns
-description: Pythonic idioms, PEP 8 standards, type hints, and best practices for building robust, efficient, and maintainable Python applications.
-metadata:
-  origin: ECC
----
 
 # Python Development Patterns
 
@@ -55294,16 +53085,6 @@ except SpecificError as e:
 ```
 
 __Remember__: Python code should be readable, explicit, and follow the principle of least surprise. When in doubt, prioritize clarity over cleverness.
-
-
----
-
----
-name: python-testing
-description: Python testing strategies using pytest, TDD methodology, fixtures, mocking, parametrization, and coverage requirements.
-metadata:
-  origin: ECC
----
 
 # Python Testing Patterns
 
@@ -56116,16 +53897,6 @@ pytest --pdb
 
 **Remember**: Tests are code too. Keep them clean, readable, and maintainable. Good tests catch bugs; great tests prevent them.
 
-
----
-
----
-name: pytorch-patterns
-description: PyTorch deep learning patterns and best practices for building robust, efficient, and reproducible training pipelines, model architectures, and data loading.
-metadata:
-  origin: ECC
----
-
 # PyTorch Development Patterns
 
 Idiomatic PyTorch patterns and best practices for building robust, efficient, and reproducible deep learning applications.
@@ -56517,29 +54288,6 @@ torch.save(model.state_dict(), "model.pt")
 
 __Remember__: PyTorch code should be device-agnostic, reproducible, and memory-conscious. When in doubt, profile with `torch.profiler` and check GPU memory with `torch.cuda.memory_summary()`.
 
-
----
-
----
-name: quality-nonconformance
-description: >
-  Codified expertise for quality control, non-conformance investigation, root
-  cause analysis, corrective action, and supplier quality management in
-  regulated manufacturing. Informed by quality engineers with 15+ years
-  experience across FDA, IATF 16949, and AS9100 environments. Includes NCR
-  lifecycle management, CAPA systems, SPC interpretation, and audit methodology.
-  Use when investigating non-conformances, performing root cause analysis,
-  managing CAPAs, interpreting SPC data, or handling supplier quality issues.
-license: Apache-2.0
-version: 1.0.0
-homepage: https://github.com/affaan-m/everything-claude-code
-metadata:
-  origin: ECC
-  author: evos
-  clawdbot:
-    emoji: ""
----
-
 # Quality & Non-Conformance Management
 
 ## Role and Context
@@ -56780,16 +54528,6 @@ Track these metrics weekly and trend monthly:
 
 - Pair this skill with your NCR template, disposition authority matrix, and SPC rule set so investigators use the same definitions every time.
 - Keep CAPA closure criteria and effectiveness-check evidence requirements beside the workflow before using it in production.
-
-
----
-
----
-name: quarkus-patterns
-description: Quarkus 3.x LTS architecture patterns with Camel for messaging, RESTful API design, CDI services, data access with Panache, and async processing. Use for Java Quarkus backend work with event-driven architectures.
-metadata:
-  origin: ECC
----
 
 # Quarkus Development Patterns
 
@@ -57508,16 +55246,6 @@ public class CamelHealthCheck implements HealthCheck {
 - Add health checks for production readiness
 - Test native compilation compatibility periodically
 
-
----
-
----
-name: quarkus-security
-description: Quarkus Security best practices for authentication, authorization, JWT/OIDC, RBAC, input validation, CSRF, secrets management, and dependency security.
-metadata:
-  origin: ECC
----
-
 # Quarkus Security Review
 
 Best practices for securing Quarkus applications with authentication, authorization, and input validation.
@@ -57979,16 +55707,6 @@ quarkus extension list --installable
 - Use SecurityIdentity for programmatic checks
 - Set appropriate CORS policies
 - Test authentication and authorization paths
-
-
----
-
----
-name: quarkus-tdd
-description: Test-driven development for Quarkus 3.x LTS using JUnit 5, Mockito, REST Assured, Camel testing, and JaCoCo. Use when adding features, fixing bugs, or refactoring event-driven services.
-metadata:
-  origin: ECC
----
 
 # Quarkus TDD Workflow
 
@@ -58796,16 +56514,6 @@ mvn jacoco:check
 - Use `argThat()` for complex argument matching
 - Verify the order of calls when it matters: `InOrder` from Mockito
 
-
----
-
----
-name: quarkus-verification
-description: "Verification loop for Quarkus projects: build, static analysis, tests with coverage, security scans, native compilation, and diff review before release or PR."
-metadata:
-  origin: ECC
----
-
 # Quarkus Verification Loop
 
 Run before PRs, after major changes, and pre-deploy.
@@ -59280,16 +56988,6 @@ jobs:
 - Review security scan results
 - Validate configuration for each environment
 
-
----
-
----
-name: ralphinho-rfc-pipeline
-description: RFC-driven multi-agent DAG execution pattern with quality gates, merge queues, and work unit orchestration.
-metadata:
-  origin: ECC
----
-
 # Ralphinho RFC Pipeline
 
 Inspired by [humanplane](https://github.com/humanplane) style RFC decomposition patterns and multi-unit orchestration workflows.
@@ -59351,16 +57049,6 @@ If a unit stalls:
 - unit scorecards
 - dependency graph snapshot
 - integration risk summary
-
-
----
-
----
-name: react-patterns
-description: React 18/19 patterns including hooks discipline, server/client component boundaries, Suspense + error boundaries, form actions, data fetching, state management decision trees, and accessibility-first composition. Use when writing or reviewing React components.
-metadata:
-  origin: ECC
----
 
 # React Patterns
 
@@ -59697,16 +57385,6 @@ const NotificationsContext = createContext<Notification[]>([]);
 
 // A component that only consumes ThemeContext does NOT re-render when notifications change
 ```
-
-
----
-
----
-name: react-performance
-description: React and Next.js performance optimization patterns adapted from Vercel Engineering's React Best Practices (https://github.com/vercel-labs/agent-skills). Organizes 70+ rules across 8 priority categories — waterfalls, bundle size, server-side, client fetching, re-render, rendering, JS micro-perf, advanced. Use when writing, reviewing, or refactoring React/Next.js code for performance.
-metadata:
-  origin: ECC
----
 
 # React Performance
 
@@ -60277,16 +57955,6 @@ Adapted from Vercel Labs `react-best-practices` skill (MIT License, copyright Ve
 
 This skill restructures and adapts the original 70-rule catalog into a single navigable reference. For the full original ruleset with extended examples, see the upstream repository.
 
-
----
-
----
-name: react-testing
-description: React component testing with React Testing Library, Vitest/Jest, MSW for network mocking, accessibility assertions with axe, and the decision boundary between component tests and Playwright/Cypress end-to-end runs. Use when writing or fixing tests for React components, hooks, or pages.
-metadata:
-  origin: ECC
----
-
 # React Testing
 
 Comprehensive React testing patterns for behavior-focused component tests, custom hook tests, accessibility assertions, and network-level mocking.
@@ -60705,16 +58373,6 @@ test("shows loading then content", async () => {
 });
 ```
 
-
----
-
----
-name: recsys-pipeline-architect
-description: Design composable recommendation, ranking, and feed pipelines using the six-stage Source→Hydrator→Filter→Scorer→Selector→SideEffect framework popularized by xAI's open-sourced For You algorithm. Use this skill whenever the user is building any system that picks "the top K items for a (user, context)" — social feeds, content CMSs, RAG rerankers, task prioritizers, notification triage, search reranking, ad ranking.
-metadata:
-  origin: community
----
-
 # recsys-pipeline-architect
 
 A spec-and-scaffold skill for building composable recommendation, ranking, and feed pipelines. It encodes the **six-stage pattern** — Source → Hydrator → Filter → Scorer → Selector → SideEffect — popularized by xAI's open-sourced [For You algorithm](https://github.com/xai-org/x-algorithm) (Apache 2.0). This skill is an independent reimplementation of the pattern (MIT) — no code copied from the original.
@@ -60824,17 +58482,6 @@ The upstream repository at <https://github.com/mturac/recsys-pipeline-architect>
 
 Install via skills.sh: `npx skills add mturac/recsys-pipeline-architect`
 
-
----
-
----
-name: recursive-decision-ledger
-description: Use when the user asks for repeated rollouts, marked decision processes, high-dimensional search, stochastic optimization, local-optima exploration, ensemble comparison, or recursive reasoning with a visible evidence trail.
-metadata:
-  origin: ECC
-tools: Read, Write, Edit, Bash, Grep, Glob
----
-
 # Recursive Decision Ledger
 
 Use this skill when the user is trying to force deeper computation through
@@ -60907,16 +58554,6 @@ Rollout 15 complete. The prior winner still holds, but edge deteriorated 17%.
 Status: watch, not live. Next gate: 20 replay fills with fresh orderbook age
 below threshold.
 ```
-
-
----
-
----
-name: redis-patterns
-description: Redis data structure patterns, caching strategies, distributed locks, rate limiting, pub/sub, and connection management for production applications.
-metadata:
-  origin: ECC
----
 
 # Redis Patterns
 
@@ -61316,16 +58953,6 @@ Use Pub/Sub for fire-and-forget. Switch to Streams if you need guaranteed delive
 - Skill: `django-patterns` — Django cache framework integration
 - Agent: `database-reviewer` — full database review workflow
 
-
----
-
----
-name: regex-vs-llm-structured-text
-description: Decision framework for choosing between regex and LLM when parsing structured text — start with regex, add LLM only for low-confidence edge cases.
-metadata:
-  origin: ECC
----
-
 # Regex vs LLM for Structured Text Parsing
 
 A practical decision framework for parsing structured text (quizzes, forms, invoices, documents). The key insight: regex handles 95-98% of cases cheaply and deterministically. Reserve expensive LLM calls for the remaining edge cases.
@@ -61541,16 +59168,6 @@ From a production quiz parsing pipeline (410 items):
 - Document structure parsing (headers, sections, tables)
 - Any structured text with repeating patterns where cost matters
 
-
----
-
----
-name: remotion-video-creation
-description: Best practices for Remotion - Video creation in React. 29 domain-specific rules covering 3D, animations, audio, captions, charts, transitions, and more.
-metadata:
-  tags: remotion, video, react, animation, composition, three.js, lottie
----
-
 ## When to use
 
 Use this skills whenever you are dealing with Remotion code to obtain the domain-specific knowledge.
@@ -61587,16 +59204,6 @@ Read individual rule files for detailed explanations and code examples:
 - [rules/transitions.md](rules/transitions.md) - Scene transition patterns for Remotion
 - [rules/trimming.md](rules/trimming.md) - Trimming patterns for Remotion - cut the beginning or end of animations
 - [rules/videos.md](rules/videos.md) - Embedding videos in Remotion - trimming, volume, speed, looping, pitch
-
-
----
-
----
-name: repo-scan
-description: Cross-stack source code asset audit — classifies every file, detects embedded third-party libraries, and delivers actionable four-level verdicts per module with interactive HTML reports.
-metadata:
-  origin: community
----
 
 # repo-scan
 
@@ -61670,16 +59277,6 @@ On a 50,000-file C++ monorepo:
 ## Links
 
 - [GitHub Repository](https://github.com/haibindev/repo-scan)
-
-
----
-
----
-name: research-ops
-description: Evidence-first current-state research workflow for ECC. Use when the user wants fresh facts, comparisons, enrichment, or a recommendation built from current public evidence and any supplied local context.
-metadata:
-  origin: ECC
----
 
 # Research Ops
 
@@ -61787,29 +59384,6 @@ RECOMMENDATION
 - important claims are labeled by evidence type
 - freshness-sensitive outputs include dates
 - the final recommendation matches the actual research mode used
-
-
----
-
----
-name: returns-reverse-logistics
-description: >
-  Codified expertise for returns authorization, receipt and inspection,
-  disposition decisions, refund processing, fraud detection, and warranty
-  claims management. Informed by returns operations managers with 15+ years
-  experience. Includes grading frameworks, disposition economics, fraud
-  pattern recognition, and vendor recovery processes. Use when handling
-  product returns, reverse logistics, refund decisions, return fraud
-  detection, or warranty claims.
-license: Apache-2.0
-version: 1.0.0
-homepage: https://github.com/affaan-m/everything-claude-code
-metadata:
-  origin: ECC
-  author: evos
-  clawdbot:
-    emoji: ""
----
 
 # Returns & Reverse Logistics
 
@@ -62031,16 +59605,6 @@ Level 1 (Returns Associate) → Level 2 (Team Lead, 2 hours) → Level 3 (Return
 
 - Pair this skill with your grading rubric, fraud review thresholds, and refund authority matrix before using it in production.
 - Keep restocking standards, hazmat return handling, and liquidation rules near the operating team that will execute the decisions.
-
-
----
-
----
-name: rules-distill
-description: "Scan skills to extract cross-cutting principles and distill them into rules — append, revise, or create new rule files"
-metadata:
-  origin: ECC
----
 
 # Rules Distill
 
@@ -62300,16 +59864,6 @@ Results saved to results.json
 - **Link back**: Draft text should include `See skill: [name]` references so readers can find the detailed How.
 - **Deterministic collection, LLM judgment**: Scripts guarantee exhaustiveness; the LLM guarantees contextual understanding.
 - **Anti-abstraction safeguard**: The 3-layer filter (2+ skills evidence, actionable behavior test, violation risk) prevents overly abstract principles from entering rules.
-
-
----
-
----
-name: rust-patterns
-description: Idiomatic Rust patterns, ownership, error handling, traits, concurrency, and best practices for building safe, performant applications.
-metadata:
-  origin: ECC
----
 
 # Rust Development Patterns
 
@@ -62804,16 +60358,6 @@ async fn bad_async() {
 ```
 
 **Remember**: If it compiles, it's probably correct — but only if you avoid `unwrap()`, minimize `unsafe`, and let the type system work for you.
-
-
----
-
----
-name: rust-testing
-description: Rust testing patterns including unit tests, integration tests, async testing, property-based testing, mocking, and coverage. Follows TDD methodology.
-metadata:
-  origin: ECC
----
 
 # Rust Testing Patterns
 
@@ -63310,16 +60854,6 @@ test:
 
 **Remember**: Tests are documentation. They show how your code is meant to be used. Write them clearly and keep them up to date.
 
-
----
-
----
-name: safety-guard
-description: Use this skill to prevent destructive operations when working on production systems or running agents autonomously.
-metadata:
-  origin: ECC
----
-
 # Safety Guard — Prevent Destructive Operations
 
 ## When to Use
@@ -63389,16 +60923,6 @@ Uses PreToolUse hooks to intercept Bash, Write, Edit, and MultiEdit tool calls. 
 - Enable by default for `codex -a never` sessions
 - Pair with observability risk scoring in ECC 2.0
 - Logs all blocked actions to `~/.claude/safety-guard.log`
-
-
----
-
----
-name: santa-method
-description: "Multi-agent adversarial verification with convergence loop. Two independent review agents must both pass before output ships."
-metadata:
-  origin: "Ronald Skelton - Founder, RapportScore.ai"
----
 
 # Santa Method
 
@@ -63701,16 +61225,6 @@ Cost of NOT Santa = (reputation damage) + (correction effort) + (trust erosion)
 
 For batch operations, the sampling pattern reduces cost to ~15-20% of full verification while catching >90% of systematic issues.
 
-
----
-
----
-name: scholar-evaluation
-description: Structured scholarly-work evaluation for papers, proposals, literature reviews, methods sections, evidence quality, citation support, and research-writing feedback.
-metadata:
-  origin: community
----
-
 # Scholar Evaluation
 
 Use this skill to evaluate academic or scientific work with a repeatable rubric.
@@ -63865,16 +61379,6 @@ Use `N/A` for dimensions that do not apply.
 - Do not penalize a paper for omitting a dimension outside its scope.
 - Do not treat citation count, venue, or author reputation as proof of quality.
 - Do not accept unsupported claims just because they appear in the abstract.
-
-
----
-
----
-name: search-first
-description: Research-before-coding workflow. Search for existing tools, libraries, and patterns before writing custom code. Invokes the researcher agent.
-metadata:
-  origin: ECC
----
 
 # /search-first — Research Before You Code
 
@@ -64053,17 +61557,6 @@ Result: 1 package + 1 schema file, no custom validation logic
 - **Over-customizing**: Wrapping a library so heavily it loses its benefits
 - **Dependency bloat**: Installing a massive package for one small feature
 
-
----
-
----
-name: security-bounty-hunter
-description: Hunt for exploitable, bounty-worthy security issues in repositories. Focuses on remotely reachable vulnerabilities that qualify for real reports instead of noisy local-only findings.
-metadata:
-  origin: ECC direct-port adaptation
-version: "1.0.0"
----
-
 # Security Bounty Hunter
 
 Use this when the goal is practical vulnerability discovery for responsible disclosure or bounty submission, not a broad best-practices review.
@@ -64156,16 +61649,6 @@ Before submitting:
 - The PoC works
 - The issue is not already covered by an advisory, CVE, or open ticket
 - The target is actually in scope for the bounty program
-
-
----
-
----
-name: security-review
-description: Use this skill when adding authentication, handling user input, working with secrets, creating API endpoints, or implementing payment/sensitive features. Provides comprehensive security checklist and patterns.
-metadata:
-  origin: ECC
----
 
 # Security Review Skill
 
@@ -64665,16 +62148,6 @@ Before ANY production deployment:
 
 **Remember**: Security is not optional. One vulnerability can compromise the entire platform. When in doubt, err on the side of caution.
 
-
----
-
----
-name: security-scan
-description: Scan your Claude Code configuration (.claude/ directory) for security vulnerabilities, misconfigurations, and injection risks using AgentShield. Checks CLAUDE.md, settings.json, MCP servers, hooks, and agent definitions.
-metadata:
-  origin: ECC
----
-
 # Security Scan Skill
 
 Audit your Claude Code configuration for security issues using [AgentShield](https://github.com/affaan-m/agentshield).
@@ -64835,16 +62308,6 @@ Add to your CI pipeline:
 - **GitHub**: [github.com/affaan-m/agentshield](https://github.com/affaan-m/agentshield)
 - **npm**: [npmjs.com/package/ecc-agentshield](https://www.npmjs.com/package/ecc-agentshield)
 
-
----
-
----
-name: seo
-description: Audit, plan, and implement SEO improvements across technical SEO, on-page optimization, structured data, Core Web Vitals, and content strategy. Use when the user wants better search visibility, SEO remediation, schema markup, sitemap/robots work, or keyword mapping.
-metadata:
-  origin: ECC
----
-
 # SEO
 
 Improve search visibility through technical correctness, performance, and content relevance, not gimmicks.
@@ -64994,17 +62457,6 @@ Fix: Generate a unique title per product using the product name and primary cate
 - `brand-voice`
 - `market-research`
 
-
----
-
----
-name: skill-comply
-description: Visualize whether skills, rules, and agent definitions are actually followed — auto-generates scenarios at 3 prompt strictness levels, runs agents, classifies behavioral sequences, and reports compliance rates with full tool call timelines
-metadata:
-  origin: ECC
-tools: Read, Bash
----
-
 # skill-comply: Automated Compliance Measurement
 
 Measures whether coding agents actually follow skills, rules, or agent definitions by:
@@ -65056,16 +62508,6 @@ Reports are self-contained and include:
 ### Advanced (optional)
 
 For users familiar with hooks, reports also include hook promotion recommendations for steps with low compliance. This is informational — the main value is the compliance visibility itself.
-
-
----
-
----
-name: skill-scout
-description: Search existing local, marketplace, GitHub, and web skill sources before creating a new skill. Use when the user wants to create, build, fork, or find a skill for a workflow.
-metadata:
-  origin: community
----
 
 # Skill Scout
 
@@ -65201,16 +62643,6 @@ release-note variant, or create a fresh skill.
 - `search-first` - General search-before-building workflow.
 - `skill-stocktake` - Audit installed skills for health, duplicates, and gaps.
 - `agent-sort` - Categorize and organize existing agents and skills.
-
-
----
-
----
-name: skill-stocktake
-description: "Use when auditing Claude skills and commands for quality. Supports Quick Scan (changed skills only) and Full Stocktake modes with sequential subagent batch evaluation."
-metadata:
-  origin: ECC
----
 
 # skill-stocktake
 
@@ -65401,16 +62833,6 @@ Obtain via Bash: `date -u +%Y-%m-%dT%H:%M:%SZ`. Never use a date-only approximat
 - Archive / delete operations always require explicit user confirmation
 - No verdict branching by skill origin
 
-
----
-
----
-name: social-graph-ranker
-description: Weighted social-graph ranking for warm intro discovery, bridge scoring, and network gap analysis across X and LinkedIn. Use when the user wants the reusable graph-ranking engine itself, not the broader outreach or network-maintenance workflow layered on top of it.
-metadata:
-  origin: ECC
----
-
 # Social Graph Ranker
 
 Canonical weighted graph-ranking layer for network-aware outreach.
@@ -65560,16 +62982,6 @@ No Warm Path
 - `brand-voice` should run before drafting any intro request or direct outreach
 - `x-api` provides X graph access and optional execution paths
 
-
----
-
----
-name: social-publisher
-description: Agent-driven scheduling and publishing of social media posts across 13 platforms via SocialClaw. Use when the user wants to publish to X, LinkedIn, Instagram, Facebook Pages, TikTok, Discord, Telegram, YouTube, Reddit, WordPress, or Pinterest — or when managing campaigns, uploading media, or monitoring post delivery status.
-metadata:
-  origin: community
----
-
 # Social Publisher (SocialClaw)
 
 Connects Claude Code to [SocialClaw](https://getsocialclaw.com) for agent-driven social media publishing across 13 platforms through a single workspace API key.
@@ -65693,16 +63105,6 @@ socialclaw posts list --json
 
 - npm: `npm install -g socialclaw@0.1.12`
 - Dashboard: [SocialClaw dashboard](https://getsocialclaw.com/dashboard)
-
-
----
-
----
-name: springboot-patterns
-description: Spring Boot architecture patterns, REST API design, layered services, data access, caching, async processing, and logging. Use for Java Spring Boot backend work.
-metadata:
-  origin: ECC
----
 
 # Spring Boot Development Patterns
 
@@ -66013,16 +63415,6 @@ Use Spring’s `@Scheduled` or integrate with queues (e.g., Kafka, SQS, RabbitMQ
 
 **Remember**: Keep controllers thin, services focused, repositories simple, and errors handled centrally. Optimize for maintainability and testability.
 
-
----
-
----
-name: springboot-security
-description: Spring Security best practices for authn/authz, validation, CSRF, secrets, headers, rate limiting, and dependency security in Java Spring Boot services.
-metadata:
-  origin: ECC
----
-
 # Spring Boot Security Review
 
 Use when adding auth, handling input, creating endpoints, or dealing with secrets.
@@ -66290,16 +63682,6 @@ public class RateLimitFilter extends OncePerRequestFilter {
 
 **Remember**: Deny by default, validate inputs, least privilege, and secure-by-configuration first.
 
-
----
-
----
-name: springboot-tdd
-description: Test-driven development for Spring Boot using JUnit 5, Mockito, MockMvc, Testcontainers, and JaCoCo. Use when adding features, fixing bugs, or refactoring.
-metadata:
-  origin: ECC
----
-
 # Spring Boot TDD Workflow
 
 TDD guidance for Spring Boot services with 80%+ coverage (unit + integration).
@@ -66452,16 +63834,6 @@ class MarketBuilder {
 - Gradle: `./gradlew test jacocoTestReport`
 
 **Remember**: Keep tests fast, isolated, and deterministic. Test behavior, not implementation details.
-
-
----
-
----
-name: springboot-verification
-description: "Verification loop for Spring Boot projects: build, static analysis, tests with coverage, security scans, and diff review before release or PR."
-metadata:
-  origin: ECC
----
 
 # Spring Boot Verification Loop
 
@@ -66689,16 +64061,6 @@ Issues to Fix:
 
 **Remember**: Fast feedback beats late surprises. Keep the gate strict—treat warnings as defects in production systems.
 
-
----
-
----
-name: strategic-compact
-description: Suggests manual context compaction at logical intervals to preserve context through task phases rather than arbitrary auto-compaction.
-metadata:
-  origin: ECC
----
-
 # Strategic Compact Skill
 
 Suggests manual `/compact` at strategic points in your workflow rather than relying on arbitrary auto-compaction.
@@ -66828,16 +64190,6 @@ Common sources of duplicate context:
 - [The Longform Guide](https://x.com/affaanmustafa/status/2014040193557471352) — Token optimization section
 - Memory persistence hooks — For state that survives compaction
 - `continuous-learning` skill — Extracts patterns before session ends
-
-
----
-
----
-name: swift-actor-persistence
-description: Thread-safe data persistence in Swift using actors — in-memory cache with file-backed storage, eliminating data races by design.
-metadata:
-  origin: ECC
----
 
 # Swift Actors for Thread-Safe Persistence
 
@@ -66976,14 +64328,6 @@ final class QuestionListViewModel {
 - Offline-first architectures that sync to a server later
 - Any shared mutable state that multiple parts of the app access concurrently
 - Replacing legacy `DispatchQueue`-based thread safety with modern Swift concurrency
-
-
----
-
----
-name: swift-concurrency-6-2
-description: Swift 6.2 Approachable Concurrency — single-threaded by default, @concurrent for explicit background offloading, isolated conformances for main actor types.
----
 
 # Swift 6.2 Approachable Concurrency
 
@@ -67197,16 +64541,6 @@ To use `@concurrent`:
 - Building MainActor-centric app architectures (most UI apps)
 - Performance optimization — offloading specific heavy computations to background
 
-
----
-
----
-name: swift-protocol-di-testing
-description: Protocol-based dependency injection for testable Swift code — mock file system, network, and external APIs using focused protocols and Swift Testing.
-metadata:
-  origin: ECC
----
-
 # Swift Protocol-Based Dependency Injection for Testing
 
 Patterns for making Swift code testable by abstracting external dependencies (file system, network, iCloud) behind small, focused protocols. Enables deterministic tests without I/O.
@@ -67391,14 +64725,6 @@ func testReadError() async {
 - Testing error handling paths that are hard to trigger in real environments
 - Building modules that need to work in app, test, and SwiftUI preview contexts
 - Apps using Swift concurrency (actors, structured concurrency) that need testable architecture
-
-
----
-
----
-name: swiftui-patterns
-description: SwiftUI architecture patterns, state management with @Observable, view composition, navigation, performance optimization, and modern iOS/macOS UI best practices.
----
 
 # SwiftUI Patterns
 
@@ -67654,15 +64980,6 @@ Use `#Preview` macro with inline mock data for fast iteration:
 
 See skill: `swift-actor-persistence` for actor-based persistence patterns.
 See skill: `swift-protocol-di-testing` for protocol-based DI and testing with Swift Testing.
-
-
----
-
----
-name: taste
-description: A creative-direction (taste) layer for music videos and short-form edits in the angelcore / cloud-trance / hyperpop visual family. Distills a named-genre aesthetic vocabulary, a mood + color + light system, and a beat-synced editing grammar, then chains ECC's video skills (video-editing, fal-ai-media, remotion-video-creation, motion-*, content-engine) into one production pipeline. Use when the work is not just making a video function but making it feel intentional, when building a music video, a fancam/edit, a moodboard-driven reel, or when choosing a coherent visual direction for AI-generated b-roll.
-origin: ECC
----
 
 # Taste
 
@@ -67922,17 +65239,6 @@ for project setup, audio track binding, and render flags.
 - `videodb` — server-side smart reframe and indexing for large footage
 - `content-engine` — platform-native distribution, covers, captions
 - `frontend-design-direction` — the same "decide a direction first" discipline, for UI
-
-
----
-
----
-name: tdd-workflow
-description: Use this skill when writing new features, fixing bugs, or refactoring code. Enforces test-driven development with 80%+ coverage including unit, integration, and E2E tests.
-argument-hint: <path/to/*.plan.md>
-metadata:
-  origin: ECC
----
 
 # Test-Driven Development Workflow
 
@@ -68453,16 +65759,6 @@ npm test && npm run lint
 
 **Remember**: Tests are not optional. They are the safety net that enables confident refactoring, rapid development, and production reliability.
 
-
----
-
----
-name: team-agent-orchestration
-description: "Run team-based orchestration for agent squads using work items, ownership, agent Kanban, merge gates, and control pane handoffs."
-metadata:
-  origin: ECC
----
-
 # Team Agent Orchestration
 
 Use this skill when agents are being managed like a team rather than a single assistant. The purpose is to make team-based orchestration reliable: clear work items, explicit ownership, agent Kanban state, branch isolation, control pane visibility, and merge gates.
@@ -68567,16 +65863,6 @@ Finish each orchestration pass with:
 - Tests and eval evidence.
 - Blockers with owner and next action.
 - New shared skill candidates.
-
-
----
-
----
-name: team-builder
-description: Interactive agent picker for composing and dispatching parallel teams
-metadata:
-  origin: community
----
 
 # Team Builder
 
@@ -68741,16 +66027,6 @@ Tension: Security recommends CSP that blocks inline styles, SEO needs inline sch
 Next steps: [...]
 ```
 
-
----
-
----
-name: terminal-ops
-description: Evidence-first repo execution workflow for ECC. Use when the user wants a command run, a repo checked, a CI failure debugged, or a narrow fix pushed with exact proof of what was executed and verified.
-metadata:
-  origin: ECC
----
-
 # Terminal Ops
 
 Use this when the user wants real repo execution: run commands, inspect git state, debug CI or builds, make a narrow fix, and report exactly what changed and what was verified.
@@ -68854,16 +66130,6 @@ STATUS
 - the response names the proving command or test
 - git-related work names the repo path and branch
 - any push claim includes the target branch and exact result
-
-
----
-
----
-name: tinystruct-patterns
-description: Expert guidance for developing with the tinystruct Java framework. Use when working on the tinystruct codebase or any project built on tinystruct — including creating Application classes, @Action-mapped routes, unit tests, ActionRegistry, HTTP/CLI dual-mode handling, the built-in HTTP server, the event system, JSON with Builder/Builders, database persistence with AbstractData, POJO generation, Server-Sent Events (SSE), file uploads, and outbound HTTP networking.
-metadata:
-  origin: ECC
----
 
 # tinystruct Development Patterns
 
@@ -69138,28 +66404,6 @@ Detailed guides are available in the `references/` directory:
 - `src/test/java/org/tinystruct/application/ActionRegistryTest.java` — Registry test examples
 - `src/test/java/org/tinystruct/system/HttpServerHttpModeTest.java` — HTTP integration test patterns
 
-
----
-
----
-name: token-budget-advisor
-description: >-
-  Offers the user an informed choice about how much response depth to
-  consume before answering. Use this skill when the user explicitly
-  wants to control response length, depth, or token budget.
-  TRIGGER when: "token budget", "token count", "token usage", "token limit",
-  "response length", "answer depth", "short version", "brief answer",
-  "detailed answer", "exhaustive answer", "respuesta corta vs larga",
-  "cuántos tokens", "ahorrar tokens", "responde al 50%", "dame la versión
-  corta", "quiero controlar cuánto usas", or clear variants where the
-  user is explicitly asking to control answer size or depth.
-  DO NOT TRIGGER when: user has already specified a level in the current
-  session (maintain it), the request is clearly a one-word answer, or
-  "token" refers to auth/session/payment tokens rather than response size.
-metadata:
-  origin: community
----
-
 # Token Budget Advisor (TBA)
 
 Intercept the response flow to offer the user a choice about response depth **before** Claude answers.
@@ -69275,16 +66519,6 @@ This skill uses heuristic estimation — no real tokenizer. Accuracy ~85-90%, va
 
 Standalone skill from [TBA — Token Budget Advisor for Claude Code](https://github.com/Xabilimon1/Token-Budget-Advisor-Claude-Code-).
 Original project also ships a Python estimator script, but this repository keeps the skill self-contained and heuristic-only.
-
-
----
-
----
-name: ui-demo
-description: Record polished UI demo videos using Playwright. Use when the user asks to create a demo, walkthrough, screen recording, or tutorial video of a web application. Produces WebM videos with visible cursor, natural pacing, and professional feel.
-metadata:
-  origin: ECC
----
 
 # UI Demo Video Recorder
 
@@ -69746,16 +66980,6 @@ node demo-script.cjs
 11. Placeholder select values look real - watch for `"0"` and `"Select..."`.
 12. Popups create separate videos - capture popup pages explicitly and merge later if needed.
 
-
----
-
----
-name: ui-to-vue
-description: Use when the user has UI screenshots or design exports that need batch conversion into Vue 3 components, especially with Vant, Element Plus, or Ant Design Vue.
-metadata:
-  origin: community
----
-
 # UI To Vue
 
 Batch-convert UI design screenshots into Vue 3 Composition API component code.
@@ -69884,16 +67108,6 @@ If a local config file is required, keep it out of version control:
 ## References
 
 - npm package: `ui-to-vue-converter`
-
-
----
-
----
-name: uncloud
-description: Use when managing an Uncloud cluster — deploying services, configuring Caddy ingress, adding static proxy routes for non-cluster devices, publishing ports, scaling, inspecting logs, or managing machines and volumes with the `uc` CLI.
-metadata:
-  origin: ECC
----
 
 # Uncloud Cluster Management
 
@@ -70233,16 +67447,6 @@ uc deploy --recreate
 | Service can't reach external LAN IP from container | Verify Caddy container's host can route to target network |
 | Volumes lost after `uc service rm` | Named volumes persist; only anonymous volumes are auto-removed |
 
-
----
-
----
-name: unified-notifications-ops
-description: Operate notifications as one ECC-native workflow across GitHub, Linear, desktop alerts, hooks, and connected communication surfaces. Use when the real problem is alert routing, deduplication, escalation, or inbox collapse.
-metadata:
-  origin: ECC
----
-
 # Unified Notifications Ops
 
 Use this skill when the real problem is not a missing ping. The real problem is a fragmented notification system.
@@ -70425,16 +67629,6 @@ NEXT ECC MOVE
 - `knowledge-ops`
 - `customer-billing-ops` when the notification pain is billing/customer operations rather than engineering
 
-
----
-
----
-name: uspto-database
-description: USPTO patent and trademark data workflow for official record lookup, PatentSearch queries, TSDR checks, assignment data, and reproducible IP research logs.
-metadata:
-  origin: community
----
-
 # USPTO Database
 
 Use this skill when a task needs official United States patent or trademark
@@ -70607,16 +67801,6 @@ For final writeups, separate:
 - [PatentSearch API updates](https://search.patentsview.org/docs/)
 - [TSDR API bulk download FAQ](https://developer.uspto.gov/faq/tsdr-api-bulk-download)
 
-
----
-
----
-name: verification-loop
-description: "A comprehensive verification system for Claude Code sessions."
-metadata:
-  origin: ECC
----
-
 # Verification Loop Skill
 
 A comprehensive verification system for Claude Code sessions.
@@ -70737,16 +67921,6 @@ Run: /verify
 
 This skill complements PostToolUse hooks but provides deeper verification.
 Hooks catch issues immediately; this skill provides comprehensive review.
-
-
----
-
----
-name: video-editing
-description: AI-assisted video editing workflows for cutting, structuring, and augmenting real footage. Covers the full pipeline from raw capture through FFmpeg, Remotion, ElevenLabs, fal.ai, and final polish in Descript or CapCut. Use when the user wants to edit video, cut footage, create vlogs, or build video content.
-metadata:
-  origin: ECC
----
 
 # Video Editing
 
@@ -71052,18 +68226,6 @@ identify the 5 most engaging 30-second clips for social media."
 - `fal-ai-media` — AI image, video, and audio generation
 - `videodb` — Server-side video processing, indexing, and streaming
 - `content-engine` — Platform-native content distribution
-
-
----
-
----
-name: videodb
-description: See, Understand, Act on video and audio. See- ingest from local files, URLs, RTSP/live feeds, or live record desktop; return realtime context and playable stream links. Understand- extract frames, build visual/semantic/temporal indexes, and search moments with timestamps and auto-clips. Act- transcode and normalize (codec, fps, resolution, aspect ratio), perform timeline edits (subtitles, text/image overlays, branding, audio overlays, dubbing, translation), generate media assets (image, audio, video), and create real time alerts for events from live streams or desktop capture.
-metadata:
-  origin: ECC
-allowed-tools: Read Grep Glob Bash(python:*)
-argument-hint: "[task description]"
----
 
 # VideoDB Skill
 
@@ -71432,14 +68594,6 @@ Reference documentation is in the `reference/` directory adjacent to this SKILL.
 Reference material for this skill is vendored locally under `skills/videodb/reference/`.
 Use the local copies above instead of following external repository links at runtime.
 
-
----
-
----
-name: visa-doc-translate
-description: Translate visa application documents (images) to English and create a bilingual PDF with original and translation
----
-
 You are helping translate visa application documents for visa applications.
 
 ## Instructions
@@ -71552,16 +68706,6 @@ The skill will:
    - Page 2: Professional English translation
 
 Perfect for visa applications to Australia, USA, Canada, UK, and other countries requiring translated documents.
-
-
----
-
----
-name: vite-patterns
-description: Vite build tool patterns including config, plugins, HMR, env variables, proxy setup, SSR, library mode, dependency pre-bundling, and build optimization. Activate when working with vite.config.ts, Vite plugins, or Vite-based projects.
-metadata:
-  origin: ECC
----
 
 # Vite Patterns
 
@@ -72006,15 +69150,6 @@ import.meta.hot.data.count = 0                 // CORRECT
 - `frontend-patterns` — React component patterns
 - `docker-patterns` — containerized dev with Vite
 - `nextjs-turbopack` — alternative bundler for Next.js
-
-
----
-
----
-name: vue-patterns
-description: Vue.js 3 Composition API patterns, component architecture, reactivity best practices, Pinia state management, Vue Router navigation, and Nuxt SSR patterns. Activates for Vue, Nuxt, Vite, or Pinia projects.
-origin: ECC
----
 
 # Vue.js Patterns and Best Practices
 
@@ -72481,16 +69616,6 @@ const AsyncComp = defineAsyncComponent({
 - `frontend-patterns` — Cross-framework frontend architecture
 - `typescript` — TypeScript best practices applied to Vue projects
 - `coding-standards` — General code quality standards
-
-
----
-
----
-name: windows-desktop-e2e
-description: E2E testing for Windows native desktop apps (WPF, WinForms, Win32/MFC, Qt) using pywinauto and Windows UI Automation.
-metadata:
-  origin: ECC
----
 
 # Windows Desktop E2E Testing
 
@@ -73374,16 +70499,6 @@ pytest tests/test_login.py --count=5 -v
 - `cpp-testing` — C++ unit/integration testing with GoogleTest
 - `cpp-coding-standards` — C++ code style and patterns
 
-
----
-
----
-name: workspace-surface-audit
-description: Audit the active repo, MCP servers, plugins, connectors, env surfaces, and harness setup, then recommend the highest-value ECC-native skills, hooks, agents, and operator workflows. Use when the user wants help setting up Claude Code or understanding what capabilities are actually available in their environment.
-metadata:
-  origin: ECC
----
-
 # Workspace Surface Audit
 
 Read-only audit skill for answering the question "what can this workspace and machine actually do right now, and what should we add or enable next?"
@@ -73503,16 +70618,6 @@ Return five sections in this order:
 - The user can immediately see what is connected, what is missing, and what ECC should own next.
 - Recommendations are specific enough to implement in the repo without another discovery pass.
 - The final answer is organized around workflows, not API brands.
-
-
----
-
----
-name: x-api
-description: X/Twitter API integration for posting tweets, threads, reading timelines, search, and analytics. Covers OAuth auth patterns, rate limits, and platform-native content posting. Use when the user wants to interact with X programmatically.
-metadata:
-  origin: ECC
----
 
 # X API
 
@@ -73742,6 +70847,3 @@ Use `brand-voice` plus `content-engine` to generate platform-native content, the
 - `content-engine` — Generate platform-native content for X
 - `crosspost` — Distribute content across X, LinkedIn, and other platforms
 - `connections-optimizer` — Reorganize the X graph before drafting network-driven outreach
-
-
----

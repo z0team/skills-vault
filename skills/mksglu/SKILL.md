@@ -1,11 +1,6 @@
 ---
 name: mksglu
-description: Skills from the mksglu pack
----
-
----
-name: context-mode-ops
-description: Manage context-mode GitHub issues, PRs, releases, and marketing with parallel subagent army. Orchestrates 10-20 dynamic agents per task. Use when triaging issues, reviewing PRs, releasing versions, writing LinkedIn posts, announcing releases, fixing bugs, merging contributions, validating ENV vars, testing adapters, or syncing branches.
+description: "Skills from the mksglu pack"
 ---
 
 ## OWNER OPERATING DIRECTIVE — ABSOLUTE, NON-NEGOTIABLE PREAMBLE
@@ -467,28 +462,6 @@ npx skills add mksglu/context-mode
 npx skills add https://github.com/mksglu/context-mode/tree/main/skills/context-mode-ops
 ```
 
-
----
-
----
-name: context-mode
-description: |
-  Use context-mode tools (ctx_execute, ctx_execute_file) instead of Bash/cat when processing
-  large outputs. Triggers: "analyze logs", "summarize output", "process data",
-  "parse JSON", "filter results", "extract errors", "check build output",
-  "analyze dependencies", "process API response", "large file analysis",
-  "page snapshot", "browser snapshot", "DOM structure", "inspect page",
-  "accessibility tree", "Playwright snapshot",
-  "run tests", "test output", "coverage report", "git log", "recent commits",
-  "diff between branches", "list containers", "pod status", "disk usage",
-  "fetch docs", "API reference", "index documentation",
-  "call API", "check response", "query results",
-  "find TODOs", "count lines", "codebase statistics", "security audit",
-  "outdated packages", "dependency tree", "cloud resources", "CI/CD output".
-  Also triggers on ANY MCP tool output that may exceed 20 lines.
-  Subagent routing is handled automatically via PreToolUse hook.
----
-
 # Context Mode: Default for All Large Output
 
 ## MANDATORY RULE
@@ -771,18 +744,6 @@ Subagents automatically receive context-mode tool routing via a PreToolUse hook.
 - [Shell Patterns](./references/patterns-shell.md)
 - [Anti-Patterns & Common Mistakes](./references/anti-patterns.md)
 
-
----
-
----
-name: ctx-doctor
-description: |
-  Run context-mode diagnostics. Checks runtimes, hooks, FTS5,
-  plugin registration, npm and marketplace versions.
-  Trigger: /context-mode:ctx-doctor
-user-invocable: true
----
-
 # Context Mode Doctor
 
 Run diagnostics and display results directly in the conversation.
@@ -796,18 +757,6 @@ Run diagnostics and display results directly in the conversation.
    CLI="<PLUGIN_ROOT>/cli.bundle.mjs"; [ ! -f "$CLI" ] && CLI="<PLUGIN_ROOT>/build/cli.js"; node "$CLI" doctor
    ```
    Re-display results verbatim with the same `[OK]`/`[FAIL]`/`[WARN]` prefixes.
-
-
----
-
----
-name: ctx-index
-description: |
-  Index a local file or directory into context-mode's persistent FTS5 knowledge base
-  so future ctx_search calls can retrieve focused snippets without rereading raw files.
-  Trigger: /context-mode:ctx-index
-user-invocable: true
----
 
 # Context Mode Index
 
@@ -847,20 +796,6 @@ ctx_search({ source: "project:<name>", queries: ["..."] })
 - Prefer `--exclude` or `exclude` for project-specific noisy paths.
 - For broad repos, ask the user before raising `maxFiles` above 500.
 
-
----
-
----
-name: ctx-insight
-description: |
-  Open the context-mode Insight analytics dashboard in the browser.
-  Shows personal metrics: session activity, tool usage, error rate,
-  parallel work patterns, project focus, and actionable insights.
-  First run installs dependencies (~30s). Subsequent runs open instantly.
-  Trigger: /context-mode:ctx-insight
-user-invocable: true
----
-
 # Context Mode Insight
 
 Open the personal analytics dashboard in the browser.
@@ -879,18 +814,6 @@ Open the personal analytics dashboard in the browser.
    - "Dashboard is running at http://localhost:4747"
    - "Refresh the page to see updated metrics"
    - "Dashboard stops automatically when Claude exits. To stop sooner: kill the PID shown above."
-
-
----
-
----
-name: ctx-purge
-description: |
-  Purge the context-mode knowledge base. Permanently deletes all indexed content
-  and resets session stats. This is destructive and cannot be undone.
-  Trigger: /context-mode:ctx-purge
-user-invocable: true
----
 
 # Context Mode Purge
 
@@ -933,18 +856,6 @@ Permanently deletes session data for this project. Two scopes are supported (iss
 - `/clear` and `/compact` do NOT affect any context-mode data.
 - There is no undo. Re-index content if you need it again.
 
-
----
-
----
-name: ctx-search
-description: |
-  Search context-mode's persistent FTS5 knowledge base for previously indexed
-  local project content, documentation, or session memory.
-  Trigger: /context-mode:ctx-search
-user-invocable: true
----
-
 # Context Mode Search
 
 Search indexed content without rereading raw sources into conversation context.
@@ -972,20 +883,6 @@ context-mode search "authentication middleware" --source project:<name> --limit 
 
 6. If the index is empty, tell the user to run `/context-mode:ctx-index` or `context-mode index <path>` first.
 
-
----
-
----
-name: ctx-stats
-description: |
-  Show how much context window context-mode saved this session.
-  Displays token consumption, context savings ratio, and per-tool breakdown.
-  Read-only — shows stats only, no reset capability.
-  To wipe the knowledge base entirely, use ctx_purge instead.
-  Trigger: /context-mode:ctx-stats
-user-invocable: true
----
-
 # Context Mode Stats
 
 Show context savings for the current session.
@@ -1001,18 +898,6 @@ Show context savings for the current session.
 ## Purge
 
 - **`ctx_purge(confirm: true)`** — Permanently deletes all indexed content from the knowledge base. Use `/context-mode:ctx-purge` for this.
-
-
----
-
----
-name: ctx-upgrade
-description: |
-  Update context-mode from GitHub and fix hooks/settings.
-  Pulls latest, builds, installs, updates npm global, configures hooks.
-  Trigger: /context-mode:ctx-upgrade
-user-invocable: true
----
 
 # Context Mode Upgrade
 
@@ -1036,6 +921,3 @@ Pull latest from GitHub and reinstall the plugin.
    ```
    CLI="<PLUGIN_ROOT>/cli.bundle.mjs"; [ ! -f "$CLI" ] && CLI="<PLUGIN_ROOT>/build/cli.js"; node "$CLI" upgrade
    ```
-
-
----

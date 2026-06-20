@@ -1,14 +1,6 @@
 ---
 name: hardikpandya
-description: Skills from the hardikpandya pack
----
-
----
-name: stop-slop
-description: Remove AI writing patterns from prose. Use when drafting, editing, or reviewing text to eliminate predictable AI tells.
-metadata:
-  trigger: Writing prose, editing drafts, reviewing content for AI patterns
-  author: Hardik Pandya (https://hvpandya.com)
+description: "Skills from the hardikpandya pack"
 ---
 
 # Stop Slop
@@ -71,6 +63,3 @@ See [references/examples.md](references/examples.md) for before/after transforma
 ## License
 
 MIT
-
-
----

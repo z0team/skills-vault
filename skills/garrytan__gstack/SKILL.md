@@ -1,24 +1,8 @@
 ---
 name: garrytan__gstack
-description: Skills from the garrytan__gstack pack
+description: "Skills pack"
 ---
 
----
-name: gstack
-preamble-tier: 1
-version: 1.1.0
-description: Fast headless browser for QA testing and site dogfooding. (gstack)
-allowed-tools:
-  - Bash
-  - Read
-  - AskUserQuestion
-triggers:
-  - browse this page
-  - take a screenshot
-  - navigate to url
-  - inspect the page
-
----
 <!-- AUTO-GENERATED from SKILL.md.tmpl — do not edit directly -->
 <!-- Regenerate: bun run gen:skill-docs -->
 
@@ -995,6 +979,3 @@ Refs are invalidated on navigation — run `snapshot` again after `goto`.
 6. **Use `snapshot -C` for tricky UIs.** Finds clickable divs that the accessibility tree misses.
 7. **Check `console` after actions.** Catch JS errors that don't surface visually.
 8. **Use `chain` for long flows.** Single command, no per-step CLI overhead.
-
-
----

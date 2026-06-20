@@ -1,12 +1,6 @@
 ---
 name: _example
-description: Skills from the _example pack
----
-
----
-name: example-skill
-description: "Шаблон-приклад скіла. Use when ти хочеш побачити мінімальну валідну структуру SKILL.md перед тим як ingest-нути реальний пак. Видали цей пак, коли додаси перший справжній."
-license: MIT
+description: "Skills from the _example pack"
 ---
 
 # Example Skill
@@ -38,6 +32,3 @@ skills/example-skill/
 ```
 
 Видали цю директорію `packs/_example/` після того як заінжестиш перший реальний пак.
-
-
----

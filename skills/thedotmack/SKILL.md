@@ -1,11 +1,6 @@
 ---
 name: thedotmack
-description: Skills from the thedotmack pack
----
-
----
-name: babysit
-description: Watch a pull request or review cycle until it is ready to merge. Use when asked to babysit, monitor, or keep checking PR comments, reviews, and CI until all actionable issues are resolved.
+description: "Skills from the thedotmack pack"
 ---
 
 # Babysit PR
@@ -91,14 +86,6 @@ gh api graphql \
 - Before final reporting, do one fresh sweep of PR status, unresolved threads, recent comments, and local `git status`.
 - Report concrete evidence: latest commit SHA, check names and results, unresolved thread count, tests run, and any dirty local files left untouched.
 
-
----
-
----
-name: claude-code-plugin-release
-description: Automated semantic versioning and release workflow for Claude Code plugins. Handles version increments across package.json, marketplace.json, plugin.json manifests, build verification, git tagging, GitHub releases, and changelog generation. NPM publishing (so `npx claude-mem@X.Y.Z` resolves) is handed off to the human maintainer, who raised npm security.
----
-
 # Version Bump & Release Workflow
 
 **IMPORTANT:** Plan and write detailed release notes before starting.
@@ -168,14 +155,6 @@ description: Automated semantic versioning and release workflow for Claude Code 
 - [ ] `CHANGELOG.md` updated and pushed
 - [ ] Discord notification run from `~/Scripts/claude-mem/`
 - [ ] `git status` shows clean tree
-
-
----
-
----
-name: design-is
-description: Audit a design against Dieter Rams' ten "Good design is..." principles, then hand off a /make-plan prompt for one of three outcomes — new design, refine design, or redesign. Use when the user says "audit this design", "design review", "check this UI against Rams", "is this UI good", "critique this design", "design audit", or asks for a critique that should lead to a plan.
----
 
 # Design Is
 
@@ -485,14 +464,6 @@ Anti-patterns to guard against (specific to REDESIGN):
 - **Score inflation to match a desired verdict** — score the evidence, then read the verdict off the rule
 - **Letting Phase 0 user preference override Phase 3 evidence** — the user can disagree with the verdict, but the audit reports what the evidence says
 
-
----
-
----
-name: do
-description: Execute a phased implementation plan using subagents. Use when asked to execute, run, or carry out a plan — especially one created by make-plan.
----
-
 # Do Plan
 
 You are an ORCHESTRATOR. Deploy subagents to execute *all* work. Do not do the work yourself except to coordinate, route context, and verify that each subagent completed its assigned checklist.
@@ -534,14 +505,6 @@ Deploy a "Branch/Sync" subagent to:
 - Don't skip verification — deploy a verification subagent and run the checklist
 - Don't commit before verification passes (or without explicit orchestrator approval)
 
-
----
-
----
-name: how-it-works
-description: Explain how claude-mem captures observations, when memory injection kicks in, and where data lives. Use when the user asks "how does claude-mem work?" or "what is this thing doing?".
----
-
 # How claude-mem works
 
 ## What it does
@@ -559,14 +522,6 @@ The first session in a fresh project seeds memory; subsequent sessions receive a
 Everything stays in ~/.claude-mem on this machine.
 
 Nothing leaves your machine except calls to whichever AI provider you configured for compression (Claude / OpenRouter / Gemini). The SQLite database, vector index, logs, and settings all live under that directory and are removed cleanly on `npx claude-mem uninstall`.
-
-
----
-
----
-name: knowledge-agent
-description: Build and query AI-powered knowledge bases from claude-mem observations. Use when users want to create focused "brains" from their observation history, ask questions about past work patterns, or compile expertise on specific topics.
----
 
 # Knowledge Agent
 
@@ -644,14 +599,6 @@ reprime_corpus name="hooks-expertise"
 
 Clears prior Q&A context and reloads the corpus into a new session.
 
-
----
-
----
-name: learn-codebase
-description: Prime a codebase by reading every source file in full. Use when starting work on a new or unfamiliar project, or when the user asks to "learn the codebase", "read the codebase", "prime", or "get up to speed".
----
-
 # Learn Codebase
 
 Please learn about the codebase by systematically and thoroughly reading
@@ -668,14 +615,6 @@ to page through the file in chunks (e.g. `offset: 1, limit: 500`, then
 This skill uses tokens but front-loads a cognitive cache to make development
 less costly over the life of the project. Please keep this in mind before
 deciding to warn the user over cost.
-
-
----
-
----
-name: make-plan
-description: Create a detailed, phased implementation plan with documentation discovery. Use when asked to plan a feature, task, or multi-step implementation — especially before executing with do.
----
 
 # Make Plan
 
@@ -739,14 +678,6 @@ The orchestrator consolidates findings into a single Phase 0 output.
 ## See Also
 
 - `oh-my-issues` — the issue-side sibling. When the plan you're being asked to make is rooted in a bug or feature backlog rather than a fresh idea, route through `oh-my-issues` first to cluster issues by root cause into plan masters and `plans/0X-*.md` design docs. `make-plan` then operates on the design doc for one plan slice.
-
-
----
-
----
-name: mem-search
-description: Search claude-mem's persistent cross-session memory database. Use when user asks "did we already solve this?", "how did we do X last time?", or needs work from previous sessions.
----
 
 # Memory Search
 
@@ -874,14 +805,6 @@ get_observations(ids=[11131, 10942, 10855], orderBy="date_desc")
 ## Knowledge Agents
 
 Want synthesized answers instead of raw records? Use `/knowledge-agent` to build a queryable corpus from your observation history. The knowledge agent reads all matching observations and answers questions conversationally.
-
-
----
-
----
-name: oh-my-issues
-description: Cluster a GitHub issue backlog by root cause into a small set of plan-master issues, redirect children with a standardized comment, and bundle architectural-fix PRs that close clusters atomically. Use when an issue tracker has accumulated dozens of reports that share underlying defects, when asked to triage / consolidate / cluster / dedupe issues, when asked to build a plan series or roadmap from open issues, or when routing a new incoming bug into an existing plan.
----
 
 # oh-my-issues
 
@@ -1104,9 +1027,6 @@ For a bundle: stop when the PR is merged and every listed child is auto-closed b
 - **Closing children before the master is open.** Children must always have a redirect target.
 - **Using the redirect comment for issues that aren't symptoms** (e.g. genuine feature requests with no shared root cause). Those stay open or get their own track.
 - **Closing a master before every listed child is shipped.** The master is the contract; closing it early breaks the audit trail.
-
-
----
 
 # Claude-Mem OpenClaw Plugin — Setup Guide
 
@@ -1571,14 +1491,6 @@ A background service connects to the worker's SSE stream and forwards `new_obser
 | `observationFeed.channel` | string | — | Channel type: `telegram`, `discord`, `slack`, `signal`, `whatsapp`, `line` |
 | `observationFeed.to` | string | — | Target chat/channel/user ID |
 
-
----
-
----
-name: pathfinder
-description: Map a codebase into feature-grouped flowcharts, identify duplicated concerns across features, and propose a unified architecture. Use when asked to "find the ideal path," unify duplicated systems, or audit architecture before a refactor. Emits a proposed unified flowchart plus per-system /make-plan prompts.
----
-
 # Pathfinder
 
 You are an ORCHESTRATOR. Map the codebase into feature-grouped flowcharts, identify duplicated concerns, propose the simplest unified architecture, and hand off per-system plans to `/make-plan`.
@@ -1685,14 +1597,6 @@ Format each as a fenced code block the user can copy directly into `/make-plan`.
 - Proposing unification of legitimately specialized components — re-examine trust/data-source divergence
 - Handoff prompts that lack concrete call sites — rewrite with Phase 2 evidence
 - Skipping Phase 0 boundary review — fanning out on bad feature boundaries wastes all of Phase 1
-
-
----
-
----
-name: smart-explore
-description: Token-optimized structural code search using tree-sitter AST parsing. Use instead of reading full files when you need to understand code structure, find functions, or explore a codebase efficiently.
----
 
 # Smart Explore
 
@@ -1883,21 +1787,6 @@ Markdown files (`.md`, `.mdx`) receive special handling beyond the generic plain
 - **`smart_unfold`** — expands heading sections rather than function bodies; each section up to the next same-level heading is returned as a chunk.
 - **Frontmatter** — YAML frontmatter (lines between leading `---` delimiters) is included in `smart_outline` output under a synthetic `frontmatter` symbol so metadata like `title:` and `description:` is visible without reading the whole file.
 
-
----
-
----
-name: standup
-version: 1.0.0
-description: Facilitate a read-only standup across git worktrees, branches, or PRs to compare changes and produce one consolidation plan.
-allowed-tools:
-  - Bash
-  - Read
-  - Edit
-  - Task
-  - AskUserQuestion
----
-
 # standup — facilitate a group chat between branch-agents
 
 You're the **facilitator**. Each of the user's git worktrees (and any PRs they
@@ -2028,14 +1917,6 @@ atomically locked.
 
 Each spawned agent plays its turns by **`agent-brief.md`** (bundled here) — the
 playbook for being one voice in the room.
-
-
----
-
----
-name: timeline-report
-description: Generate a "Journey Into [Project]" narrative report analyzing a project's entire development history from claude-mem's timeline. Use when asked for a timeline report, project history analysis, development journey, or full project report.
----
 
 # Timeline Report
 
@@ -2243,14 +2124,6 @@ User: "Write a journey report for the tokyo project"
 4. Deploy analysis agent with full timeline
 5. Save to `./journey-into-tokyo.md`
 6. Report: "Report saved. Analyzed 34,722 observations spanning Oct 2025 - Mar 2026 (~718K input tokens, ~8K output tokens)."
-
-
----
-
----
-name: weekly-digests
-description: Generate a serial week-by-week narrative digest of a project's full claude-mem timeline. Splits the timeline into per-ISO-week files, then runs one consecutive subagent per week — each receiving the prior week's carry-forward block — to produce one chapter per ISO week of data. Use when asked for "weekly digests", "week-by-week story", "serial timeline", or "narrative chapters" of a project's history.
----
 
 # Weekly Digests
 
@@ -2510,14 +2383,6 @@ Same flow, just smaller. N=3, so:
 
 Apply both first-and-final-chapter treatment to the only chapter: empty carry-forward, `## Where We Are` close, no inter-chapter references. Filename: `00-...md`.
 
-
----
-
----
-name: wowerpoint
-description: Turn one document into a kawaii NotebookLM slide-deck PDF. Use for "wowerpoint this", "make a deck about <file>", "turn this report into slides", or any request to render a single document as shareable narrative slides.
----
-
 # Wowerpoint
 
 One doc in, one PDF out. Slide-deck only — videos and podcasts from the same engine are noticeably worse and out of scope; refer the user to the `notebooklm` CLI directly if they want those.
@@ -2718,6 +2583,3 @@ Do NOT poll status manually. The `wait` commands handle backoff.
 
 - **Rerun cheaply** — once the notebook + source exist, regenerating with a different prompt only repeats generation + download. Reuse `NOTEBOOK_ID` and `SOURCE_ID`.
 - **Web UI fallback** — if generation is rate-limited >30 minutes, open the notebook URL, trigger generation in the UI, then `notebooklm artifact list -n <NOTEBOOK_ID>` and `download`.
-
-
----

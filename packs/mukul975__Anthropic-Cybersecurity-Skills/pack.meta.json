@@ -1,0 +1,18 @@
+{
+  "id": "mukul975__Anthropic-Cybersecurity-Skills",
+  "source": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+  "license": "Found in repository",
+  "fetched_at": "2026-06-20T17:26:27.450167+00:00Z",
+  "type": "skill",
+  "agents": [
+    "claude-code",
+    "cursor",
+    "generic"
+  ],
+  "mcp_servers": [
+    {
+      "name": "21st-dev",
+      "command": "npx -y @21st-dev/cli@latest"
+    }
+  ]
+}

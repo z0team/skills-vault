@@ -1,11 +1,6 @@
 ---
 name: colbymchenry
-description: Skills from the colbymchenry pack
----
-
----
-name: add-lang
-description: Add tree-sitter language support to codegraph end-to-end — wire the grammar + extractor, write tests, then benchmark extraction quality and retrieval value on 3 popular real-world repos. Use when the user runs /add-lang <language> or asks to add/support a new language (e.g. Lua, Elixir, Zig, OCaml) in codegraph.
+description: "Skills from the colbymchenry pack"
 ---
 
 # Add a language to CodeGraph
@@ -223,14 +218,6 @@ releases go through the GitHub Actions Release workflow.
 - If a grammar can't be obtained, or extraction can't reach PASS, **STOP and
   report** — don't ship a half-wired language.
 
-
----
-
----
-name: agent-eval
-description: Benchmark CodeGraph retrieval quality on a real codebase by comparing agent behavior with vs without CodeGraph. Use when the user runs /agent-eval or asks to test, benchmark, audit, or validate a codegraph version (the local dev build or a published npm version) against a language's repo.
----
-
 # CodeGraph Quality Audit
 
 Measures how much CodeGraph helps an agent versus plain grep/read, for a chosen
@@ -300,6 +287,3 @@ codegraph reduced effort and whether both arms reached a correct answer.
 - Corpus repos are cloned to `/tmp/codegraph-corpus` (reused if already present).
 - Add or edit repos in `corpus.json` (fields: `name`, `repo`, `size`, `files`,
   `question`).
-
-
----

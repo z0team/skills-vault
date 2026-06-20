@@ -1,0 +1,12 @@
+{
+  "id": "obra__Superpowers",
+  "source": "https://github.com/obra/Superpowers",
+  "license": "Found in repository",
+  "fetched_at": "2026-06-20T17:26:15.694698+00:00Z",
+  "type": "skill",
+  "agents": [
+    "claude-code",
+    "cursor",
+    "generic"
+  ]
+}

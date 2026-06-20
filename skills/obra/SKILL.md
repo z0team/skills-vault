@@ -1,11 +1,6 @@
 ---
 name: obra
-description: Skills from the obra pack
----
-
----
-name: brainstorming
-description: "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation."
+description: "Skills from the obra pack"
 ---
 
 # Brainstorming Ideas Into Designs
@@ -162,14 +157,6 @@ A question about a UI topic is not automatically a visual question. "What does p
 
 If they agree to the companion, read the detailed guide before proceeding:
 `skills/brainstorming/visual-companion.md`
-
-
----
-
----
-name: dispatching-parallel-agents
-description: Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies
----
 
 # Dispatching Parallel Agents
 
@@ -352,14 +339,6 @@ From debugging session (2025-10-03):
 - All fixes integrated successfully
 - Zero conflicts between agent changes
 
-
----
-
----
-name: executing-plans
-description: Use when you have a written implementation plan to execute in a separate session with review checkpoints
----
-
 # Executing Plans
 
 ## Overview
@@ -425,14 +404,6 @@ After all tasks complete and verified:
 - **superpowers:using-git-worktrees** - Ensures isolated workspace (creates one or verifies existing)
 - **superpowers:writing-plans** - Creates the plan this skill executes
 - **superpowers:finishing-a-development-branch** - Complete development after all tasks
-
-
----
-
----
-name: finishing-a-development-branch
-description: Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup
----
 
 # Finishing a Development Branch
 
@@ -671,14 +642,6 @@ git worktree prune  # Self-healing: clean up any stale registrations
 - `cd` to main repo root before worktree removal
 - Run `git worktree prune` after removal
 
-
----
-
----
-name: receiving-code-review
-description: Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation
----
-
 # Code Review Reception
 
 ## Overview
@@ -888,14 +851,6 @@ Verify. Question. Then implement.
 
 No performative agreement. Technical rigor always.
 
-
----
-
----
-name: requesting-code-review
-description: Use when completing tasks, implementing major features, or before merging to verify work meets requirements
----
-
 # Requesting Code Review
 
 Dispatch a code reviewer subagent to catch issues before they cascade. The reviewer gets precisely crafted context for evaluation — never your session's history. This keeps the reviewer focused on the work product, not your thought process, and preserves your own context for continued work.
@@ -994,14 +949,6 @@ You: [Fix progress indicators]
 - Request clarification
 
 See template at: [code-reviewer.md](code-reviewer.md)
-
-
----
-
----
-name: subagent-driven-development
-description: Use when executing implementation plans with independent tasks in the current session
----
 
 # Subagent-Driven Development
 
@@ -1417,14 +1364,6 @@ Done!
 **Alternative workflow:**
 - **superpowers:executing-plans** - Use for parallel session instead of same-session execution
 
-
----
-
----
-name: systematic-debugging
-description: Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
----
-
 # Systematic Debugging
 
 ## Overview
@@ -1716,14 +1655,6 @@ From debugging sessions:
 - Random fixes approach: 2-3 hours of thrashing
 - First-time fix rate: 95% vs 40%
 - New bugs introduced: Near zero vs common
-
-
----
-
----
-name: test-driven-development
-description: Use when implementing any feature or bugfix, before writing implementation code
----
 
 # Test-Driven Development (TDD)
 
@@ -2092,14 +2023,6 @@ Otherwise → not TDD
 
 No exceptions without your human partner's permission.
 
-
----
-
----
-name: using-git-worktrees
-description: Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback
----
-
 # Using Git Worktrees
 
 ## Overview
@@ -2298,14 +2221,6 @@ Ready to implement <feature-name>
 - Auto-detect and run project setup
 - Verify clean test baseline
 
-
----
-
----
-name: using-superpowers
-description: Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions
----
-
 <SUBAGENT-STOP>
 If you were dispatched as a subagent to execute a specific task, skip this skill.
 </SUBAGENT-STOP>
@@ -2422,14 +2337,6 @@ The skill itself tells you which.
 ## User Instructions
 
 Instructions say WHAT, not HOW. "Add X" or "Fix Y" doesn't mean skip workflows.
-
-
----
-
----
-name: verification-before-completion
-description: Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always
----
 
 # Verification Before Completion
 
@@ -2565,14 +2472,6 @@ From 24 failure memories:
 Run the command. Read the output. THEN claim the result.
 
 This is non-negotiable.
-
-
----
-
----
-name: writing-plans
-description: Use when you have a spec or requirements for a multi-step task, before touching code
----
 
 # Writing Plans
 
@@ -2743,14 +2642,6 @@ After saving the plan, offer execution choice:
 **If Inline Execution chosen:**
 - **REQUIRED SUB-SKILL:** Use superpowers:executing-plans
 - Batch execution with checkpoints for review
-
-
----
-
----
-name: writing-skills
-description: Use when creating new skills, editing existing skills, or verifying skills work before deployment
----
 
 # Writing Skills
 
@@ -3436,6 +3327,3 @@ Same cycle: RED (baseline) → GREEN (write skill) → REFACTOR (close loopholes
 Same benefits: Better quality, fewer surprises, bulletproof results.
 
 If you follow TDD for code, follow it for skills. It's the same discipline applied to documentation.
-
-
----

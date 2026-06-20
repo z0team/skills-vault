@@ -1,12 +1,6 @@
 ---
 name: open-gsd
-description: Skills from the open-gsd pack
----
-
----
-name: gsd-core
-description: "Lightweight meta-prompting, context-engineering, and spec-driven development system for Claude Code, Codex, Gemini CLI, Cursor, Windsurf, and more. Use when you want to eliminate context rot by running research, planning, and execution in fresh-context subagents while keeping the main session lean."
-source: "https://github.com/open-gsd/gsd-core"
+description: "Skills from the open-gsd pack"
 ---
 
 <div align="center">
@@ -134,6 +128,3 @@ MIT License. See [LICENSE](LICENSE) for details.
 **Claude Code is powerful. GSD Core makes it reliable.**
 
 </div>
-
-
----

@@ -1,12 +1,6 @@
 ---
 name: hesamsheikh
-description: Skills from the hesamsheikh pack
----
-
----
-name: octogent
-description: "Multi-agent terminal orchestration framework for Node.js/TypeScript. Use when you need to spawn, coordinate, and manage multiple AI sub-agents across parallel terminal sessions — each with its own scoped context, notes, and task list — from a single Claude Code orchestrator process."
-source: "https://github.com/hesamsheikh/octogent"
+description: "Skills from the hesamsheikh pack"
 ---
 
 <div align="center">
@@ -196,6 +190,3 @@ PTY sessions survive browser reloads during the idle grace period, but they do *
 
 ## Contributor setup
 Octogent is not actively reviewing pull requests right now. If you still open one and any code was written with AI, disclose which coding agent and model were used. For contributor workflow and expectations, see [CONTRIBUTING.md](CONTRIBUTING.md).
-
-
----

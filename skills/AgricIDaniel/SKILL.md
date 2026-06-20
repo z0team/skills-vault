@@ -1,14 +1,6 @@
 ---
 name: AgricIDaniel
-description: Skills from the AgricIDaniel pack
----
-
----
-name: seo-ahrefs
-description: Ahrefs API analyst (extension). Reads referring domains, backlinks, organic keywords, and content explorer data via the official @ahrefs/mcp@0.0.11 server. Pairs with seo-backlinks for multi-source confidence weighting.
-metadata:
-  version: "2.2.0"
-compatibility: "Requires the official @ahrefs/mcp@0.0.11 server (installed by extensions/ahrefs/install.sh)."
+description: "Skills from the AgricIDaniel pack"
 ---
 
 # seo-ahrefs
@@ -55,21 +47,6 @@ Ahrefs API usage is metered per unit. Before running a batch (>= 50 URLs):
 3. Log actual cost after each call.
 
 This is the same workflow the seo-dataforseo skill uses.
-
-
----
-
----
-name: seo-audit
-description: "Full website SEO audit with parallel subagent delegation. Crawls up to 500 pages, detects business type, delegates to up to 15 specialists (8 always + 7 conditional), generates health score. Use when user says audit, full SEO check, analyze my site, or website health check."
-user-invocable: true
-argument-hint: "[url]"
-license: MIT
-metadata:
-  author: AgriciDaniel
-  version: "2.2.0"
-  category: seo
----
 
 # Full Website SEO Audit
 
@@ -241,22 +218,6 @@ If Google API credentials are configured (`python3 scripts/google_auth.py --chec
 | robots.txt blocks crawling | Report which paths are blocked. Analyze only accessible pages and note the limitation in the report. |
 | Rate limiting (429 responses) | Back off and reduce concurrent requests. Report partial results with a note on which sections could not be completed. |
 | Timeout on large sites (500+ pages) | Cap the crawl at the timeout limit. Report findings for pages crawled and estimate total site scope. |
-
-
----
-
----
-name: seo-backlinks
-description: "Backlink profile analysis: referring domains, anchor text distribution, toxic link detection, competitor gap analysis. Works with free APIs (Moz, Bing Webmaster, Common Crawl) and DataForSEO extension. Use when user says backlinks, link profile, referring domains, anchor text, toxic links, link gap, link building, disavow, or backlink audit."
-user-invocable: true
-argument-hint: "<url>"
-license: MIT
-compatibility: "Free: Common Crawl + verify always available. Optional: Moz API, Bing Webmaster (free signup). Premium: DataForSEO extension."
-metadata:
-  author: AgriciDaniel
-  version: "2.2.0"
-  category: seo
----
 
 # Backlink Profile Analysis
 
@@ -510,17 +471,6 @@ Load on demand (do NOT load at startup):
 - `skills/seo/references/backlink-quality.md` -- Detailed toxic link patterns and scoring methodology (shared reference, load when analyzing toxic links or spam scores)
 - `skills/seo/references/free-backlink-sources.md` -- Source comparison, confidence weighting, setup guides (shared reference, load when configuring free backlink APIs)
 
-
----
-
----
-name: seo-bing
-description: Bing Webmaster Tools + IndexNow extension. Microsoft Copilot citations are fed by the Bing index; this skill makes Bing visibility, link data, and IndexNow URL submission first-class.
-metadata:
-  version: "2.2.0"
-compatibility: "Requires BING_WEBMASTER_API_KEY and (optionally) INDEXNOW_KEY in ~/.claude/settings.json env. Run extensions/bing-webmaster/install.sh to configure."
----
-
 # seo-bing
 
 The non-Google indexing surface. Google still rejects IndexNow (per
@@ -560,29 +510,6 @@ specifically for **Bing/Yandex/Seznam/Naver indexing** and
   IndexNow), use `seo-google indexing`.
 - For multi-source backlink confidence weighting, fall back to
   `seo-backlinks` which already integrates Bing + Moz + CC.
-
-
----
-
----
-name: seo-cluster
-description: >
-  SERP-based semantic topic clustering for content architecture planning. Groups
-  keywords by actual Google SERP overlap (not text similarity), designs hub-and-spoke
-  content clusters with internal link matrices, and generates interactive
-  visualizations. Optionally executes content creation if claude-blog is installed.
-  Use when user says "topic cluster", "content cluster", "semantic clustering",
-  "pillar page", "hub and spoke", "content architecture", "keyword grouping",
-  or "cluster plan".
-user-invocable: true
-argument-hint: "<seed-keyword or url>"
-license: MIT
-metadata:
-  author: AgriciDaniel
-  original_author: "Lutfiya Miller (Pro Hub Challenge Winner)"
-  version: "2.2.0"
-  category: seo
----
 
 # Semantic Topic Clustering (v1.9.0)
 
@@ -887,26 +814,6 @@ After cluster planning or execution completes, offer:
 
 For prompt-guided keyword research and gap analysis, use `/seo flow find [url|topic]` — FLOW's 5 find-stage prompts complement the SERP-overlap clustering methodology with structured discovery prompts.
 
-
----
-
----
-name: seo-competitor-pages
-description: >
-  Generate SEO-optimized competitor comparison and alternatives pages. Covers
-  "X vs Y" layouts, "alternatives to X" pages, feature matrices, schema markup,
-  and conversion optimization. Use when user says "comparison page", "vs page",
-  "alternatives page", "competitor comparison", "X vs Y", "versus",
-  "compare competitors", or "alternative to".
-user-invocable: true
-argument-hint: "[url or generate] [competitor]"
-license: MIT
-metadata:
-  author: AgriciDaniel
-  version: "2.2.0"
-  category: seo
----
-
 # Competitor Comparison & Alternatives Pages
 
 Create high-converting comparison and alternatives pages that target
@@ -1110,28 +1017,6 @@ competitive intent keywords with accurate, structured content.
 | Competitor URL unreachable | Report which competitor URLs failed. Proceed with available data and note gaps in the comparison. |
 | Insufficient competitor data (pricing, features unavailable) | Flag missing data points clearly. Use "Not publicly available" in comparison tables rather than guessing. |
 | No product/service overlap found | Report that the products serve different markets. Suggest alternative competitors that share feature overlap, or pivot to a category roundup format. |
-
-
----
-
----
-name: seo-content-brief
-description: >
-  Generate competitive SEO content briefs with per-section word counts,
-  competitor scoring, keyword density guidance, and page-type templates.
-  Supports both new page briefs and improve-existing-page briefs.
-  Use when user says "content brief", "write a brief", "content outline",
-  "blog brief", "service page brief", "brief for", "writing brief",
-  "content plan", or "outline for".
-user-invocable: true
-argument-hint: "[url-or-keyword] [page-type]"
-license: MIT
-metadata:
-  author: puneetindersingh
-  original_author: puneetindersingh
-  version: "1.0.0"
-  category: seo
----
 
 # SEO Content Brief Generator
 
@@ -1362,24 +1247,6 @@ If Ahrefs MCP tools are available, use `keywords-explorer-overview` for keyword 
 | Page type not specified | Auto-detect from the keyword intent and SERP format. State the detected type in the brief. |
 | Target word count not specified | Use competitor average as the baseline. Note this in the outline. |
 
-
----
-
----
-name: seo-content
-description: >
-  Content quality and E-E-A-T analysis with AI citation readiness assessment.
-  Use when user says "content quality", "E-E-A-T", "content analysis",
-  "readability check", "thin content", or "content audit".
-user-invocable: true
-argument-hint: "[url]"
-license: MIT
-metadata:
-  author: AgriciDaniel
-  version: "2.2.0"
-  category: seo
----
-
 # Content Quality & E-E-A-T Analysis
 
 ## Google's "Who / How / Why" Test (canonical heuristic)
@@ -1563,30 +1430,6 @@ If DataForSEO MCP tools are available, use `kw_data_google_ads_search_volume` fo
 ## FLOW Framework Integration
 
 For prompt-guided content optimization, use `/seo flow optimize <url>` and `/seo flow win <url>` — FLOW's optimize and win prompts provide structured E-E-A-T improvement and BOFU conversion workflows.
-
-
----
-
----
-name: seo-dataforseo
-description: >
-  Live SEO data via DataForSEO MCP server. SERP analysis (Google, Bing, Yahoo,
-  YouTube, Google Images), keyword research (volume, difficulty, intent, trends),
-  backlink profiles, on-page analysis (Lighthouse, content parsing), competitor
-  analysis, content analysis, business listings, AI visibility (ChatGPT scraper,
-  LLM mention tracking), and domain analytics. Requires DataForSEO extension
-  installed. Use when user says "dataforseo", "live SERP", "keyword volume",
-  "backlink data", "competitor data", "AI visibility check", "LLM mentions",
-  "image SERP", "google images", "image rankings", or "real search data".
-user-invocable: true
-argument-hint: "[command] [query]"
-license: MIT
-compatibility: "Requires DataForSEO MCP server"
-metadata:
-  author: AgriciDaniel
-  version: "2.2.0"
-  category: seo
----
 
 # DataForSEO: Live SEO Data (Extension)
 
@@ -1971,27 +1814,6 @@ Match existing claude-seo output patterns:
 - Show scores as XX/100 where applicable
 - Note data source as "DataForSEO (live)" to distinguish from static analysis
 
-
----
-
----
-name: seo-drift
-description: >
-  SEO drift monitoring: capture baselines of SEO-critical elements, detect changes,
-  and track regressions over time. Git for SEO — baseline, diff, and track changes
-  to your on-page SEO. Use when user says "SEO drift", "baseline", "track changes",
-  "did anything break", "SEO regression", "compare SEO", "before and after",
-  "monitor SEO changes", or "deployment check".
-user-invocable: true
-argument-hint: "baseline|compare|history <url>"
-license: MIT
-metadata:
-  author: AgriciDaniel
-  original_author: "Dan Colta (Pro Hub Challenge)"
-  version: "2.2.0"
-  category: seo
----
-
 # SEO Drift Monitor (April 2026)
 
 Git for your SEO. Capture baselines, detect regressions, track changes over time.
@@ -2193,29 +2015,6 @@ When drift is detected, recommend the appropriate specialized skill:
 /seo drift compare https://example.com      # What changed?
 /seo drift history https://example.com      # When did it change?
 ```
-
-
----
-
----
-name: seo-ecommerce
-description: >
-  E-commerce SEO analysis: Google Shopping visibility, Amazon marketplace
-  intelligence, product schema validation, competitor pricing analysis, and
-  marketplace keyword gaps. Combines on-page product SEO with marketplace data
-  from DataForSEO Merchant API. Use when user says "ecommerce SEO", "product SEO",
-  "Google Shopping", "marketplace SEO", "product schema", "Amazon SEO",
-  "product listings", "shopping ads", or "merchant SEO".
-user-invocable: true
-argument-hint: "<url or keyword>"
-license: MIT
-compatibility: "Enhanced with DataForSEO Merchant API (optional)"
-metadata:
-  author: AgriciDaniel
-  original_author: "Matej Marjanovic (Pro Hub Challenge)"
-  version: "2.2.0"
-  category: seo
----
 
 # E-commerce SEO Analysis
 
@@ -2568,26 +2367,6 @@ reported explicitly. Missing profile is reported as opportunity, not failure
 Generate a PDF report? Use `/seo google report`
 ```
 
-
----
-
----
-name: seo-firecrawl
-description: >
-  Full-site crawling, scraping, and site mapping via Firecrawl MCP.
-  Use when user says "crawl site", "map site", "full crawl",
-  "find all pages", "broken links", "site structure",
-  "discover pages", "JS rendering", or needs site-wide analysis.
-user-invocable: true
-argument-hint: "[command] <url>"
-license: MIT
-compatibility: "Requires Firecrawl MCP server"
-metadata:
-  author: AgriciDaniel
-  version: "2.2.0"
-  category: seo
----
-
 # Firecrawl Extension for Claude SEO
 
 This skill requires the Firecrawl extension to be installed:
@@ -2774,26 +2553,6 @@ When Firecrawl is available during `/seo audit`:
 2. Use `WebFetch` tool for basic HTML retrieval
 3. Install Firecrawl: `./extensions/firecrawl/install.sh`
 
-
----
-
----
-name: seo-flow
-description: >
-  FLOW framework integration — evidence-led SEO using the Find → Leverage →
-  Optimize → Win loop. Surfaces stage-specific AI prompts from the FLOW
-  knowledge base (41 prompts, CC BY 4.0). Use when user says "FLOW", "FLOW
-  framework", "seo flow", "evidence-led SEO", "find leverage optimize win",
-  or wants stage-specific SEO prompts.
-user-invocable: true
-argument-hint: "[stage] [url|topic]"
-license: MIT
-metadata:
-  author: AgriciDaniel
-  version: "2.2.0"
-  category: seo
----
-
 # FLOW Framework — Find · Leverage · Optimize · Win
 
 > Framework and prompts © Daniel Agrici, CC BY 4.0 — github.com/AgriciDaniel/flow
@@ -2913,28 +2672,6 @@ Do not omit or modify the attribution.
 | Prompt file missing | "Run `/seo flow sync` to pull the latest prompts from the FLOW repo." |
 | `sync_flow.py` network error | Display the script's stderr. Check rate limits: `gh api rate_limit`. |
 | `sync_flow.py` auth error | Run `gh auth login` then retry. |
-
-
----
-
----
-name: seo-geo
-description: >
-  Optimize content for AI Overviews (formerly SGE), ChatGPT web search,
-  Perplexity, and other AI-powered search experiences. Generative Engine
-  Optimization (GEO) analysis including brand mention signals, AI crawler
-  accessibility, llms.txt compliance, passage-level citability scoring, and
-  platform-specific optimization. Use when user says "AI Overviews", "SGE",
-  "GEO", "AI search", "LLM optimization", "Perplexity", "AI citations",
-  "ChatGPT search", or "AI visibility".
-user-invocable: true
-argument-hint: "[url]"
-license: MIT
-metadata:
-  author: AgriciDaniel
-  version: "2.2.0"
-  category: seo
----
 
 # AI Search / GEO Optimization (May 2026)
 
@@ -3203,29 +2940,6 @@ If DataForSEO MCP tools are available, use `ai_optimization_chat_gpt_scraper` to
 ## FLOW Framework Integration
 
 For prompt-guided AI content optimization, use `/seo flow optimize <url>` — FLOW's 21 optimize-stage prompts complement GEO's citability and structure analysis with evidence-led AI prompts.
-
-
----
-
----
-name: seo-google
-description: >
-  Google SEO APIs: Search Console (Search Analytics, URL Inspection, Sitemaps),
-  PageSpeed Insights v5, CrUX field data with 25-week history, Indexing API v3,
-  and GA4 organic traffic. Provides real Google field data for Core Web Vitals,
-  indexation status, search performance, and organic traffic trends. Use when
-  user says "search console", "GSC", "PageSpeed", "CrUX", "field data",
-  "indexing API", "GA4 organic", "URL inspection", "google api setup",
-  "real CWV data", "impressions", "clicks", "CTR", "position data",
-  "LCP", "INP", "CLS", "FCP", "TTFB", or "Lighthouse scores".
-user-invocable: true
-argument-hint: "[command] [url|property]"
-license: MIT
-metadata:
-  author: AgriciDaniel
-  version: "2.2.0"
-  category: seo
----
 
 # Google SEO APIs
 
@@ -3555,25 +3269,6 @@ Generate a professional PDF report with charts and analytics.
 | Indexing API quota exceeded | Report 200/day limit. Suggest prioritizing most important URLs. |
 | Rate limit (429) | Wait and retry with exponential backoff. Report which API hit the limit. |
 
-
----
-
----
-name: seo-hreflang
-description: >
-  Hreflang and international SEO audit, validation, and generation. Detects
-  common mistakes, validates language/region codes, and generates correct
-  hreflang implementations. Use when user says "hreflang", "i18n SEO",
-  "international SEO", "multi-language", "multi-region", or "language tags".
-user-invocable: true
-argument-hint: "[url]"
-license: MIT
-metadata:
-  author: AgriciDaniel
-  version: "2.2.0"
-  category: seo
----
-
 # Hreflang & International SEO
 
 Validate existing hreflang implementations or generate correct hreflang tags
@@ -3814,22 +3509,6 @@ Load on-demand as needed (do NOT load all at startup):
 | Cultural profile not available for language | Use the Default Profile checklist from cultural-profiles.md. Note that assessment is based on general guidelines, not a pre-built profile. |
 | Content parity directory empty | Report that no content files were found. Suggest verifying the directory path or providing a URL for live site analysis. |
 
-
----
-
----
-name: seo-image-gen
-description: "AI image generation for SEO assets: OG/social preview images, blog hero images, schema images, product photography, infographics. Powered by Gemini via nanobanana-mcp. Requires banana extension installed. Use when user says \"generate image\", \"OG image\", \"social preview\", \"hero image\", \"blog image\", \"product photo\", \"infographic\", \"seo image\", \"create visual\", \"image-gen\", \"favicon\", \"schema image\", \"pinterest pin\", \"generate visual\", \"banner\", or \"thumbnail\"."
-argument-hint: "[og|hero|product|infographic|custom|batch] <description>"
-user-invocable: true
-license: MIT
-compatibility: "Requires nanobanana MCP server"
-metadata:
-  author: AgriciDaniel
-  version: "2.2.0"
-  category: seo
----
-
 # SEO Image Gen: AI Image Generation for SEO Assets (Extension)
 
 Generate production-ready images for SEO use cases using Gemini's image generation
@@ -3993,27 +3672,6 @@ After generating, always provide:
 3. **Settings**:model, aspect ratio, resolution
 4. **SEO checklist**:alt text suggestion, file naming, WebP conversion
 5. **Schema snippet**:ImageObject or og:image markup if applicable
-
-
----
-
----
-name: seo-images
-description: >
-  Image optimization analysis for SEO and performance. Checks alt text, file
-  sizes, formats, responsive images, lazy loading, CLS prevention, image SERP
-  rankings (via DataForSEO), and image file optimization (WebP/AVIF conversion,
-  IPTC/XMP metadata injection). Use when user says "image optimization",
-  "alt text", "image SEO", "image size", "image audit", "optimize images",
-  "image metadata", "image SERP", "convert to webp", or "image file optimize".
-user-invocable: true
-argument-hint: "[url]"
-license: MIT
-metadata:
-  author: AgriciDaniel
-  version: "2.2.0"
-  category: seo
----
 
 # Image Optimization Analysis
 
@@ -4407,30 +4065,6 @@ For maximum image SEO, run this pipeline on each image:
 | cwebp not installed | Fall back to ImageMagick or FFmpeg for WebP conversion. Recommend: `sudo apt install webp` |
 | DataForSEO MCP not available | Skip Image SERP Analysis section. Note extension is not installed. |
 
-
----
-
----
-name: seo-local
-description: >
-  Local SEO analysis covering Google Business Profile optimization, NAP
-  consistency, citation health, review signals, local schema markup,
-  location page quality, multi-location SEO, and industry-specific
-  recommendations. Detects business type (brick-and-mortar, SAB, hybrid)
-  and industry vertical (restaurant, healthcare, legal, home services,
-  real estate, automotive). Use when user says "local SEO", "Google
-  Business Profile", "GBP", "map pack", "local pack", "citations",
-  "NAP consistency", "local rankings", "service area", "multi-location",
-  or "local search".
-user-invocable: true
-argument-hint: "[url]"
-license: MIT
-metadata:
-  author: AgriciDaniel
-  version: "2.2.0"
-  category: seo
----
-
 # Local SEO Analysis (March 2026)
 
 ## Key Statistics
@@ -4728,31 +4362,6 @@ If DataForSEO MCP tools are available, use `local_business_data` for live GBP da
 
 For prompt-guided local optimization, use `/seo flow local <url>` — FLOW's 11 local-stage prompts cover GBP optimization, meta descriptions, title tags, and structured local audit workflows.
 
-
----
-
----
-name: seo-maps
-description: >
-  Maps intelligence for local SEO — geo-grid rank tracking, GBP profile
-  auditing via API, review intelligence across Google/Tripadvisor/Trustpilot,
-  cross-platform NAP verification (Google/Bing/Apple/OSM), competitor
-  radius mapping, and LocalBusiness schema generation from API data.
-  Three-tier capability: free (Overpass + Geoapify), DataForSEO (full
-  intelligence), DataForSEO + Google (maximum coverage). Use when user
-  says "maps", "geo-grid", "rank tracking", "GBP audit", "review
-  velocity", "competitor radius", "maps analysis", "local rank
-  tracking", "Share of Local Voice", or "SoLV".
-user-invocable: true
-argument-hint: "[command] [url|keyword|location]"
-license: MIT
-compatibility: "DataForSEO MCP for Tier 1+, Google Maps API for Tier 2"
-metadata:
-  author: AgriciDaniel
-  version: "2.2.0"
-  category: seo
----
-
 # Maps Intelligence (March 2026)
 
 Maps platform analysis for local businesses. Works with external APIs to assess
@@ -4991,25 +4600,6 @@ Generate `MAPS-ANALYSIS-{domain}.md` with:
 | No reviews found | Report zero review state. Recommend review generation strategy with 18-day cadence target. |
 | Multi-location detected | Ask user which location to analyze, or offer batch mode with per-location cost estimate. |
 
-
----
-
----
-name: seo-page
-description: >
-  Deep single-page SEO analysis covering on-page elements, content quality,
-  technical meta tags, schema, images, and performance. Use when user says
-  "analyze this page", "check page SEO", "single URL", "check this page",
-  "page analysis", or provides a single URL for review.
-user-invocable: true
-argument-hint: "[url]"
-license: MIT
-metadata:
-  author: AgriciDaniel
-  version: "2.2.0"
-  category: seo
----
-
 # Single Page Analysis
 
 ## What to Analyze
@@ -5088,26 +4678,6 @@ If DataForSEO MCP tools are available, use `serp_organic_live_advanced` for real
 | URL unreachable (DNS failure, connection refused) | Report the error clearly. Do not guess page content. Suggest the user verify the URL and try again. |
 | Page requires authentication (401/403) | Report that the page is behind authentication. Suggest the user provide the rendered HTML directly or a publicly accessible URL. |
 | JavaScript-rendered content (empty body in HTML) | Note that key content may be rendered client-side. Analyze the available HTML and flag that results may be incomplete. Suggest using a browser-rendered snapshot if available. |
-
-
----
-
----
-name: seo-plan
-description: >
-  Strategic SEO planning for new or existing websites. Industry-specific
-  templates, competitive analysis, content strategy, and implementation
-  roadmap. Use when user says "SEO plan", "SEO strategy", "SEO planning",
-  "content strategy", "keyword strategy", "content calendar",
-  "site architecture", or "SEO roadmap".
-user-invocable: true
-argument-hint: "[business-type]"
-license: MIT
-metadata:
-  author: AgriciDaniel
-  version: "2.2.0"
-  category: seo
----
 
 # Strategic SEO Planning
 
@@ -5219,17 +4789,6 @@ If DataForSEO MCP tools are available, use `dataforseo_labs_google_competitors_d
 | No website URL provided | Proceed with new-site planning mode. Skip current site assessment and competitive gap analysis that require a live URL. |
 | Industry template not found | Check `assets/` directory for available templates. If the requested template file is missing, use `generic.md` and note the missing template in output. |
 
-
----
-
----
-name: seo-profound
-description: Profound LLM citation tracker (extension). Time-series brand citation rates across ChatGPT, Perplexity, and other LLMs. Pairs with seo-seranking for triangulated AI visibility coverage.
-metadata:
-  version: "2.2.0"
-compatibility: "Requires a Profound API key (set PROFOUND_API_KEY by running extensions/profound/install.sh)."
----
-
 # seo-profound
 
 Profound is purpose-built for LLM brand-mention tracking. While
@@ -5264,26 +4823,6 @@ are first-class.
 
 - For end-to-end AI search audit (passage citability + brand mentions + platform-specific tuning), hand back to `seo-geo`.
 - For prompt-set design + AI Cleanup pattern detection in cited content, fall back to `seo-content`.
-
-
----
-
----
-name: seo-programmatic
-description: >
-  Programmatic SEO planning and analysis for pages generated at scale from data
-  sources. Covers template engines, URL patterns, internal linking automation,
-  thin content safeguards, and index bloat prevention. Use when user says
-  "programmatic SEO", "pages at scale", "dynamic pages", "template pages",
-  "generated pages", or "data-driven SEO".
-user-invocable: true
-argument-hint: "[url or plan]"
-license: MIT
-metadata:
-  author: AgriciDaniel
-  version: "2.2.0"
-  category: seo
----
 
 # Programmatic SEO Analysis & Planning
 
@@ -5447,24 +4986,6 @@ Measure against all other pages in the programmatic set. Shared headers, footers
 | Thin content threshold exceeded | Trigger quality gate warning. Report the unique content percentage and flag pages below 40% uniqueness. Require user acknowledgment before proceeding. |
 | Quality gate violation | Halt analysis at the HARD STOP threshold (500+ pages without justification or <30% unique content). Present findings and require explicit user approval to continue. |
 
-
----
-
----
-name: seo-schema
-description: >
-  Detect, validate, and generate Schema.org structured data. JSON-LD format
-  preferred. Use when user says "schema", "structured data", "rich results",
-  "JSON-LD", or "markup".
-user-invocable: true
-argument-hint: "[url]"
-license: MIT
-metadata:
-  author: AgriciDaniel
-  version: "2.2.0"
-  category: seo
----
-
 # Schema Markup Analysis & Generation
 
 ## Detection
@@ -5618,17 +5139,6 @@ When generating schema for a page:
 | Invalid JSON-LD syntax | Parse and report specific syntax errors (missing brackets, trailing commas, unquoted keys). Provide corrected JSON-LD output. |
 | Deprecated schema type detected | Flag the deprecated type with its retirement date. Recommend the current replacement type or advise removal if no replacement exists. |
 
-
----
-
----
-name: seo-seranking
-description: SE Ranking AI visibility analyst (extension). Tracks AI Share-of-Voice across ChatGPT, Gemini, Perplexity, AI Overviews, and AI Mode in a single query. Highest-impact new extension per the v2 gap analysis — no other vendor covers all 5 AI platforms in one API.
-metadata:
-  version: "2.2.0"
-compatibility: "Requires an SE Ranking API key (set SERANKING_API_KEY by running extensions/seranking/install.sh)."
----
-
 # seo-seranking
 
 Live AI visibility tracking via the SE Ranking REST API.
@@ -5672,24 +5182,6 @@ spend across vendors.
 
 - For traditional backlinks + content audit, fall back to `seo-backlinks` / `seo-content`.
 - For platform-specific deep-dives (ChatGPT only, Perplexity only), prefer the dedicated `seo-geo` skill which has Brand Mention Correlation guidance.
-
-
----
-
----
-name: seo-sitemap
-description: >
-  Analyze existing XML sitemaps or generate new ones with industry templates.
-  Validates format, URLs, and structure. Use when user says "sitemap",
-  "generate sitemap", "sitemap issues", or "XML sitemap".
-user-invocable: true
-argument-hint: "[url or generate]"
-license: MIT
-metadata:
-  author: AgriciDaniel
-  version: "2.2.0"
-  category: seo
----
 
 # Sitemap Analysis & Generation
 
@@ -5794,28 +5286,6 @@ metadata:
 - `sitemap.xml` (or split files with index)
 - `STRUCTURE.md`: site architecture documentation
 - URL count and organization summary
-
-
----
-
----
-name: seo-sxo
-description: >
-  Search Experience Optimization: reads Google SERPs backwards to detect page-type
-  mismatches, derives user stories from search intent signals, and scores pages
-  from multiple persona perspectives. Identifies why well-optimized pages fail
-  to rank by analyzing what Google rewards for each keyword. Use when user says
-  "SXO", "search experience", "page type mismatch", "SERP analysis", "user story",
-  "persona scoring", "why isn't my page ranking", "intent mismatch", or "wireframe".
-user-invocable: true
-argument-hint: "<url> [keyword]"
-license: MIT
-metadata:
-  author: AgriciDaniel
-  original_author: "Florian Schmitz (Pro Hub Challenge)"
-  version: "2.2.0"
-  category: seo
----
 
 # Search Experience Optimization (SXO)
 
@@ -6053,25 +5523,6 @@ Before delivering results, verify:
 - [ ] Limitations section is present and honest
 - [ ] Cross-skill recommendations are included where relevant
 
-
----
-
----
-name: seo-technical
-description: >
-  Technical SEO audit across 9 categories: crawlability, indexability, security,
-  URL structure, mobile, Core Web Vitals, structured data, JavaScript rendering,
-  and IndexNow protocol. Use when user says "technical SEO", "crawl issues",
-  "robots.txt", "Core Web Vitals", "site speed", or "security headers".
-user-invocable: true
-argument-hint: "[url]"
-license: MIT
-metadata:
-  author: AgriciDaniel
-  version: "2.2.0"
-  category: seo
----
-
 # Technical SEO Audit
 
 ## Categories
@@ -6259,17 +5710,6 @@ If Google API credentials are configured, use `python3 scripts/pagespeed_check.p
 | HTTPS not configured | Flag as a critical issue. Report whether HTTP is served without redirect, mixed content exists, or SSL certificate is missing/expired. |
 | Core Web Vitals data unavailable | Note that CrUX data is not available (common for low-traffic sites). Suggest using Lighthouse lab data as a proxy and recommend increasing traffic before re-testing. |
 
-
----
-
----
-name: seo-unlighthouse
-description: Multi-page Lighthouse audit via the MIT-licensed Unlighthouse CLI. Free-tier alternative to running PageSpeed against every URL on a site — no API quota burn, runs locally.
-metadata:
-  version: "2.2.0"
-compatibility: "Requires Node 18+ and the unlighthouse npm package. Run extensions/unlighthouse/install.sh to pre-warm."
----
-
 # seo-unlighthouse
 
 Run Lighthouse against every URL on a site (up to a configurable cap)
@@ -6309,21 +5749,6 @@ returns it parsed. Aggregate fields:
 - For single-URL field data (CrUX), use `seo-google psi` / `seo-google crux`.
 - For LCP subpart decomposition on slow pages, use the
   `scripts/lcp_subparts.py` workflow (Phase C).
-
-
----
-
----
-name: seo
-description: "Comprehensive SEO analysis for any website or business type. Full site audits, single-page analysis, technical SEO (crawlability, indexability, Core Web Vitals with INP), schema markup, content quality (E-E-A-T), image optimization, sitemap analysis, and GEO for AI Overviews/ChatGPT/Perplexity. Industry detection for SaaS, e-commerce, local, publishers, agencies. Triggers on: SEO, audit, schema, Core Web Vitals, sitemap, E-E-A-T, AI Overviews, GEO, technical SEO, content quality, page speed, structured data."
-user-invocable: true
-argument-hint: "[command] [url]"
-license: MIT
-metadata:
-  author: AgriciDaniel
-  version: "2.2.0"
-  category: seo
----
 
 # SEO: Universal SEO Analysis Skill
 
@@ -6584,6 +6009,3 @@ For parallel analysis during audits:
 | URL unreachable | Report the error and suggest the user verify the URL. Do not attempt to guess site content. |
 | Sub-skill fails during audit | Report partial results from successful sub-skills. Clearly note which sub-skill failed and why. Suggest re-running the failed sub-skill individually. |
 | Ambiguous business type detection | Present the top two detected types with supporting signals. Ask the user to confirm before proceeding with industry-specific recommendations. |
-
-
----
