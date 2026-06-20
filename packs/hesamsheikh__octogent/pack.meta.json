@@ -1,0 +1,12 @@
+{
+  "id": "hesamsheikh__octogent",
+  "source": "https://github.com/hesamsheikh/octogent",
+  "license": "Found in repository",
+  "fetched_at": "2026-06-20T17:26:30.840336+00:00Z",
+  "type": "skill",
+  "agents": [
+    "claude-code",
+    "cursor",
+    "generic"
+  ]
+}

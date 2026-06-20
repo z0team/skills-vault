@@ -1,4 +1,9 @@
 ---
+name: garrytan__gstack
+description: Skills from the garrytan__gstack pack
+---
+
+---
 name: gstack
 preamble-tier: 1
 version: 1.1.0
@@ -990,3 +995,6 @@ Refs are invalidated on navigation — run `snapshot` again after `goto`.
 6. **Use `snapshot -C` for tricky UIs.** Finds clickable divs that the accessibility tree misses.
 7. **Check `console` after actions.** Catch JS errors that don't surface visually.
 8. **Use `chain` for long flows.** Single command, no per-step CLI overhead.
+
+
+---

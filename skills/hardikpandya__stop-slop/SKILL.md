@@ -1,4 +1,9 @@
 ---
+name: hardikpandya__stop-slop
+description: Skills from the hardikpandya__stop-slop pack
+---
+
+---
 name: stop-slop
 description: Remove AI writing patterns from prose. Use when drafting, editing, or reviewing text to eliminate predictable AI tells.
 metadata:
@@ -66,3 +71,6 @@ See [references/examples.md](references/examples.md) for before/after transforma
 ## License
 
 MIT
+
+
+---

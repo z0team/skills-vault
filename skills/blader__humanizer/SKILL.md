@@ -1,4 +1,9 @@
 ---
+name: blader__humanizer
+description: Skills from the blader__humanizer pack
+---
+
+---
 name: humanizer
 version: 2.8.0
 description: |
@@ -619,3 +624,6 @@ Deliver the draft, the brief "still-AI" bullets, the final rewrite, and (optiona
 This skill is based on [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup. The patterns documented there come from observations of thousands of instances of AI-generated text on Wikipedia.
 
 Key insight from Wikipedia: "LLMs use statistical algorithms to guess what should come next. The result tends toward the most statistically likely result that applies to the widest variety of cases."
+
+
+---
