@@ -50,8 +50,12 @@ ensure_pyyaml() {
   local py="$1"
   "$py" -c "import yaml" 2>/dev/null && return
   info "Встановлюю PyYAML (потрібен для конвертера)..."
-  "$py" -m pip install --quiet --break-system-packages pyyaml 2>/dev/null \
-    || "$py" -m pip install --quiet pyyaml
+  if ! "$py" -m pip install --quiet --break-system-packages pyyaml 2>/dev/null; then
+    if ! "$py" -m pip install --quiet pyyaml 2>/dev/null; then
+      err "Не вдалося автоматично встановити PyYAML. Встанови його вручну: $py -m pip install pyyaml"
+      exit 1
+    fi
+  fi
 }
 
 all_skill_dirs() {
@@ -133,16 +137,22 @@ if [ -z "$AGENT" ]; then
   echo "  2) cursor"
   echo "  3) copilot"
   echo "  4) windsurf"
-  echo "  5) agents-md (універсально: Codex, OpenClaw, інші)"
-  echo "  6) generic (сирий SKILL.md)"
-  read -rp "Вибір [1-6]: " AGENT_CHOICE
+  echo "  5) opencode"
+  echo "  6) codex"
+  echo "  7) agy"
+  echo "  8) agents-md (універсально)"
+  echo "  9) generic (сирий SKILL.md)"
+  read -rp "Вибір [1-9]: " AGENT_CHOICE
   case "$AGENT_CHOICE" in
     1) AGENT="claude-code" ;;
     2) AGENT="cursor" ;;
     3) AGENT="copilot" ;;
     4) AGENT="windsurf" ;;
-    5) AGENT="agents-md" ;;
-    6) AGENT="generic" ;;
+    5) AGENT="opencode" ;;
+    6) AGENT="codex" ;;
+    7) AGENT="agy" ;;
+    8) AGENT="agents-md" ;;
+    9) AGENT="generic" ;;
     *) err "Невідомий вибір"; exit 1 ;;
   esac
 fi
@@ -176,7 +186,7 @@ resolve_out_dir() {
         err "Cursor не підтримує global rules у стабільній версії — встановлюю в local."
         echo "$project"
       else echo "$project"; fi ;;
-    copilot|windsurf|agents-md|generic)
+    copilot|windsurf|opencode|codex|agy|agents-md|generic)
       if [ "$scope" = "global" ]; then echo "$HOME/.claude"
       else echo "$project"; fi ;;
     *) err "Невідомий агент: $agent"; exit 1 ;;
@@ -185,6 +195,7 @@ resolve_out_dir() {
 
 if [ "$SCOPE" = "local" ]; then
   [ -z "$PROJECT" ] && { err "Для local scope потрібен --project"; exit 1; }
+  mkdir -p "$PROJECT"
   PROJECT="$(cd "$PROJECT" && pwd)"
 fi
 
@@ -215,7 +226,7 @@ info "Встановлюю $COUNT скіл(ів) -> агент=$AGENT, scope=$SC
 echo ""
 
 while read -r skill_md; do
-  "$PY" "$CONVERT" "$skill_md" --target "$AGENT" --out "$OUT_DIR"
+  "$PY" "$CONVERT" "$skill_md" --target "$AGENT" --out "$OUT_DIR" || err "Помилка конвертації: $skill_md (пропускаю)"
 done < "$TARGETS_FILE"
 
 echo ""

@@ -1,0 +1,12 @@
+{
+  "id": "blader__humanizer",
+  "source": "https://github.com/blader/humanizer",
+  "license": "Found in repository",
+  "fetched_at": "2026-06-20T17:26:11.659678+00:00Z",
+  "type": "skill",
+  "agents": [
+    "claude-code",
+    "cursor",
+    "generic"
+  ]
+}

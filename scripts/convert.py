@@ -51,16 +51,22 @@ class SkillMeta:
 
 
 def parse_skill_md(path: Path) -> SkillMeta:
-    text = path.read_text(encoding="utf-8")
+    text = path.read_text(encoding="utf-8-sig")
     m = re.match(r"^---\s*\n(.*?)\n---\s*\n?(.*)$", text, re.DOTALL)
     if not m:
-        raise ValueError(f"{path}: не знайдено YAML frontmatter (--- ... ---)")
+        # Відсутній frontmatter — генеруємо базовий
+        fm = {
+            "name": path.parent.name,
+            "description": "(Опис відсутній у джерелі)"
+        }
+        return SkillMeta(fm, text, path.parent)
+        
     fm_raw, body = m.group(1), m.group(2)
     frontmatter = yaml.safe_load(fm_raw) or {}
     if "name" not in frontmatter:
-        raise ValueError(f"{path}: відсутнє обов'язкове поле 'name'")
+        frontmatter["name"] = path.parent.name
     if "description" not in frontmatter:
-        raise ValueError(f"{path}: відсутнє обов'язкове поле 'description'")
+        frontmatter["description"] = "(Опис відсутній у джерелі)"
     return SkillMeta(frontmatter, body, path.parent)
 
 
@@ -71,19 +77,47 @@ def first_sentence(text: str, max_len: int = 160) -> str:
     return candidate.strip()
 
 
+def _copy_skill_dir(skill: SkillMeta, dest_dir: Path) -> Path:
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    for item in skill.skill_dir.iterdir():
+        target = dest_dir / item.name
+        if item.is_symlink():
+            if target.is_symlink() or target.exists():
+                target.unlink()
+            shutil.copy2(item, target, follow_symlinks=False)
+        elif item.is_dir():
+            shutil.copytree(item, target, dirs_exist_ok=True, symlinks=True)
+        else:
+            shutil.copy2(item, target)
+    return dest_dir / "SKILL.md"
+
+
 # ---------------------------------------------------------------------------
 # Target: Claude Code — SKILL.md лишається SKILL.md, просто копіюється
 # ---------------------------------------------------------------------------
 def to_claude_code(skill: SkillMeta, out_root: Path) -> Path:
-    dest_dir = out_root / "skills" / skill.name
-    dest_dir.mkdir(parents=True, exist_ok=True)
-    for item in skill.skill_dir.iterdir():
-        target = dest_dir / item.name
-        if item.is_dir():
-            shutil.copytree(item, target, dirs_exist_ok=True)
-        else:
-            shutil.copy2(item, target)
-    return dest_dir / "SKILL.md"
+    return _copy_skill_dir(skill, out_root / "skills" / skill.name)
+
+
+# ---------------------------------------------------------------------------
+# Target: OpenCode — .opencode/skills/<name>
+# ---------------------------------------------------------------------------
+def to_opencode(skill: SkillMeta, out_root: Path) -> Path:
+    return _copy_skill_dir(skill, out_root / ".opencode" / "skills" / skill.name)
+
+
+# ---------------------------------------------------------------------------
+# Target: Codex — .codex/skills/<name>
+# ---------------------------------------------------------------------------
+def to_codex(skill: SkillMeta, out_root: Path) -> Path:
+    return _copy_skill_dir(skill, out_root / ".codex" / "skills" / skill.name)
+
+
+# ---------------------------------------------------------------------------
+# Target: Agy — .agy/rules/<name>
+# ---------------------------------------------------------------------------
+def to_agy(skill: SkillMeta, out_root: Path) -> Path:
+    return _copy_skill_dir(skill, out_root / ".agy" / "rules" / skill.name)
 
 
 # ---------------------------------------------------------------------------
@@ -121,8 +155,12 @@ def to_cursor(skill: SkillMeta, out_root: Path) -> Path:
             if item.name == "SKILL.md":
                 continue
             target = extra_dir / item.name
-            if item.is_dir():
-                shutil.copytree(item, target, dirs_exist_ok=True)
+            if item.is_symlink():
+                if target.is_symlink() or target.exists():
+                    target.unlink()
+                shutil.copy2(item, target, follow_symlinks=False)
+            elif item.is_dir():
+                shutil.copytree(item, target, dirs_exist_ok=True, symlinks=True)
             else:
                 shutil.copy2(item, target)
     return dest
@@ -180,7 +218,7 @@ def to_agents_md(skill: SkillMeta, out_root: Path) -> Path:
             re.DOTALL,
         )
         if pattern.search(existing):
-            existing = pattern.sub(block, existing)
+            existing = pattern.sub(lambda m: block, existing)
         else:
             existing = existing.rstrip() + "\n\n" + block
         dest.write_text(existing, encoding="utf-8")
@@ -196,6 +234,38 @@ def to_agents_md(skill: SkillMeta, out_root: Path) -> Path:
 def to_generic(skill: SkillMeta, out_root: Path) -> Path:
     return to_claude_code(skill, out_root)
 
+def to_roo(skill: SkillMeta, out_root: Path) -> Path:
+    dest_dir = out_root / ".roo" / "rules"
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    content = f"---\ndescription: {skill.description}\nglobs: *\n---\n\n{skill.body}"
+    dest = dest_dir / f"{skill.name}.mdc"
+    dest.write_text(content, encoding="utf-8")
+    return dest
+
+def to_continue(skill: SkillMeta, out_root: Path) -> Path:
+    dest_dir = out_root / ".prompts"
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    content = f"---\ndescription: {skill.description}\n---\n\n{skill.body}"
+    dest = dest_dir / f"{skill.name}.prompt"
+    dest.write_text(content, encoding="utf-8")
+    return dest
+
+def to_zed(skill: SkillMeta, out_root: Path) -> Path:
+    dest_dir = out_root / ".zed" / "prompts"
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    content = f"# {skill.name}\n\n{skill.description}\n\n{skill.body}"
+    dest = dest_dir / f"{skill.name}.md"
+    dest.write_text(content, encoding="utf-8")
+    return dest
+
+def to_trae(skill: SkillMeta, out_root: Path) -> Path:
+    dest_dir = out_root / ".trae" / "rules"
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    content = f"---\ndescription: {skill.description}\nglobs: *\n---\n\n{skill.body}"
+    dest = dest_dir / f"{skill.name}.mdc"
+    dest.write_text(content, encoding="utf-8")
+    return dest
+
 
 TARGETS = {
     "claude-code": to_claude_code,
@@ -204,6 +274,13 @@ TARGETS = {
     "windsurf": to_windsurf,
     "agents-md": to_agents_md,
     "generic": to_generic,
+    "opencode": to_opencode,
+    "codex": to_codex,
+    "agy": to_agy,
+    "roo": to_roo,
+    "continue": to_continue,
+    "zed": to_zed,
+    "trae": to_trae,
 }
 
 
@@ -218,7 +295,12 @@ def main():
         print(f"❌ Не знайдено: {args.skill_md}", file=sys.stderr)
         sys.exit(1)
 
-    skill = parse_skill_md(args.skill_md)
+    try:
+        skill = parse_skill_md(args.skill_md)
+    except ValueError as e:
+        print(f"❌ {e}", file=sys.stderr)
+        sys.exit(1)
+
     fn = TARGETS[args.target]
     dest = fn(skill, args.out)
     print(f"✅ [{args.target}] {skill.name} -> {dest}")

@@ -1,0 +1,32 @@
+{
+  "name": "skills-vault",
+  "version": "1.0.0",
+  "description": "Universal installer for AI agent skills",
+  "main": "cli.js",
+  "type": "module",
+  "bin": {
+    "skills-vault": "./cli.js"
+  },
+  "scripts": {
+    "start": "node cli.js"
+  },
+  "files": [
+    "cli.js",
+    "registry.json",
+    "dist/"
+  ],
+  "keywords": [
+    "ai",
+    "agent",
+    "skills",
+    "claude",
+    "cursor",
+    "copilot"
+  ],
+  "author": "merybist",
+  "license": "MIT",
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "picocolors": "^1.0.0"
+  }
+}

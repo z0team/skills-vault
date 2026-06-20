@@ -80,11 +80,17 @@ if [ ! -d "$SEARCH_ROOT" ]; then
 fi
 
 # ---------- пошук SKILL.md ------------------------------------------------
-mapfile -t SKILL_FILES < <(find "$SEARCH_ROOT" -name "SKILL.md" -not -path "*/node_modules/*" 2>/dev/null)
+SKILL_FILES=()
+while IFS= read -r line; do
+  [ -n "$line" ] && SKILL_FILES+=("$line")
+done < <(find "$SEARCH_ROOT" -name "SKILL.md" -not -path "*/node_modules/*" 2>/dev/null || true)
 
 if [ "${#SKILL_FILES[@]}" -eq 0 ]; then
   info "SKILL.md не знайдено напряму. Шукаю .mdc / .cursor/rules для конвертації..."
-  mapfile -t MDC_FILES < <(find "$SEARCH_ROOT" -name "*.mdc" -not -path "*/node_modules/*" 2>/dev/null)
+  MDC_FILES=()
+  while IFS= read -r line; do
+    [ -n "$line" ] && MDC_FILES+=("$line")
+  done < <(find "$SEARCH_ROOT" -name "*.mdc" -not -path "*/node_modules/*" 2>/dev/null || true)
   if [ "${#MDC_FILES[@]}" -eq 0 ]; then
     err "Не знайдено жодного скіла (ні SKILL.md, ні .mdc) у $URL"
     err "Перевір посилання вручну — можливо, формат нестандартний."
