@@ -1,6 +1,6 @@
 ---
 name: thedotmack__claude-mem
-description: "Skills pack"
+description: "<a href=https://github.com/thedotmack/claude-mem>"
 ---
 
 # claude-mem

@@ -1,6 +1,6 @@
 ---
 name: anthropics__skill-creator
-description: "Skills pack"
+description: "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a sk"
 ---
 
 # Skill Creator

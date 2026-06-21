@@ -1,6 +1,6 @@
 ---
 name: hardikpandya__stop-slop
-description: "Skills pack"
+description: "Remove AI writing patterns from prose. Use when drafting, editing, or reviewing text to eliminate predictable AI tells."
 ---
 
 # Stop Slop

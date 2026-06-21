@@ -1,6 +1,6 @@
 ---
 name: affaan-m__ecc
-description: "Language: English | Português (Brasil)(docs/pt-BR/README.md) | 简体中文(README.zh-CN.md) | 繁體中文(docs/zh-TW/README.md) | 日本語("
+description: "**Language:** English | [Português (Brasil)](docs/pt-BR/README.md) | [简体中文](README.zh-CN.md) | [繁體中文](docs/zh-TW/README."
 ---
 
 # ecc

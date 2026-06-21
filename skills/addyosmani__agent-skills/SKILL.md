@@ -1,6 +1,6 @@
 ---
 name: addyosmani__agent-skills
-description: "Production-grade engineering skills for AI coding agents."
+description: "**Production-grade engineering skills for AI coding agents.**"
 ---
 
 # agent-skills

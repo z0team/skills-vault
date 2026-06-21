@@ -1,6 +1,6 @@
 ---
 name: mukul975__Anthropic-Cybersecurity-Skills
-description: "Skills pack"
+description: "<img src=assets/banner.png alt=Anthropic Cybersecurity Skills width=100%>"
 ---
 
 # Anthropic-Cybersecurity-Skills

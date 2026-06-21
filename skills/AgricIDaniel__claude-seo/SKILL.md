@@ -1,6 +1,6 @@
 ---
 name: AgricIDaniel__claude-seo
-description: "Claude SEO cover: a Claude Code command palette with /seo audit, schema, geo, content, and backlinks commands over a dar"
+description: "![Claude SEO cover: a Claude Code command palette with /seo audit, schema, geo, content, and backlinks commands over a d"
 ---
 
 # claude-seo

@@ -1,6 +1,6 @@
 ---
 name: garrytan__gstack
-description: "Skills pack"
+description: "Fast headless browser for QA testing and site dogfooding. (gstack)"
 ---
 
 <!-- AUTO-GENERATED from SKILL.md.tmpl — do not edit directly -->
