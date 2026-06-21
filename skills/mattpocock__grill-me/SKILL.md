@@ -1,6 +1,6 @@
 ---
 name: mattpocock__grill-me
-description: "A relentless interview to sharpen a plan or design."
+description: "Skills pack"
 ---
 
 Run a `/grilling` session.

@@ -1,6 +1,6 @@
 ---
 name: hesamsheikh__octogent
-description: "Multi-agent terminal orchestration framework for Node.js/TypeScript. Use when you need to spawn, coordinate, and manage "
+description: "Skills pack"
 ---
 
 <div align="center">

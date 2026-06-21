@@ -1,6 +1,6 @@
 ---
 name: zarazhangrui__frontend-slides
-description: "Create stunning, animation-rich HTML presentations from scratch or by converting PowerPoint files. Use when the user wan"
+description: "Skills pack"
 ---
 
 # Frontend Slides

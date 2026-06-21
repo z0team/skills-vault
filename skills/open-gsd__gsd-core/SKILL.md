@@ -1,6 +1,6 @@
 ---
 name: open-gsd__gsd-core
-description: "Lightweight meta-prompting, context-engineering, and spec-driven development system for Claude Code, Codex, Gemini CLI, "
+description: "English · Português(README.pt-BR.md) · 简体中文(README.zh-CN.md) · 日本語(README.ja-JP.md) · 한국어(README.ko-KR.md)"
 ---
 
 <div align="center">

@@ -1,6 +1,6 @@
 ---
 name: blader__humanizer
-description: "|"
+description: "Skills pack"
 ---
 
 # Humanizer: Remove AI Writing Patterns

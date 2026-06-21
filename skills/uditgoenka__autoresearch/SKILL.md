@@ -1,6 +1,6 @@
 ---
 name: uditgoenka__autoresearch
-description: "Autonomous iteration loop: modify, verify, keep/discard against any metric"
+description: "Turn Claude Code(https://docs.anthropic.com/en/docs/claude-code), OpenCode(https://opencode.ai), or OpenAI Codex(https:/"
 ---
 
 # Autoresearch — Autonomous Goal-directed Iteration
